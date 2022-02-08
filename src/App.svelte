@@ -103,9 +103,28 @@
 	}
 
 	.header {
-		font-size: 2em;
+		font-size: 3em;
 		color: #e8000d;
 		font-weight: 700;
+	}
+
+	.subheader {
+		font-size: 1.5em;
+		color: #e8000d;
+		font-weight: 400;
+		text-align: center;
+	}
+
+	.paragraph {
+		font-size: 1.5em;
+		color: #0051ba;
+		font-weight: 400;
+	}
+
+	.caption {
+		font-size: 0.75em;
+		color: #e8000d;
+		font-weight: 400;
 	}
 
 	#MainLogo {
@@ -116,7 +135,7 @@
 
 	#Dates {
 		color: #e8000d;
-		font-size: 2em;
+		font-size: 3em;
 		font-weight: 700;
 	}
 
@@ -196,15 +215,14 @@
 	#home {
 		display: flex;
 		flex-direction: column;
-
 	}
+
 	#RegisterButtonCont {
 		flex-grow: 1;
 		display: flex;
 		justify-content: center;
 		justify-items: end;
 	}
-
 
 	#scheduleCont {
 		display: flex;
@@ -247,6 +265,30 @@
 	}
 	#stickyNote svg {
 		width: 100%
+	}
+
+	.question {
+		font-size: 1.5em;
+		color: #0051ba;
+		font-weight: 600;
+		text-align: center;
+	}
+
+	.answer {
+		font-size: 1.5em;
+		color: #e8000d;
+		font-weight: 400;
+		text-align: center;
+	}
+
+	.team-members {
+  	display: flex;
+		justify-content: space-between;
+		padding: 10em;
+	}
+
+	.made-with-love {
+		text-align: center;
 	}
 
 	@keyframes backgroundScroll {
@@ -292,7 +334,7 @@
 		<div id="Dates">April 8 - 10</div>
 		<div id="RegisterButtonCont">
 			<RegisterButton>
-				register
+				register now
 			</RegisterButton>
 		</div>
 	</div>
@@ -300,7 +342,14 @@
 		<div class="header">
 			What is HackKU?
 		</div>
-		no <Heart></Heart>
+		<div class="paragraph" id="about" style="width: 50%">
+			HackKU is a hackathon it is a thing where you write code and do something it is a hackathon where you do things it is 36 hours"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.is et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+		</div>
+		<div id="RegisterButtonCont">
+			<RegisterButton>
+				register now
+			</RegisterButton>
+		</div>
 	</div>
 	<div class="section" id="schedule">
 		<div class="header">
@@ -333,15 +382,59 @@
 		<div class="header">
 			Question & Answers
 		</div>
+		<div>
+			<ul style="list-style: none;">
+				<li>
+					<p class="question">What is a hackathon?</p>
+					<p class="answer">A hackathon is an event where you code something</p>
+				</li>
+				<li>
+					<p class="question">Where is KU?</p>
+					<p class="answer">KU is in Lawrence, KS</p>
+				</li>
+				<li>
+					<p class="question">Who is Jerusha?</p>
+					<p class="answer">Jerusha is</p>
+				</li>
+			</ul>
+		</div>
 	</div>
 	<div class="section" id="sponsors">
 		<div class="header">
 			Sponsors
 		</div>
+		<div>
+			<ul class="subheader" style="list-style: none;">
+				<li>Peta Tier</li>
+				<li>Tera Tier</li>
+				<li>Giga Tier</li>
+				<li>Meta Tier</li>
+			</ul>
+		</div>
 	</div>
 	<div class="section" id="contact">
 		<div class="header">
 			Meet the Team
+		</div>
+		<div class="team-members">
+			<a class="link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jerusha-rowden/">
+				Jerusha Rowden
+			</a>
+			<a class="link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/firangizganbarli/">
+				Firangiz Ganbarli
+			</a>
+			<a class="link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/skyler-bosch-37393a159/">
+				Skyler Bosch
+			</a>
+			<a class="link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/zoe-kulphongpatana-b9a9151b6/">
+				Zoe Kulphongpatana
+			</a>
+		</div>
+		<div class="made-with-love">
+			<Heart></Heart>
+			<div class="caption">
+				made with love by the HackKU team
+			</div>
 		</div>
 	</div>
 </main>
