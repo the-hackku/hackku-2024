@@ -40,9 +40,7 @@
 </style>
 
 <div class="cont">
-    <div class="backdrop">
-
-    </div>
+    <div class="backdrop"></div>
     <div class="text">
         <slot></slot>
     </div>
