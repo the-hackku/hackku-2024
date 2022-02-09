@@ -14,12 +14,13 @@
 		{ display: "sponsors", href: "sponsors"},
 		{ display: "contact us", href: "contact"}
 	]
-	const scrollToID = (id) => {
-		window.scrollTo({
-			top: document.getElementById(id).offsetTop - 60,
-			behavior: 'smooth'
-		})
-	}
+
+	$(function () {
+        $('nav li a').filter(function () {
+            return this.href === location.href;
+        }).addClass('active');
+    });
+
 	let hamburgerExpanded = false
 
 	let innerHeight
@@ -98,7 +99,7 @@
 		min-height: 100vh;
 		background-color: #f2f2dd;
 		position: relative;
-		padding: 30px;
+		padding: 64px;
 		overflow:hidden;
 	}
 
@@ -306,7 +307,12 @@
   	display: flex;
 		justify-content: space-between;
 		padding: 10em;
+		width: 15%;
 		text-align: center;
+	}
+
+	.portraits {
+		width: 100%;
 	}
 
 	.made-with-love {
@@ -387,7 +393,8 @@
 		<div class="header">
 			What is HackKU?
 		</div>
-		<div class="paragraph" id="about" style="width: 50%">
+		<br>
+		<div class="paragraph" id="about" style="width: 40%">
 			HackKU is an annual 36-hour hackathon hosted by the University of Kansas, where students can have the opportunity to innovate new ideas, discover different paths, and push the boundaries of technology. Work with teams of up to four people to create unique solutions to real-world problems. Projects can range from web applications and video games to drones and fitness devices.
 		</div>
 		<div id="RegisterButtonCont">
@@ -400,6 +407,7 @@
 		<div class="header">
 			Schedule
 		</div>
+		<br>
 		<div id="scheduleCont">
 			<div id="schedule">
 				<div id="schedule-tab-bar">
@@ -421,6 +429,15 @@
 			<div id="stickyNote">
 				<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 396 396"><defs><style>.stickySVG1{fill:none;stroke:#e8000d;stroke-miterlimit:10;stroke-width:4.21px;}.stickySVG2{fill:#e8000d;}</style></defs><path class="stickySVG1" d="M286,361H53a18,18,0,0,1-18-18V53A18,18,0,0,1,53,35H343a18,18,0,0,1,18,18V286Z"/><path class="stickySVG2" d="M304,286h57l-75,75V304A18,18,0,0,1,304,286Z"/></svg>
 			</div>
+		</div>
+		<div>
+			<table>
+				<tr><th>Housekeeping</th></tr>
+				<tr>
+					<td>1/15 registration opens</td>
+					<td>2/14 registration closes</td>
+				</tr>
+			</table>
 		</div>
 	</div>
 	<div class="section" id="faq">
@@ -492,21 +509,25 @@
 		</div>
 		<div class="team-members">
 			<a class="link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jerusha-rowden/">
+				<img src="2022-15.png" alt="Jerusha Rowden" class="portraits"/>
 				Jerusha Rowden
 				<br>
 				Chair
 			</a>
 			<a class="link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/firangizganbarli/">
+				<img src="2022-15.png" alt="Firangiz Ganbarli" class="portraits"/>
 				Firangiz Ganbarli
 				<br>
 				Chair
 			</a>
 			<a class="link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/skyler-bosch-37393a159/">
+				<img src="2022-15.png" alt="Skyler Bosch" class="portraits"/>
 				Skyler Bosch
 				<br>
 				Chair
 			</a>
 			<a class="link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/zoe-kulphongpatana-b9a9151b6/">
+				<img src="2022-15.png" alt="Zoe Kulphongpatana" class="portraits"/>
 				Zoe Kulphongpatana
 				<br>
 				Chair
