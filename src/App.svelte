@@ -12,9 +12,15 @@
 		{ display: "schedule", href: "schedule"},
 		{ display: "faq", href: "faq"},
 		{ display: "sponsors", href: "sponsors"},
-		{ display: "contact us", href: "contact"}
+		{ display: "contact us", href: "contact"},
+		{ display: "register now!", href: "register now!"}
 	]
-
+	const scrollToID = (id) => {
+		window.scrollTo({
+			top: document.getElementById(id).offsetTop - 60,
+			behavior: 'smooth'
+		})
+	}
 	let hamburgerExpanded = false
 
 	let innerHeight
@@ -109,7 +115,7 @@
 	}
 
 	.subheader {
-		font-size: 1em;
+		font-size: 1.2em;
 		color: #e8000d;
 		font-weight: 400;
 		text-align: center;
@@ -242,10 +248,10 @@
 	}
 
 	.laptop-mascot {
-		width: 65%;
+		width: 60%;
 		position: absolute;
 		top: 0%;
-		left: 40%;
+		left: 45%;
 	}
 
 	#scheduleCont {
@@ -323,22 +329,24 @@
 	.qanda {
 		display: flex;
 		align-items: stretch;
-		justify-content: left;
+		justify-content: space-around;
 		flex-wrap: wrap;
-		padding-right: 100px;
+		padding-right: 0;
 		padding-left: 0;
 	}
 
 	.team-members {
   	display: flex;
-		justify-content: space-between;
-		padding: 10em;
-		width: 15%;
 		text-align: center;
 	}
 
+	.individual-members {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
 	.portraits {
-		width: 100%;
+		width: 200px;
 	}
 
 	.made-with-love {
@@ -417,9 +425,9 @@
 				<img id="mascot-filled" src="mascot-filled.png" alt="mascot">
 			</div>
 		</div>
-		<div id="RegisterButtonCont">
+		<div id="RegisterButtonCont" on:click={() => scrollToID("about")}>
 			<RegisterButton>
-				register now
+				learn more
 			</RegisterButton>
 		</div>
 	</div>
@@ -428,7 +436,7 @@
 			What is HackKU?
 		</div>
 		<br>
-		<div class="paragraph" id="about" style="width: 40%">
+		<div class="paragraph" id="about" style="width: 45%">
 			HackKU is an annual 36-hour hackathon hosted by the University of Kansas, where students can have the opportunity to innovate new ideas, discover different paths, and push the boundaries of technology. Work with teams of up to four people to create unique solutions to real-world problems. Projects can range from web applications and video games to drones and fitness devices.
 		</div>
 		<div id="RegisterButtonCont">
@@ -494,23 +502,23 @@
 		</div>
 		<div>
 			<ul style="list-style: none" class="qanda">
-				<li style="width: 40%">
+				<li style="width: 35%">
 					<p class="question">What is HackKU?</p>
 					<p class="answer">The annual 36-hour hackathon hosted by students at the University of Kansas.</p>
 				</li>
-				<li style="width: 40%; margin-left: 100px">
+				<li style="width: 35%">
 					<p class="question">When is HackKU?</p>
 					<p class="answer">HackKU will run from 5:00 pm April 8 until 12:00 pm April 10 in the Engineering Complex at the University of Kansas.</p>
 				</li>
-				<li style="width: 40%">
+				<li style="width: 35%">
 					<p class="question">What is the cost?</p>
 					<p class="answer">Nothing! It’s free to participate. Meals, drinks, and snacks are provided.</p>
 				</li>
-				<li style="width: 40%; margin-left: 100px">
+				<li style="width: 35%">
 					<p class="question">Is coding experience required?</p>
 					<p class="answer">No! All students who want to learn about coding, technology, design, and building new things are welcome. If you’re a beginner, this is the perfect opportunity to learn something new!</p>
 				</li>
-				<li style="width: 40%">
+				<li style="width: 35%">
 					<p class="question">What should I bring?</p>
 					<p class="answer">
 						<b>Hardware:</b> Bring your hacking device and any accessories it requires.<br>
@@ -519,19 +527,18 @@
 						<b>Photo ID:</b> You must bring a photo ID with you to check in, and the name on the ID must match the name entered during registration.<br>
 					</p>
 				</li>
-				<li style="width: 40%; margin-left: 100px">
+				<li style="width: 35%">
 					<p class="question">Are meals provided?</p>
 					<p class="answer">Yes. You will be able to access food with a badge and ticket given during registration.</p>
-				</li>
-				<li style="width: 40%">
+					<br>
 					<p class="question">What is the wifi?</p>
 					<p class="answer">You will be able to log in to KU GUEST.</p>
 				</li>
-				<li style="width: 40%; margin-left: 100px">
+				<li style="width: 35%">
 					<p class="question">I’m stuck. How do I get help?</p>
 					<p class="answer">There will be a lot of different ways to get help. We will have mentors, both students, and engineers from industry, in the #mentoring channel on Discord.</p>
 				</li>
-				<li style="width: 40%">
+				<li style="width: 35%">
 					<p class="question">What if I need to contact the organizers?</p>
 					<p class="answer">TBD</p>
 				</li>
@@ -555,34 +562,40 @@
 		<div class="header">
 			Meet the Team
 		</div>
+		<br>
+		<br>
+		<br>
 		<div class="team-members">
-			<a class="link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jerusha-rowden/">
+			<a class="link individual-members" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jerusha-rowden/">
 				<img src="2022-15.png" alt="Jerusha Rowden" class="portraits"/>
 				Jerusha Rowden
 				<br>
 				Chair
 			</a>
-			<a class="link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/firangizganbarli/">
+			<a class="link individual-members" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/firangizganbarli/">
 				<img src="2022-15.png" alt="Firangiz Ganbarli" class="portraits"/>
 				Firangiz Ganbarli
 				<br>
 				Chair
 			</a>
-			<a class="link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/skyler-bosch-37393a159/">
+			<a class="link individual-members" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/skyler-bosch-37393a159/">
 				<img src="2022-15.png" alt="Skyler Bosch" class="portraits"/>
 				Skyler Bosch
 				<br>
 				Chair
 			</a>
-			<a class="link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/zoe-kulphongpatana-b9a9151b6/">
+			<a class="link individual-members" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/zoe-kulphongpatana-b9a9151b6/">
 				<img src="2022-15.png" alt="Zoe Kulphongpatana" class="portraits"/>
 				Zoe Kulphongpatana
 				<br>
 				Chair
 			</a>
 		</div>
+		<br>
+		<br>
+		<br>
 		<div class="made-with-love">
-			<Heart></Heart>
+			<div style="justify-content: center"><Heart></Heart></div>
 			<div class="caption">
 				made with love by the HackKU team
 			</div>
