@@ -13,7 +13,7 @@
 		{ display: "faq", href: "faq"},
 		{ display: "sponsors", href: "sponsors"},
 		{ display: "contact us", href: "contact"},
-		{ display: "register now!", href: "Register.svelte"}
+		{ display: "register now!", href: "https://forms.gle/KwRNWYcxXyqf3EdZ7"}
 	]
 	const scrollToID = (id) => {
 		window.scrollTo({
@@ -33,58 +33,23 @@
 	let schedule = {
 		friday: [
 			{
-				time: "5:00",
-				event: "Opening Ceremonies",
-				location: "Eaton 2"
-			},
-			{
-				time: "5:00",
-				event: "Opening Ceremonies",
-				location: "Eaton 2"
-			},
-			{
-				time: "5:00",
-				event: "Opening Ceremonies",
-				location: "Eaton 2"
-			},
-			{
-				time: "5:00",
-				event: "Opening Ceremonies",
-				location: "Eaton 2"
+				time: "TBD",
+				event: "Coming soon!",
+				location: "TBD"
 			}
 		],
 		saturday: [
 			{
-				time: "5:00",
-				event: "Opening Ceremonies",
-				location: "Eaton 2"
-			},
-			{
-				time: "5:00",
-				event: "Opening Ceremonies",
-				location: "Eaton 2"
-			},
-			{
-				time: "5:00",
-				event: "Opening Ceremonies",
-				location: "Eaton 2"
+				time: "TBD",
+				event: "Coming soon!",
+				location: "TBD"
 			}
 		],
 		sunday: [
 			{
-				time: "5:00",
-				event: "Closing Ceremonies",
-				location: "Eaton 3"
-			},
-			{
-				time: "5:00",
-				event: "Closing Ceremonies",
-				location: "Eaton 3"
-			},
-			{
-				time: "5:00",
-				event: "Closing Ceremonies",
-				location: "Eaton 3"
+				time: "TBD",
+				event: "Coming soon!",
+				location: "TBD"
 			}
 		]
 	}
@@ -315,25 +280,56 @@
 		margin-left: 100px;
 	}
 
-	.question {
+	.qanda-container {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		width: 50%;
+		justify-content: space-around;
+		margin-left: 25%;
+	}
+
+	.accordion {
+		background-color: #f2f2dd;
+		font-family: 'Merriweather', 'serif';
+		color: #0051ba;
+		cursor: pointer;
+		padding: 18px;
+		text-align: left;
+		border: none;
+		outline: none;
+		transition: 0.4s;
 		font-size: 1em;
 		color: #0051ba;
 		font-weight: 600;
 	}
 
-	.answer {
+	/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+	.active, .accordion:hover {
+		background-color: #ccc;
+	}
+
+	/* Style the accordion panel. Note: hidden by default */
+	.panel {
+		padding: 0 18px;
+		background-color: #f2f2dd;
+		display: none;
+		overflow: hidden;
 		font-size: 1em;
 		color: #e8000d;
 		font-weight: 400;
 	}
 
-	.qanda {
-		display: flex;
-		align-items: stretch;
-		justify-content: space-around;
-		flex-wrap: wrap;
-		padding-right: 0;
-		padding-left: 0;
+	.accordion:after {
+		content: '\02795'; /* Unicode character for "plus" sign (+) */
+		font-size: 13px;
+		color: #0051ba;
+		float: right;
+		margin-left: 5px;
+	}
+
+	.active:after {
+		content: "\2796"; /* Unicode character for "minus" sign (-) */
 	}
 
 	.sponsors {
@@ -365,6 +361,10 @@
 		justify-content: center;
 	}
 
+	.heart {
+		width: 5%;
+	}
+
 	@keyframes backgroundScroll {
 		from {
 			background-position-x: 0%;
@@ -389,7 +389,7 @@
 				<div class="linkCont" transition:fly>
 					{#each links as link}
 						{#if link.display == "register now!"}
-							<a href="Register.svelte" style="text-decoration: none">
+							<a href="https://forms.gle/KwRNWYcxXyqf3EdZ7" style="text-decoration: none">
 								<div class="link" style="color: #0051ba" on:click={() => scrollToID(link.href)}>{link.display}</div>
 							</a>
 						{:else}
@@ -457,7 +457,7 @@
 			HackKU is an annual 36-hour hackathon hosted by the University of Kansas, where students can have the opportunity to innovate new ideas, discover different paths, and push the boundaries of technology. Work with teams of up to four people to create unique solutions to real-world problems. Projects can range from web applications and video games to drones and fitness devices.
 			<br>
 			<br>
-			<a href="Register.svelte">
+			<a href="https://forms.gle/KwRNWYcxXyqf3EdZ7">
 				<div id="RegisterButtonCont">
 					<RegisterButton>register now</RegisterButton>
 				</div>
@@ -496,8 +496,9 @@
 			<div>
 				<table class="housekeeping">
 					<tr class="header" style="color: #0051ba"><th>Housekeeping</th></tr>
-					<tr><td>1/15 registration opens</td></tr>
-					<tr><td>2/14 registration closes</td></tr>
+					<tr><td>2/16 registration opens</td></tr>
+					<tr><td>3/16 early registration closes</td></tr>
+					<tr><td>4/6 late registration closes</td></tr>
 					<tr><td style="line-height:27px;" colspan=3>&nbsp;</td></tr>
 					<tr><td style="line-height:27px;" colspan=3>&nbsp;</td></tr>
 					<tr><td style="line-height:27px;" colspan=3>&nbsp;</td></tr>
@@ -519,49 +520,67 @@
 		<div class="header">
 			Question & Answers
 		</div>
-		<div>
-			<ul style="list-style: none" class="qanda">
-				<li style="width: 35%">
-					<p class="question">What is HackKU?</p>
-					<p class="answer">The annual 36-hour hackathon hosted by students at the University of Kansas.</p>
-				</li>
-				<li style="width: 35%">
-					<p class="question">When is HackKU?</p>
-					<p class="answer">HackKU will run from 5:00 pm April 8 until 12:00 pm April 10 in the Engineering Complex at the University of Kansas.</p>
-				</li>
-				<li style="width: 35%">
-					<p class="question">What is the cost?</p>
-					<p class="answer">Nothing! It’s free to participate. Meals, drinks, and snacks are provided.</p>
-				</li>
-				<li style="width: 35%">
-					<p class="question">Is coding experience required?</p>
-					<p class="answer">No! All students who want to learn about coding, technology, design, and building new things are welcome. If you’re a beginner, this is the perfect opportunity to learn something new!</p>
-				</li>
-				<li style="width: 35%">
-					<p class="question">What should I bring?</p>
-					<p class="answer">
-						<b>Hardware:</b> Bring your hacking device and any accessories it requires.<br>
-						<b>Sleeping:</b> Feel free to bring a sleeping bag, pillows, and/or blankets.<br>
-						<b>Personal Hygiene:</b> Showers will be provided. Bring a bath towel and personal hygiene products.<br>
-						<b>Photo ID:</b> You must bring a photo ID with you to check in, and the name on the ID must match the name entered during registration.<br>
-					</p>
-				</li>
-				<li style="width: 35%">
-					<p class="question">Are meals provided?</p>
-					<p class="answer">Yes. You will be able to access food with a badge and ticket given during registration.</p>
-					<br>
-					<p class="question">What is the wifi?</p>
-					<p class="answer">You will be able to log in to KU GUEST.</p>
-				</li>
-				<li style="width: 35%">
-					<p class="question">I’m stuck. How do I get help?</p>
-					<p class="answer">There will be a lot of different ways to get help. We will have mentors, both students, and engineers from industry, in the #mentoring channel on Discord.</p>
-				</li>
-				<li style="width: 35%">
-					<p class="question">What if I need to contact the organizers?</p>
-					<p class="answer">TBD</p>
-				</li>
-			</ul>
+		<br>
+		<div class="qanda-container">
+			<button class="accordion">What is HackKU?</button>
+			<div class="panel">
+				<p>The annual 36-hour hackathon hosted by students at the University of Kansas.</p>
+			</div>
+			<button class="accordion">When is HackKU?</button>
+			<div class="panel">
+				<p>HackKU will run from 5:00 pm April 8 until 12:00 pm April 10 in the Engineering Complex at the University of Kansas.</p>
+			</div>
+			<button class="accordion">What is the cost?</button>
+			<div class="panel">
+				<p>Nothing! It’s free to participate. Meals, drinks, and snacks are provided.</p>
+			</div>
+			<button class="accordion">Is coding experience required?</button>
+			<div class="panel">
+				<p>No! All students who want to learn about coding, technology, design, and building new things are welcome. If you’re a beginner, this is the perfect opportunity to learn something new!</p>
+			</div>
+			<button class="accordion">What should I bring?</button>
+			<div class="panel">
+				<p>
+					<b>Hardware:</b> Bring your hacking device and any accessories it requires.<br>
+					<b>Sleeping:</b> Feel free to bring a sleeping bag, pillows, and/or blankets.<br>
+					<b>Personal Hygiene:</b> Showers will be provided. Bring a bath towel and personal hygiene products.<br>
+					<b>Photo ID:</b> You must bring a photo ID with you to check in, and the name on the ID must match the name entered during registration.<br>
+				</p>
+			</div>
+			<button class="accordion">Are meals provided?</button>
+			<div class="panel">
+				<p>Yes. You will be able to access food with a badge and ticket given during registration.</p>
+			</div>
+			<button class="accordion">What is the wifi?</button>
+			<div class="panel">
+				<p>You will be able to log in to KU GUEST.</p>
+			</div>
+			<button class="accordion">I’m stuck. How do I get help?</button>
+			<div class="panel">
+				<p>There will be a lot of different ways to get help. We will have mentors, both students, and engineers from industry, in the #mentoring channel on Discord</p>
+			</div>
+			<button class="accordion">What if I need to contact the organizers?</button>
+			<div class="panel">
+				<p>Message us in the #ask-the-organizers channel! There will always be a couple of organizers online that will be able to answer questions. For urgent event-related problems, please go to LEEP2 1415A, or reach out to any HackKU organizer. </p>
+			</div>
+
+			<script>
+				var acc = document.getElementsByClassName("accordion");
+				var i;
+				
+				for (i = 0; i < acc.length; i++) {
+					acc[i].addEventListener("click", function() {
+						this.classList.toggle("active");
+						var panel = this.nextElementSibling;
+						if (panel.style.display === "block") {
+							panel.style.display = "none";
+						} else {
+							panel.style.display = "block";
+						}
+					});
+				}
+				</script>
+
 		</div>
 	</div>
 	<div class="section" id="sponsors">
@@ -574,7 +593,7 @@
 					<br>
 					<div class="sponsors">
 						<div class="sponsor-image">
-							<img id="sponsor logo" src="bnb-logo.svg" alt="sponsor logo">
+							<p class="paragraph">Coming soon!</p>
 						</div>
 					</div>
 				</li>
@@ -584,7 +603,7 @@
 					<br>
 					<div class="sponsors">
 						<div class="sponsor-image">
-							<img id="sponsor logo" src="bnb-logo.svg" alt="sponsor logo">
+							<p class="paragraph">Coming soon!</p>
 						</div>
 					</div>
 				</li>
@@ -594,10 +613,7 @@
 					<br>
 					<div class="sponsors">
 						<div class="sponsor-image">
-							<img id="sponsor logo" src="bnb-logo.svg" alt="sponsor logo">
-						</div>
-						<div class="sponsor-image">
-							<img id="sponsor logo" src="bnb-logo.svg" alt="sponsor logo">
+							<p class="paragraph">Coming soon!</p>
 						</div>
 					</div>
 				</li>
@@ -607,13 +623,7 @@
 					<br>
 					<div class="sponsors">
 						<div class="sponsor-image">
-							<img id="sponsor logo" src="bnb-logo.svg" alt="sponsor logo">
-						</div>
-						<div class="sponsor-image">
-							<img id="sponsor logo" src="bnb-logo.svg" alt="sponsor logo">
-						</div>
-						<div class="sponsor-image">
-							<img id="sponsor logo" src="bnb-logo.svg" alt="sponsor logo">
+							<p class="paragraph">Coming soon!</p>
 						</div>
 					</div>
 				</li>
@@ -630,28 +640,28 @@
 		<br>
 		<div class="team-members">
 			<a class="link individual-members" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/firangizganbarli/">
-				<img src="2022-15.png" alt="Firangiz Ganbarli" class="portraits"/>
+				<img src="Untitled_Artwork.png" alt="Firangiz Ganbarli" class="portraits"/>
 				Firangiz Ganbarli
 				<br>
-				Chair
+				Head Chair
 			</a>
 			<a class="link individual-members" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jerusha-rowden/">
-				<img src="2022-15.png" alt="Jerusha Rowden" class="portraits"/>
+				<img src="Untitled_Artwork (3).png" alt="Jerusha Rowden" class="portraits"/>
 				Jerusha Rowden
 				<br>
-				Chair
+				Vice Chair
 			</a>
 			<a class="link individual-members" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/skyler-bosch-37393a159/">
-				<img src="2022-15.png" alt="Skyler Bosch" class="portraits"/>
+				<img src="Untitled_Artwork (1).png" alt="Skyler Bosch" class="portraits"/>
 				Skyler Bosch
 				<br>
-				Chair
+				Sponsorship Chair
 			</a>
 			<a class="link individual-members" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/zoe-kulphongpatana-b9a9151b6/">
-				<img src="2022-15.png" alt="Zoe Kulphongpatana" class="portraits"/>
+				<img src="Untitled_Artwork (2).png" alt="Zoe Kulphongpatana" class="portraits"/>
 				Zoe Kulphongpatana
 				<br>
-				Chair
+				Website Chair
 			</a>
 		</div>
 		<br>
@@ -659,7 +669,8 @@
 		<br>
 		<br>
 		<div class="made-with-love">
-			<Heart></Heart>
+			<img src="2022-13.png" class="heart" alt="heart"/>
+			<!---<Heart></Heart>--->
 			<div class="caption">
 				made with love by the HackKU team
 			</div>
