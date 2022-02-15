@@ -37,9 +37,7 @@ jobs:
     
     steps:
       - uses: actions-x/commit@v4
-        with:
+      - with:
           branch: public
-          
-      - name: Commit to public
       
       
