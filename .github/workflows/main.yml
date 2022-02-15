@@ -36,8 +36,9 @@ jobs:
     needs: build
     
     steps:
-      - uses: actions-x/commit@v4
-      - with:
+      - name: push to public
+        uses: actions-x/commit@v4
+        with:
           branch: public
       
       
