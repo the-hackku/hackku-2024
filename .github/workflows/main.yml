@@ -30,10 +30,11 @@ jobs:
         run: |
           npm install
           npm run build
-          for target in $(ls . | grep -v '.git'); do rm -r $target; done;
+          for target in $(ls . | grep -v 'public'); do rm -r $target; done;
           
       - uses: actions-x/commit@v4
         with: 
           branch: public
+          force: 1
       
       
