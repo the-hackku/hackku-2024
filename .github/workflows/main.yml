@@ -30,3 +30,16 @@ jobs:
         run: |
           npm install
           npm run build
+    
+  commitBuild:
+    runs-on: ubuntu-latest
+    needs: build
+    
+    steps:
+      - uses: action-x/commit@v4
+        with:
+          branch: public
+          
+      - name: Commit to public
+      
+      
