@@ -36,7 +36,7 @@ jobs:
     needs: build
     
     steps:
-      - uses: action-x/commit@v4
+      - uses: actions-x/commit@v4
         with:
           branch: public
           
