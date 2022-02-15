@@ -38,7 +38,5 @@ jobs:
     steps:
       - name: push to public
         uses: actions-x/commit@v4
-        with:
-          branch: public
       
       
