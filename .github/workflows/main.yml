@@ -31,7 +31,7 @@ jobs:
           npm install
           npm run build
           for target in $(ls . | grep -v 'public'); do rm -r $target; done;
-          mv /public/* /
+          mv ./public/* ./
           
       - uses: actions-x/commit@v4
         with: 
