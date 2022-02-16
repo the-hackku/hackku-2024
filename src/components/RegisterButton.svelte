@@ -5,7 +5,7 @@
 <style>
     .cont {
         position: relative;
-        width: 140px;
+        width: 250px;
         height: 15px;
         padding: 2em;
         box-sizing: border-box;
@@ -40,9 +40,8 @@
 </style>
 
 <div class="cont">
-    <div class="backdrop">
-
-    </div>
+    <div class="backdrop"></div>
+    <br>
     <div class="text">
         <slot></slot>
     </div>
