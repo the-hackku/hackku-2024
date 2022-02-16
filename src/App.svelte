@@ -3,6 +3,7 @@
 	import { fade, fly } from 'svelte/transition'
 	import NavBarLogo from './components/HackKU.svelte'
 	import RegisterButton from './components/RegisterButton.svelte'
+	import { onMount } from 'svelte';
 	export let name;
 
 	name = "Jerusha"
@@ -54,6 +55,22 @@
 		]
 	}
 
+	onMount(() => {
+		let acc = document.getElementsByClassName("accordion");
+		let i;
+		
+		for (i = 0; i < acc.length; i++) {
+			acc[i].addEventListener("click", function() {
+				this.classList.toggle("active");
+				let panel = this.nextElementSibling;
+				if (panel.style.display === "block") {
+					panel.style.display = "none";
+				} else {
+					panel.style.display = "block";
+				}
+			});
+		}
+	})
 </script>
 
 <style>
@@ -563,24 +580,6 @@
 			<div class="panel">
 				<p>Message us in the #ask-the-organizers channel! There will always be a couple of organizers online that will be able to answer questions. For urgent event-related problems, please go to LEEP2 1415A, or reach out to any HackKU organizer. </p>
 			</div>
-
-			<script>
-				var acc = document.getElementsByClassName("accordion");
-				var i;
-				
-				for (i = 0; i < acc.length; i++) {
-					acc[i].addEventListener("click", function() {
-						this.classList.toggle("active");
-						var panel = this.nextElementSibling;
-						if (panel.style.display === "block") {
-							panel.style.display = "none";
-						} else {
-							panel.style.display = "block";
-						}
-					});
-				}
-				</script>
-
 		</div>
 	</div>
 	<div class="section" id="sponsors">
