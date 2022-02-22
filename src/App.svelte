@@ -619,7 +619,7 @@
 				</li>
 				<br>
 				<br>
-				<li class="subheader">Meta Tier
+				<li class="subheader">Mega Tier
 					<br>
 					<div class="sponsors">
 						<div class="sponsor-image">
