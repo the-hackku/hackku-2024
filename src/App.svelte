@@ -573,7 +573,7 @@
 					<br>
 					<div class="sponsors">
 						<div class="sponsor-image">
-							<p class="paragraph">Coming soon!</p>
+							<p class="paragraph">Coming Soon!</p>
 						</div>
 					</div>
 				</li>
