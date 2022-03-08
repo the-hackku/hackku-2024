@@ -459,7 +459,7 @@
 			<div class="flex flex-col flex-grow">
 				<div class="flex">
 					{#each Object.keys(schedule) as day}
-						<div class="border-[3px] border-b-0 border-[#e8000d] rounded-t-lg py-2 px-4 cursor-pointer"  style="color: #e8000d" class:selected={selectedDay == day} on:click={() => selectedDay = day}>{day}</div>
+						<div class="border-[3px] border-b-0 border-[#e8000d] rounded-t-lg py-2 px-4 cursor-pointer" class:selected={selectedDay == day} on:click={() => selectedDay = day}>{day}</div>
 					{/each}
 				</div>
 				<div class="border-[3px] border-[#e8000d] rounded-lg rounded-tl-none p-4 blue grid grid-cols-[100px_2fr_1fr] grid-rows-[repeat(10,40px)] max-w-[600px] flex-grow">
@@ -591,6 +591,8 @@
 						</div>
 					</div>
 				</li>
+				<br>
+				<br>
 				<li class="subheader">In-Kind Tier
 					<br>
 					<div class="sponsors">
