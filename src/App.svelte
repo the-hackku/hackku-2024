@@ -459,7 +459,7 @@
 			<div class="flex flex-col flex-grow">
 				<div class="flex">
 					{#each Object.keys(schedule) as day}
-						<div class="border-[3px] border-b-0 border-[#e8000d] rounded-t-lg py-2 px-4 cursor-pointer" class:selected={selectedDay == day} on:click={() => selectedDay = day}>{day}</div>
+						<div class="border-[3px] border-b-0 border-[#e8000d] rounded-t-lg py-2 px-4 cursor-pointer"  style="color: #e8000d" class:selected={selectedDay == day} on:click={() => selectedDay = day}>{day}</div>
 					{/each}
 				</div>
 				<div class="border-[3px] border-[#e8000d] rounded-lg rounded-tl-none p-4 blue grid grid-cols-[100px_2fr_1fr] grid-rows-[repeat(10,40px)] max-w-[600px] flex-grow">
@@ -478,15 +478,15 @@
 			</div>
 			<div class="flex flex-col w-[500px] sm:text-base">
 				<div class="border-[4px] rounded-t p-2 min-h-[20px] border-b-0 border-[#e80008] header blue">Housekeeping</div>
-				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]">2/16 registration opens</div>
-				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]">3/16 early registration closes</div>
-				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]">4/6 late registration closes</div>
-				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]"></div>
-				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]"></div>
-				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]"></div>
-				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]"></div>
-				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]"></div>
-				<div class="border-[4px] rounded-b p-2 min-h-[40px] border-[#e80008]"></div>
+				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]" style="color:#0051ba">2/16 registration opens</div>
+				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]" style="color:#0051ba">3/16 early registration closes</div>
+				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]" style="color:#0051ba">4/6 late registration closes</div>
+				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]" style="color:#0051ba">4/7 Google-sponsored workshop</div>
+				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]" style="color:#0051ba"></div>
+				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]" style="color:#0051ba"></div>
+				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]" style="color:#0051ba"></div>
+				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]" style="color:#0051ba"></div>
+				<div class="border-[4px] rounded-b p-2 min-h-[40px] border-[#e80008]" style="color:#0051ba"></div>
 			</div>
 		</div>
 	</div>
@@ -532,6 +532,10 @@
 			<button class="accordion">What is the wifi?</button>
 			<div class="panel">
 				<p>You will be able to log in to KU GUEST.</p>
+			</div>
+			<button class="accordion">How will COVID-19 impact HackKU?</button>
+			<div class="panel">
+				<p>HackKU will be held entirely in-person this year. At this time, we will be requiring all participants to wear a mask except while eating or drinking.</p>
 			</div>
 			<button class="accordion">I’m stuck. How do I get help?</button>
 			<div class="panel">
@@ -580,6 +584,14 @@
 				<br>
 				<br>
 				<li class="subheader">Mega Tier
+					<br>
+					<div class="sponsors">
+						<div class="sponsor-image">
+							<p class="paragraph">Coming Soon!</p>
+						</div>
+					</div>
+				</li>
+				<li class="subheader">In-Kind Tier
 					<br>
 					<div class="sponsors">
 						<div class="sponsor-image">
