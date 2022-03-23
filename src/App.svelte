@@ -55,7 +55,12 @@
 	let selectedDay = "friday"
 	let schedule = {
 		friday: [
-			{
+		{
+			time: "5:00 PM",
+			event: "Check-in",
+			location: "LEEP2 Atrium"
+		},
+		{
 				time: "7:00 PM",
 				event: "Opening Ceremonies",
 				location: "Eaton 2"
@@ -77,12 +82,12 @@
 			{
 				time: "8:00 AM",
 				event: "Submission Deadline",
-				location: "TBD"
+				location: "Online"
 			},
 			{
 				time: "11:00 AM",
 				event: "Closing Ceremonies",
-				location: "TBD"
+				location: "Eaton 2"
 			}
 		]
 	}
@@ -313,13 +318,19 @@
 	}
 
 	.sponsors {
+		max-width: 70vw;
+		margin: auto;
 		display: flex;
 		justify-content: space-around;
+		flex-direction: row;
+		align-items: center;
 		flex-wrap: wrap;
+		gap: 5%;
 	}
 
 	.sponsor-image {
-		width: 300px;
+		width: 250px;
+		margin-top: 4%;
 	}
 
 	.individual-members {
@@ -488,9 +499,11 @@
 			</div>
 			<div class="flex flex-col w-[500px] sm:text-base flex-grow">
 				<div class="border-[4px] rounded-t p-2 min-h-[20px] border-b-0 border-[#e80008] header blue">Housekeeping</div>
-				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]" style="color:#0051ba">2/16 registration opens</div>
-				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]" style="color:#0051ba">4/6 registration closes</div>
+				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]" style="color:#0051ba">4/6 Registration closes</div>
 				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]" style="color:#0051ba">4/7 Google-sponsored workshop</div>
+				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]" style="color:#0051ba">4/8 Hacking commences</div>
+				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]" style="color:#0051ba">4/10 Hacking concludes</div>
+				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]" style="color:#0051ba"></div>
 				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]" style="color:#0051ba"></div>
 				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]" style="color:#0051ba"></div>
 				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]" style="color:#0051ba"></div>
@@ -565,53 +578,104 @@
 		<div class="header">
 			Sponsors
 		</div>
+		<br>
+		<br>
+		<br>
 		<div>
 			<ul style="list-style: none;">
 				<li class="subheader">Peta Tier
 					<br>
 					<div class="sponsors">
 						<div class="sponsor-image">
-							<p class="paragraph">Coming Soon!</p>
+							<img id="logo" src="Microsoft.png" alt="Microsoft logo">
+						</div>
+						<div class="sponsor-image" style="width: 200px">
+							<img id="logo" src="NIC.png" alt="NIC logo">
 						</div>
 					</div>
 				</li>
+				<br>
+				<br>
 				<br>
 				<br>
 				<li class="subheader">Tera Tier
 					<br>
 					<div class="sponsors">
 						<div class="sponsor-image">
-							<p class="paragraph">Coming Soon!</p>
+							<img id="logo" src="Air Power.png" alt="Air Power logo">
+						</div>
+						<div class="sponsor-image">
+							<img id="logo" src="Ripple.png" alt="Ripple logo">
+						</div>
+						<div class="sponsor-image">
+							<img id="logo" src="Security Benefit.png" alt="Security Benefit logo">
+						</div>
+						<div class="sponsor-image">
+							<img id="logo" src="Twilio.png" alt="Twilio logo">
+						</div>
+						<div class="sponsor-image">
+							<img id="logo" src="VUHL.png" alt="VUHL logo">
 						</div>
 					</div>
 				</li>
+				<br>
+				<br>
 				<br>
 				<br>
 				<li class="subheader">Giga Tier
-					<br>
 					<div class="sponsors">
 						<div class="sponsor-image">
-							<p class="paragraph">Coming Soon!</p>
+							<img id="logo" src="Alarm.png" alt="Alarm logo">
+						</div>
+						<div class="sponsor-image">
+							<img id="logo" src="BCBSKS.png" alt="BCBSKS logo">
+						</div>
+						<div class="sponsor-image">
+							<img id="logo" src="BNB.png" alt="Brand New Box logo">
+						</div>
+						<div class="sponsor-image">
+							<img id="logo" src="Koch.png" alt="Koch logo">
+						</div>
+						<div class="sponsor-image">
+							<img id="logo" src="SS&C.png" alt="SS&C logo">
+						</div>
+						<div class="sponsor-image">
+							<img id="logo" src="Tradebot.png" alt="Tradebotlogo">
+						</div>
+						<div class="sponsor-image" style="margin-top: 8%">
+							<img id="logo" src="/1517.png" alt="1517 logo">
 						</div>
 					</div>
 				</li>
+				<br>
+				<br>
 				<br>
 				<br>
 				<li class="subheader">Mega Tier
 					<br>
 					<div class="sponsors">
 						<div class="sponsor-image">
-							<p class="paragraph">Coming Soon!</p>
+							<img id="logo" src="HR.png" alt="H&R Block logo">
+						</div>
+						<div class="sponsor-image">
+							<img id="logo" src="NBKC.png" alt="NBKC logo">
 						</div>
 					</div>
 				</li>
 				<br>
 				<br>
+				<br>
+				<br>
 				<li class="subheader">In-Kind Tier
-					<br>
 					<div class="sponsors">
 						<div class="sponsor-image">
-							<p class="paragraph">Coming Soon!</p>
+							<img id="logo" src="Balsamiq.png" alt="Balsamiq logo">
+						</div>
+						<div class="sponsor-image">
+							<img id="logo" src="Echo3D.png" alt="Echo3D logo">
+						</div>
+						<div class="sponsor-image">
+							<img id="logo" src="Google.png" alt="Google logo">
 						</div>
 					</div>
 				</li>
