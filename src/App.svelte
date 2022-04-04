@@ -34,6 +34,7 @@
 		{ display: "schedule", action: () => scrollToID("schedule")},
 		{ display: "faq", action: () => scrollToID("faq")},
 		{ display: "sponsors", action: () => scrollToID("sponsors")},
+		{ display: "prizes", action: () => scrollToID("prizes")},
 		{ display: "contact us", action: () => scrollToID("contact")},
 		{ display: "register now!", action: () => window.open("https://forms.gle/KwRNWYcxXyqf3EdZ7", "_blank")}
 	]
@@ -680,6 +681,56 @@
 					</div>
 				</li>
 			</ul>
+		</div>
+	</div>
+	<div class="section" id="prizes">
+		<div class="header">
+			Prizes
+		</div>
+		<br>
+		<div class="qanda-container">
+			<button class="accordion">General Track Prizes</button>
+			<div class="panel">
+				<p><b>1st place:</b> Oculus Quest 2</p>
+				<br>
+				<p><b>2nd place:</b> Anker Soundcore 2 Bluetooth Speaker</p>
+			</div>
+			<button class="accordion">Secret Track Prizes</button>
+			<div class="panel">
+				<p><b>1st place:</b> Nintendo Switch Lite</p>
+				<br>
+				<p><b>2nd place:</b> Sony ZX110NC Noise Cancelling Headphones</p>
+			</div>
+			<button class="accordion">Blockchain Prize</button>
+			<div class="panel">
+				<p>Amazon Echo 4th Gen</p>
+			</div>
+			<button class="accordion">Trivia Prize</button>
+			<div class="panel">
+				<p>Logitech Mouse</p>
+			</div>
+			<button class="accordion">Hackers' Choice Prize</button>
+			<div class="panel">
+				<p>Portable Laptop Charger</p>
+			</div>
+			<button class="accordion">MLH-sponsored prizes</button>
+			<div class="panel">
+				<p><b>Best Use of Google Cloud:</b> Google Cloud Swag Bag or Backpack</p>
+				<br>
+				<p><b>Best Domain Name from Domain.com:</b> PowerSquare Qi Wireless Phone Charger</p>
+				<br>
+				<p><b>Most Creative Use of Github:</b> Github Octocat Status, Plushy, and Sticker Bundle</p>
+				<br>
+				<p><b>Best Hardware Hack Sponsored by Digi-Key:</b> Grove Beginner Kit</p>
+				<br>
+				<p><b>Most Creative Use of Twilio:</b> Twilio Swag Box and GameGo Console</p>
+				<br>
+				<p><b>Dream Big and Create More Cheers with AB InBev:</b> Anker Wireless Charger Bundle</p>
+				<br>
+				<p><b>Best Use of DeSo:</b> $100 worth of $DESO coin and an exclusive DeSo tumbler</p>
+				<br>
+				<a href="https://hack.mlh.io/prizes" class="link">Read more about MLH prizes here!</a>
+			</div>
 		</div>
 	</div>
 	<div class="section" id="contact" style="min-height: 65vh">
