@@ -58,8 +58,18 @@
 		friday: [
 		{
 			time: "5:00 PM",
-			event: "Check-in",
+			event: "Check-in Begins",
 			location: "LEEP2 Atrium"
+		},
+		{
+			time: "5:00 PM",
+			event: "Sponsor Fair",
+			location: "LEEP2 Atrium"
+		},
+		{
+			time: "6:00 PM",
+			event: "Dinner",
+			location: "Hawaiian Bros*"
 		},
 		{
 				time: "7:00 PM",
@@ -69,21 +79,86 @@
 			{
 				time: "8:00 PM",
 				event: "Hacking begins!",
-				location: "School of Engineering"
+				location: "KU Engineering"
+			},
+			{
+				time: "8:30 PM",
+				event: "Twilio Workshop",
+				location: "LEEP2 G411"
+			},
+			{
+				time: "9:00 PM",
+				event: "Beginners Workshop",
+				location: "LEEP2 G411"
+			},
+			{
+				time: "11:00 PM",
+				event: "Trivia Game",
+				location: "LEEP2 411"
 			}
 		],
 		saturday: [
 			{
-				time: "TBD",
-				event: "Coming soon!",
-				location: "TBD"
+				time: "8:00 AM",
+				event: "Breakfast",
+				location: "Panera Bread*"
+			},
+			{
+				time: "11:00 AM",
+				event: "Alumn Panel Career Talk",
+				location: "LEEP22 G411"
+			},
+			{
+				time: "1:00 PM",
+				event: "Lunch",
+				location: "Chipotle*"
+			},
+			{
+				time: "3:00 PM",
+				event: "Capture the Flag",
+				location: "Engineering Lawn"
+			},
+			{
+				time: "4:00 PM",
+				event: "Ripple Workshop",
+				location: "LEEP2 G411"
+			},
+			{
+				time: "6:00 PM",
+				event: "Dinner",
+				location: "Bigg'sBBQ/Noodles&Co.*"
+			},
+			{
+				time: "7:00 PM",
+				event: "MLH SlideShow Karaoke",
+				location: "Eaton 2"
+			},
+			{
+				time: "10:00 PM",
+				event: "Devpost Workshop",
+				location: "LEEP2 G411"
+			},
+			{
+				time: "12:00 AM",
+				event: "Late Night Karaoke",
+				location: "Leep2 G411"
 			}
 		],
 		sunday: [
 			{
 				time: "8:00 AM",
+				event: "Breakfast",
+				location: "Chris Cakes*"
+			},	
+			{
+				time: "8:00 AM",
 				event: "Submission Deadline",
-				location: "Online"
+				location: "Submit via Devpost"
+			},
+			{
+				time: "9:30 AM",
+				event: "Demo and Expo",
+				location: "LEEP2 2415"
 			},
 			{
 				time: "11:00 AM",
@@ -484,7 +559,7 @@
 						<div class="border-[4px] border-b-0 border-[#e8000d] rounded-t-lg py-2 px-4 cursor-pointer" class:selected={selectedDay == day} on:click={() => selectedDay = day}>{day}</div>
 					{/each}
 				</div>
-				<div class="border-[4px] border-[#e8000d] rounded-lg rounded-tl-none p-4 blue grid grid-cols-[100px_2fr_1fr] grid-rows-[repeat(10,40px)] max-w-[600px] flex-grow">
+				<div class="border-[4px] border-[#e8000d] rounded-lg rounded-tl-none p-4 blue grid grid-cols-[100px_260px_200px] grid-rows-[repeat(10,40px)] max-w-[600px] flex-grow">
 					<i>Time</i>
 					<i>Event</i>
 					<i>Location</i>
@@ -512,6 +587,7 @@
 				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]" style="color:#0051ba"></div>
 				<div class="border-[4px] rounded-b p-2 min-h-[40px] border-[#e80008]" style="color:#0051ba"></div>
 			</div>
+			<p class="paragraph">*Meals will be served at the Burns & McDonnell Student Lounge in LEEP2</p>
 		</div>
 	</div>
 	<div class="section" id="faq">
