@@ -30,7 +30,7 @@
         <defs>
             <style>
                 .cls-1 {
-                    fill:#e8000d;
+                    fill:#F37A63;
                 }
                 .innerHeart {
                     mask: rectangle(0, 0, 0%, 0%)
@@ -44,7 +44,7 @@
             <defs>
                 <style>
                     .innerHeart {
-                        fill:#e8000d;
+                        fill:#F37A63;
                     }
                 </style>
             </defs>
