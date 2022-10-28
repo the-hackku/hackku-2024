@@ -56,115 +56,10 @@
 	let selectedDay = "friday"
 	let schedule = {
 		friday: [
-		{
-			time: "5:00 PM",
-			event: "Check-in Begins",
-			location: "LEEP2 Atrium"
-		},
-		{
-			time: "5:00 PM",
-			event: "Sponsor Fair",
-			location: "LEEP2 Atrium"
-		},
-		{
-			time: "6:00 PM",
-			event: "Dinner",
-			location: "Hawaiian Bros*"
-		},
-		{
-				time: "7:00 PM",
-				event: "Opening Ceremonies",
-				location: "Eaton 2"
-			},
-			{
-				time: "8:00 PM",
-				event: "Hacking begins!",
-				location: "KU Engineering"
-			},
-			{
-				time: "8:30 PM",
-				event: "Twilio Workshop",
-				location: "LEEP2 G411"
-			},
-			{
-				time: "9:00 PM",
-				event: "Beginners Workshop",
-				location: "LEEP2 G411"
-			},
-			{
-				time: "11:00 PM",
-				event: "Trivia Game",
-				location: "LEEP2 411"
-			}
 		],
 		saturday: [
-			{
-				time: "8:00 AM",
-				event: "Breakfast",
-				location: "Panera Bread*"
-			},
-			{
-				time: "11:00 AM",
-				event: "Alumn Panel Career Talk",
-				location: "LEEP22 G411"
-			},
-			{
-				time: "1:00 PM",
-				event: "Lunch",
-				location: "Chipotle*"
-			},
-			{
-				time: "3:00 PM",
-				event: "Capture the Flag",
-				location: "Engineering Lawn"
-			},
-			{
-				time: "4:00 PM",
-				event: "Ripple Workshop",
-				location: "LEEP2 G411"
-			},
-			{
-				time: "6:00 PM",
-				event: "Dinner",
-				location: "Bigg'sBBQ/Noodles&Co.*"
-			},
-			{
-				time: "7:00 PM",
-				event: "MLH SlideShow Karaoke",
-				location: "Eaton 2"
-			},
-			{
-				time: "10:00 PM",
-				event: "Devpost Workshop",
-				location: "LEEP2 G411"
-			},
-			{
-				time: "12:00 AM",
-				event: "Late Night Karaoke",
-				location: "Leep2 G411"
-			}
 		],
 		sunday: [
-			{
-				time: "8:00 AM",
-				event: "Breakfast",
-				location: "Chris Cakes*"
-			},	
-			{
-				time: "8:00 AM",
-				event: "Submission Deadline",
-				location: "Submit via Devpost"
-			},
-			{
-				time: "9:30 AM",
-				event: "Demo and Expo",
-				location: "LEEP2 2415"
-			},
-			{
-				time: "11:00 AM",
-				event: "Closing Ceremonies",
-				location: "Eaton 2"
-			}
 		]
 	}
 
@@ -191,6 +86,17 @@
 	@tailwind components;
 	@tailwind utilities;
 
+	:root {
+		--background: #F3F7E1;
+		--background-accent: #EDF1C0;
+		--header: #F37A63;
+		--accent1: #F4AD9A;
+		--body-text: #7085C1;
+		--accent2: #92A0CA;
+		--accent3: #BFC6D5;
+		--accent4: #CED4DA;
+	}
+	
 
 	.blue {
 		color: #0051ba;
@@ -198,18 +104,14 @@
 	.red {
 		color: #e8000d;
 	}
-	.white {
-		color: #f2f2dd;
-	}
+
 	main {
 		margin: 0;
-		font-family: 'Merriweather', 'serif';
-		font-size: 1.5em;
 	}
 
 	.section {
 		min-height: 100vh;
-		background-color: #f2f2dd;
+		background-color: var(--background);
 		position: relative;
 		padding: 64px;
 		overflow: hidden;
@@ -218,30 +120,33 @@
 	}
 
 	.header {
+		font-family: 'Modak';
 		font-size: 2em;
-		font-weight: 700;
+		font-weight: 400;
 		color: #e8000d;
 	}
 
 	.subheader {
+		font-family: 'PT Sans';
 		font-size: 1.2em;
 		color: #e8000d;
-		font-weight: 400;
+		font-weight: 700;
 		text-align: center;
 	}
 
 	.paragraph {
+		font-family: 'PT Sans';
 		font-size: 1.2em;
 		color: #0051ba;
 		font-weight: 400;
 	}
 
 	.caption {
+		font-family: 'PT Sans';
 		font-size: 0.75em;
 		color: #e8000d;
 		font-weight: 400;
 	}
-
 
 	#blueChecker {
 		background: repeating-conic-gradient(#0051ba 0% 25%, #f2f2dd 0% 50%) 50% / 40px 200px;
@@ -278,7 +183,7 @@
 		right: 120px;
 		display: flex;
 		justify-content: between;
-		background-color: #f2f2dd;
+		background-color: var(--background);
 		z-index: 500;
 		height: 50px;
 	}
@@ -336,7 +241,7 @@
 
 	.selected {
 		background-color: #e8000d;
-		color: #f2f2dd;
+		color: var(--background);
 	}
 
 	.qanda-container {
@@ -350,8 +255,8 @@
 	}
 
 	.accordion {
-		background-color: #f2f2dd;
-		font-family: 'Merriweather', 'serif';
+		background-color: var(--background);
+		font-family: 'PT Sans';
 		color: #0051ba;
 		cursor: pointer;
 		padding: 18px;
@@ -361,7 +266,7 @@
 		transition: 0.4s;
 		font-size: 1em;
 		color: #0051ba;
-		font-weight: 600;
+		font-weight: 400;
 	}
 
 	/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -372,7 +277,7 @@
 	/* Style the accordion panel. Note: hidden by default */
 	.panel {
 		padding: 0 18px;
-		background-color: #f2f2dd;
+		background-color: var(--background);
 		display: none;
 		overflow: hidden;
 		font-size: 1em;
@@ -407,29 +312,6 @@
 	.sponsor-image {
 		width: 250px;
 		margin-top: 4%;
-	}
-
-	.individual-members {
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: column;
-		text-align: center;
-	}
-
-	.portraits {
-		width: 200px;
-	}
-
-	.made-with-love {
-		display: flex;
-		flex-direction: column;
-		text-align: center;
-		justify-content: center;
-		width: 30%;
-	}
-
-	.heart {
-		width: 10%;
 	}
 
 	@keyframes backgroundScroll {
@@ -489,44 +371,10 @@
 			<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 993.949 165.495"><defs><style>.mainLogoSvg{fill:#e8000d;}</style></defs><path class="mainLogoSvg" d="M126.44,23.32H74.25a2,2,0,0,0-2,2V36.74a2,2,0,0,0,1.63,2l10.6,2V75.84H43.79V40.57l11.69-1.86a2,2,0,0,0,1.69-2V25.32a2,2,0,0,0-2-2H2.33a2,2,0,0,0-2,2V36.74a2,2,0,0,0,1.64,2l10.1,1.82v91.82l-10.34,1.4a2,2,0,0,0-1.73,2V146.5a2,2,0,0,0,2,2H55.17a2,2,0,0,0,2-2V135.73a2,2,0,0,0-1.76-2l-11.62-1.42V93.7H84.48v38.51L74,133.75a2,2,0,0,0-1.71,2V146.5a2,2,0,0,0,2,2h52.19a2,2,0,0,0,2-2V135.73a2,2,0,0,0-1.73-2l-10.34-1.4V40.54l10.41-1.83a2,2,0,0,0,1.66-2V25.32A2,2,0,0,0,126.44,23.32Zm-2,11.74L114,36.89a2,2,0,0,0-1.65,2V134.1a2,2,0,0,0,1.73,2l10.34,1.4v7H76.25v-7l10.52-1.54a2,2,0,0,0,1.71-2V91.7a2,2,0,0,0-2-2H41.79a2,2,0,0,0-2,2v42.4a2,2,0,0,0,1.76,2l11.62,1.41v7H4v-7l10.34-1.4a2,2,0,0,0,1.73-2V38.86a2,2,0,0,0-1.65-2L4.33,35.07V27.32H53.17V35L41.48,36.88a2,2,0,0,0-1.69,2v39a2,2,0,0,0,2,2H86.48a2,2,0,0,0,2-2V39a2,2,0,0,0-1.63-2l-10.6-2V27.32h48.19Z"/><path class="mainLogoSvg" d="M190.2,99.48c-8.87,0-15.62,1.67-20,5a16,16,0,0,0-6.92,13.34c0,5.34,1.25,9.61,3.7,12.67a12.83,12.83,0,0,0,10.53,4.83,17.32,17.32,0,0,0,7.39-1.91h0a26.65,26.65,0,0,0,6.7-4.5,2,2,0,0,0,.63-1.46V101.48A2,2,0,0,0,190.2,99.48Zm-2,27a22.56,22.56,0,0,1-5,3.25,13.47,13.47,0,0,1-5.67,1.52,8.9,8.9,0,0,1-7.41-3.33c-1.87-2.34-2.82-5.76-2.82-10.17a12.06,12.06,0,0,1,5.31-10.14c3.4-2.53,8.65-3.92,15.64-4.13Z"/><path class="mainLogoSvg" d="M223.64,133.73h-6.48V87.3c0-8.51-1.13-15.36-3.36-20.39a22.62,22.62,0,0,0-11.59-11.6c-5.19-2.4-12.36-3.61-21.3-3.61A68.42,68.42,0,0,0,163.19,54a73.84,73.84,0,0,0-14.51,5.37,53.64,53.64,0,0,0-8.83,5.36,2,2,0,0,0-.54,2.41l5.54,11.74a2,2,0,0,0,2.63,1,103.66,103.66,0,0,1,12.88-4.88,48.14,48.14,0,0,1,13.7-1.79c4.12,0,7.22.5,9.22,1.5A7.33,7.33,0,0,1,187,78.71a25.11,25.11,0,0,1,1.17,8.59v1.28c-15.22.32-27.78,3-37.33,8-10.4,5.46-15.67,13.46-15.67,23.78a31.18,31.18,0,0,0,3.94,15.93,26.93,26.93,0,0,0,10.74,10.38,31.25,31.25,0,0,0,14.88,3.58,33.9,33.9,0,0,0,16.8-4.09,45.13,45.13,0,0,0,8-5.58c.15,3.61,1,6.08,2.7,7.54s4.81,2.29,9.55,2.29a97.05,97.05,0,0,0,11.66-.83c4.57-.56,8.05-1.1,10.62-1.66a2,2,0,0,0,1.58-2V135.73A2,2,0,0,0,223.64,133.73Zm-2,10.64c-2.26.42-5.17.85-8.68,1.28a93.54,93.54,0,0,1-11.18.8c-4.91,0-6.47-.9-6.91-1.29s-1.36-1.78-1.36-5.68v-3.75a2,2,0,0,0-2-2,2,2,0,0,0-1.54.72,36.68,36.68,0,0,1-10.36,8.26,30,30,0,0,1-14.85,3.58,27.26,27.26,0,0,1-13-3.11,23,23,0,0,1-9.16-8.86,27.19,27.19,0,0,1-3.4-13.92c0-8.84,4.42-15.46,13.53-20.24,9.39-4.94,22-7.5,37.49-7.6a2,2,0,0,0,2-2V87.3a28.63,28.63,0,0,0-1.43-10,11.28,11.28,0,0,0-5.71-6.22c-2.58-1.29-6.18-1.92-11-1.92a52.21,52.21,0,0,0-14.85,2,104.93,104.93,0,0,0-11.58,4.27l-4-8.5a63.07,63.07,0,0,1,6.89-4,69.75,69.75,0,0,1,13.71-5.07,64.86,64.86,0,0,1,16.69-2.13c8.36,0,15,1.09,19.63,3.24a18.5,18.5,0,0,1,9.61,9.6c2,4.5,3,10.81,3,18.76v48.43a2,2,0,0,0,2,2h6.48Z"/><path class="mainLogoSvg" d="M303.41,125.12a2,2,0,0,0-2.86-.88,39.83,39.83,0,0,1-21.14,5.91c-5.5,0-9.77-2.6-13.05-7.94-3.43-5.57-5.17-13.81-5.17-24.48,0-11.22,1.36-19.28,4.06-24,2.51-4.38,5.87-6.5,10.25-6.5A12.08,12.08,0,0,1,280,68a2.12,2.12,0,0,1,1.5,1.6l4.24,18.76a2,2,0,0,0,2,1.56H304.2a2,2,0,0,0,2-1.92l1.14-29.52a2,2,0,0,0-1.72-2.06c-.37-.05-1.61-.31-5.55-1.4a88.78,88.78,0,0,0-10.44-2.59,70.59,70.59,0,0,0-12.17-.92A51.23,51.23,0,0,0,252,57.75a43.5,43.5,0,0,0-17.25,17.67c-4,7.55-6.11,16.43-6.11,26.39,0,14.56,3.72,26.37,11.07,35.13s18.7,13.35,33.5,13.35A49,49,0,0,0,294,146c6.29-2.92,10.71-5.88,13.53-9a2,2,0,0,0,.33-2.16Zm-11.14,17.2a45.07,45.07,0,0,1-19,4c-13.56,0-23.8-4-30.44-11.92s-10.13-19-10.13-32.56c0-9.3,1.89-17.54,5.63-24.49A39.67,39.67,0,0,1,254,61.23a47.41,47.41,0,0,1,23.49-5.69,66.47,66.47,0,0,1,11.46.86,82.71,82.71,0,0,1,10,2.49c2.06.57,3.42.92,4.34,1.15l-1,25.91H289.33l-3.89-17.21a6.19,6.19,0,0,0-3.89-4.42,16.13,16.13,0,0,0-6.05-1c-5.85,0-10.47,2.86-13.72,8.5-3.09,5.36-4.59,13.85-4.59,26,0,11.42,1.94,20.36,5.76,26.57,4,6.53,9.55,9.85,16.46,9.85a43.82,43.82,0,0,0,21.28-5.37l2.92,6.39C301.13,137.57,297.33,140,292.27,142.32Z"/><path class="mainLogoSvg" d="M541.29,133.78l-7.5-1.72c-.49-.35-1.7-1.49-3.88-5-2-3.26-5-8.45-9-15.43-6-10.53-11.12-19.15-15.31-25.63a81.08,81.08,0,0,0-11-14l27.59-31.27,13.65-2.17a2,2,0,0,0,1.68-2V25.32a2,2,0,0,0-2-2H489a2,2,0,0,0-2,2V36.74a2,2,0,0,0,1.66,2l9.91,1.71L464.4,84V40.68l10.44-2a2,2,0,0,0,1.63-2V25.32a2,2,0,0,0-2-2H422.11a2,2,0,0,0-2,2V36.74a2,2,0,0,0,1.65,2l10.91,2v91.52l-10.84,1.54a1.54,1.54,0,0,1-3,0l-7.53-1.3-25.71-46.9,16.05-15.3,12.76-2a2,2,0,0,0,1.69-2V56a2,2,0,0,0-2-2H369.77a2,2,0,0,0-2,2V66.26a2,2,0,0,0,1.7,2l8.26,1.22L353.5,95l.16-2.51V16.19a2,2,0,0,0-.83-1.62l-4.72-3.43a2.1,2.1,0,0,0-1.18-.38h-.49l-.24,0-32.45,3.91a2,2,0,0,0-1.76,2v10a2,2,0,0,0,1.62,2l9.47,1.81V132.57l-7.29,1.19a2,2,0,0,0-1.68,2V146.5a2,2,0,0,0,2,2H361a2,2,0,0,0,2-2V135.73a2,2,0,0,0-1.7-2l-7.76-1.21v-8.64l-.29-7.46,10.65-11,13.71,27.42-4.77,1a2,2,0,0,0-1.61,2V146.5a2,2,0,0,0,2,2h45.34a2,2,0,0,1,3.58,0h53.82a2,2,0,0,0,2-2V135.73a2,2,0,0,0-1.76-2l-11.77-1.42v-25.2l11-12.68c3.62,5.43,8.55,14.65,14.69,27.51,4.56,9,8,15.6,10.33,19.58,2.76,4.81,5.06,7,7.44,7h32.94a2,2,0,0,0,2-2V135.73A2,2,0,0,0,541.29,133.78ZM416.53,144.5H375.19v-7.13l5.73-1.14a2.05,2.05,0,0,0,1.41-1.09,2,2,0,0,0,0-1.77l-16.15-32.29a2,2,0,0,0-3.23-.49l-13.21,13.7a2,2,0,0,0-.56,1.46l.33,8.24v10.28a2,2,0,0,0,1.69,2l7.77,1.21v7.05H318.11v-7.07l7.29-1.19a2,2,0,0,0,1.68-2V28.75a2,2,0,0,0-1.63-2L316,25V18.45l30.33-3.66,3.34,2.42V92.29l-.48,7.93a2,2,0,0,0,3.44,1.5l30.66-32.29a2,2,0,0,0-1.15-3.36l-10.36-1.54V58h40.36v6.57L400.44,66.4a2.09,2.09,0,0,0-1.07.53l-17.61,16.8a2,2,0,0,0-.38,2.41l26.91,49.09a2.06,2.06,0,0,0,1.42,1l6.82,1.18Z"/><path class="mainLogoSvg" d="M660.23,23.32H617.82a2,2,0,0,0-2,2V36.74a2,2,0,0,0,1.68,2l12.35,2V99.85c0,11-1.91,19.67-5.66,25.79-3.61,5.88-9.16,8.75-17,8.75-15.88,0-23.6-11.41-23.6-34.86V40.86l12-2.15a2,2,0,0,0,1.65-2V25.32a2,2,0,0,0-2-2H542.64a2,2,0,0,0-2,2V36.74a2,2,0,0,0,1.56,1.95l8.55,1.93V97.24c0,17.88,4.43,31.26,13.16,39.76h0c8.72,8.5,21.92,12.8,39.23,12.8,14.72,0,26.57-4.22,35.23-12.54s13.09-21.43,13.09-38.87V40.64l9.18-2a2,2,0,0,0,1.59-1.95V25.32A2,2,0,0,0,660.23,23.32Z"/><path class="mainLogoSvg" d="M756.84,115.34l-11.25-2.28a2,2,0,0,0-2.18,1.06l-6,11.9-36.32,3.36a144.75,144.75,0,0,0,20.82-17A126.51,126.51,0,0,0,743.1,85.44c5.42-9.46,8.17-18.27,8.17-26.2C751.27,48,747.6,38.8,740.36,32S723,21.85,710.13,21.85a55.73,55.73,0,0,0-44.67,21.69,2,2,0,0,0,.13,2.53l8.64,9.62a2,2,0,0,0,1.41.66,1.92,1.92,0,0,0,1.46-.56c2.79-2.67,5.1-4.74,6.88-6.15a27.27,27.27,0,0,1,6.75-3.71,25.53,25.53,0,0,1,9.45-1.65c5.52,0,9.93,1.57,13.5,4.79s5.21,7.77,5.21,14.09c0,7.78-2.44,16.24-7.26,25.14a117.94,117.94,0,0,1-19.32,25.9h0a140.22,140.22,0,0,1-25.17,20.66,2,2,0,0,0-.79,2.42l3.92,9.95a2,2,0,0,0,1.86,1.27H752a2,2,0,0,0,2-1.7l4.4-29.2A2,2,0,0,0,756.84,115.34Z"/><path class="mainLogoSvg" d="M854.7,115.34l-11.26-2.28a2,2,0,0,0-2.18,1.06l-6,11.9-36.31,3.36a144.67,144.67,0,0,0,20.81-17A126.2,126.2,0,0,0,841,85.44c5.42-9.46,8.17-18.27,8.17-26.2,0-11.28-3.67-20.44-10.9-27.22S820.84,21.85,808,21.85a55.73,55.73,0,0,0-44.66,21.69,2,2,0,0,0,.12,2.53l8.64,9.62a2,2,0,0,0,1.42.66,2,2,0,0,0,1.46-.56c2.78-2.67,5.09-4.74,6.87-6.15a27.27,27.27,0,0,1,6.75-3.71A25.53,25.53,0,0,1,798,44.28c5.52,0,9.94,1.57,13.5,4.79s5.22,7.77,5.22,14.09c0,7.78-2.45,16.24-7.26,25.14a118,118,0,0,1-19.33,25.9h0A140.16,140.16,0,0,1,765,134.86a2,2,0,0,0-.79,2.42l3.91,9.95A2,2,0,0,0,770,148.5H849.9a2,2,0,0,0,2-1.7l4.41-29.2A2,2,0,0,0,854.7,115.34Z"/><path class="mainLogoSvg" d="M877.46,106.42h16a2,2,0,0,0,2-1.86l7-102.42a2,2,0,0,0-.53-1.51A2,2,0,0,0,900.45,0H870.28a2,2,0,0,0-2,2.14l7.17,102.42A2,2,0,0,0,877.46,106.42Z"/><path class="mainLogoSvg" d="M899.11,122.18c-3-3.05-7-4.59-12-4.59a19,19,0,0,0-12.81,4.64,15.47,15.47,0,0,0-5.5,12.2,14.29,14.29,0,0,0,4.9,11,15.94,15.94,0,0,0,11,4.35c5.57,0,10.15-1.47,13.61-4.38s5.35-7.13,5.35-12.3A15.14,15.14,0,0,0,899.11,122.18Z"/></svg>		
 		</div>
 		<div class="red font-bold text-[2em] my-4">Coming soon!</div>
-		<div class="flex-grow flex flex-col justify-end gap-6">
-
-			<div class="flex gap-2">
-				<div class="pattern-image">
-					<img id="mascot-filled" src="mascot-filled.png" alt="mascot">
-				</div>
-				<div class="pattern-image">
-					<img id="mascot-unfilled" src="mascot-unfilled.png" alt="mascot">
-				</div>
-				<div class="pattern-image">
-					<img id="mascot-filled" src="mascot-filled.png" alt="mascot">
-				</div>
-				<div class="pattern-image">
-					<img id="mascot-unfilled" src="mascot-unfilled.png" alt="mascot">
-				</div>
-				{#if !smallScreen}
-					<div class="pattern-image">
-						<img id="mascot-filled" src="mascot-filled.png" alt="mascot">
-					</div>
-					<div class="pattern-image">
-						<img id="mascot-unfilled" src="mascot-unfilled.png" alt="mascot">
-					</div>
-					<div class="pattern-image">
-						<img id="mascot-filled" src="mascot-filled.png" alt="mascot">
-					</div>
-					<div class="pattern-image">
-						<img id="mascot-unfilled" src="mascot-unfilled.png" alt="mascot">
-					</div>
-					<div class="pattern-image">
-						<img id="mascot-filled" src="mascot-filled.png" alt="mascot">
-					</div>
-				{/if}
-			</div>
-			<div class="flex justify-center" on:click={() => scrollToID("about")}>
-				<RegisterButton>
-					learn more
-				</RegisterButton>
-			</div>
+		<div class="flex justify-center" on:click={() => scrollToID("about")}>
+			<RegisterButton>
+				learn more
+			</RegisterButton>
 		</div>
 	</div>
 	<div class="section" id="about">
@@ -575,10 +423,10 @@
 			</div>
 			<div class="flex flex-col w-[500px] sm:text-base flex-grow">
 				<div class="border-[4px] rounded-t p-2 min-h-[20px] border-b-0 border-[#e80008] header blue">Housekeeping</div>
-				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]" style="color:#0051ba">4/6 Registration closes</div>
-				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]" style="color:#0051ba">4/7 Google-sponsored workshop</div>
-				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]" style="color:#0051ba">4/8 Hacking commences</div>
-				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]" style="color:#0051ba">4/10 Hacking concludes</div>
+				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]" style="color:#0051ba"></div>
+				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]" style="color:#0051ba"></div>
+				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]" style="color:#0051ba"></div>
+				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]" style="color:#0051ba"></div>
 				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]" style="color:#0051ba"></div>
 				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]" style="color:#0051ba"></div>
 				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#e80008]" style="color:#0051ba"></div>
@@ -661,100 +509,35 @@
 		<div>
 			<ul style="list-style: none;">
 				<li class="subheader">Peta Tier
-					<br>
-					<div class="sponsors">
-						<div class="sponsor-image">
-							<img id="logo" src="Microsoft.png" alt="Microsoft logo">
-						</div>
-						<div class="sponsor-image" style="width: 200px">
-							<img id="logo" src="NIC.png" alt="NIC logo">
-						</div>
-					</div>
+					<p>Coming soon!</p>
 				</li>
 				<br>
 				<br>
 				<br>
 				<br>
 				<li class="subheader">Tera Tier
-					<br>
-					<div class="sponsors">
-						<div class="sponsor-image">
-							<img id="logo" src="Air Power.png" alt="Air Power logo">
-						</div>
-						<div class="sponsor-image">
-							<img id="logo" src="Ripple.png" alt="Ripple logo">
-						</div>
-						<div class="sponsor-image">
-							<img id="logo" src="Security Benefit.png" alt="Security Benefit logo">
-						</div>
-						<div class="sponsor-image">
-							<img id="logo" src="Twilio.png" alt="Twilio logo">
-						</div>
-						<div class="sponsor-image">
-							<img id="logo" src="VUHL.png" alt="VUHL logo">
-						</div>
-					</div>
+					<p>Coming soon!</p>
 				</li>
 				<br>
 				<br>
 				<br>
 				<br>
 				<li class="subheader">Giga Tier
-					<div class="sponsors">
-						<div class="sponsor-image">
-							<img id="logo" src="Alarm.png" alt="Alarm logo">
-						</div>
-						<div class="sponsor-image">
-							<img id="logo" src="BCBSKS.png" alt="BCBSKS logo">
-						</div>
-						<div class="sponsor-image">
-							<img id="logo" src="BNB.png" alt="Brand New Box logo">
-						</div>
-						<div class="sponsor-image">
-							<img id="logo" src="Koch.png" alt="Koch logo">
-						</div>
-						<div class="sponsor-image">
-							<img id="logo" src="SS&C.png" alt="SS&C logo">
-						</div>
-						<div class="sponsor-image">
-							<img id="logo" src="Tradebot.png" alt="Tradebotlogo">
-						</div>
-						<div class="sponsor-image" style="margin-top: 8%">
-							<img id="logo" src="/1517.png" alt="1517 logo">
-						</div>
-					</div>
+					<p>Coming soon!</p>
 				</li>
 				<br>
 				<br>
 				<br>
 				<br>
 				<li class="subheader">Mega Tier
-					<br>
-					<div class="sponsors">
-						<div class="sponsor-image">
-							<img id="logo" src="HR.png" alt="H&R Block logo">
-						</div>
-						<div class="sponsor-image">
-							<img id="logo" src="NBKC.png" alt="NBKC logo">
-						</div>
-					</div>
+					<p>Coming soon!</p>
 				</li>
 				<br>
 				<br>
 				<br>
 				<br>
 				<li class="subheader">In-Kind Tier
-					<div class="sponsors">
-						<div class="sponsor-image">
-							<img id="logo" src="Balsamiq.png" alt="Balsamiq logo">
-						</div>
-						<div class="sponsor-image">
-							<img id="logo" src="Echo3D.png" alt="Echo3D logo">
-						</div>
-						<div class="sponsor-image">
-							<img id="logo" src="Google.png" alt="Google logo">
-						</div>
-					</div>
+					<p>Coming soon!</p>
 				</li>
 			</ul>
 		</div>
@@ -767,45 +550,27 @@
 		<div class="qanda-container">
 			<button class="accordion">General Track Prizes</button>
 			<div class="panel">
-				<p><b>1st place:</b> Oculus Quest 2</p>
-				<br>
-				<p><b>2nd place:</b> Anker Soundcore 2 Bluetooth Speaker</p>
+				<p>Coming soon!</p>
 			</div>
 			<button class="accordion">Secret Track Prizes</button>
 			<div class="panel">
-				<p><b>1st place:</b> Nintendo Switch Lite</p>
-				<br>
-				<p><b>2nd place:</b> Sony ZX110NC Noise Cancelling Headphones</p>
+				<p>Coming soon!</p>
 			</div>
 			<button class="accordion">Blockchain Prize</button>
 			<div class="panel">
-				<p>Amazon Echo 4th Gen</p>
+				<p>Coming soon!</p>
 			</div>
 			<button class="accordion">Trivia Prize</button>
 			<div class="panel">
-				<p>Logitech Mouse</p>
+				<p>Coming soon!</p>
 			</div>
 			<button class="accordion">Hackers' Choice Prize</button>
 			<div class="panel">
-				<p>Portable Laptop Charger</p>
+				<p>Coming soon!</p>
 			</div>
 			<button class="accordion">MLH-sponsored prizes</button>
 			<div class="panel">
-				<p><b>Best Use of Google Cloud:</b> Google Cloud Swag Bag or Backpack</p>
-				<br>
-				<p><b>Best Domain Name from Domain.com:</b> PowerSquare Qi Wireless Phone Charger</p>
-				<br>
-				<p><b>Most Creative Use of Github:</b> Github Octocat Status, Plushy, and Sticker Bundle</p>
-				<br>
-				<p><b>Best Hardware Hack Sponsored by Digi-Key:</b> Grove Beginner Kit</p>
-				<br>
-				<p><b>Most Creative Use of Twilio:</b> Twilio Swag Box and GameGo Console</p>
-				<br>
-				<p><b>Dream Big and Create More Cheers with AB InBev:</b> Anker Wireless Charger Bundle</p>
-				<br>
-				<p><b>Best Use of DeSo:</b> $100 worth of $DESO coin and an exclusive DeSo tumbler</p>
-				<br>
-				<a href="https://hack.mlh.io/prizes" class="link">Read more about MLH prizes here!</a>
+				<p>Coming soon!</p>
 			</div>
 		</div>
 	</div>
