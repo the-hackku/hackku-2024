@@ -33,7 +33,7 @@ jobs:
           for target in $(ls . | grep -v 'public'); do rm -r $target; done;
           mv ./public/* ./
           
-      - uses: actions-x/commit@v4
+      - uses: actions-x/commit@v5
         with: 
           branch: public
           force: 1
