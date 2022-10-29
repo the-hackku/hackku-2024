@@ -572,5 +572,4 @@
 			</div>
 		</div>
 	</div>
-	<a id="mlh-trust-badge" href="https://mlh.io/seasons/2022/events?utm_source=na-hackathon&amp;utm_medium=TrustBadge&amp;utm_campaign=2022-season&amp;utm_content=white" target="_blank" style="display: block; max-width: 100px; min-width: 60px; position: fixed; right: 20px; top: 0px; width: 10%; z-index: 10000;"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2022/mlh-trust-badge-2022-blue.svg" alt="Major League Hacking 2022 Hackathon Season" style="width: 100%;"></a>
 </main>
