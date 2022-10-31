@@ -356,7 +356,7 @@
 		  </div>
 			<br>
 		  <div class="paragraph">
-		  	More information coming soon!
+		  	More information coming soon
 		  </div>
 		</div>
 		<div class="flex justify-center" on:click={() => scrollToID("about")}>
