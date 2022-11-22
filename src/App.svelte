@@ -140,7 +140,7 @@
 	.section {
 		background-color: var(--background);
 		position: relative;
-		padding: 4rem 8rem 4rem 8rem;
+		padding: 8rem 8rem 8rem 8rem;
 		overflow: hidden;
 		display: flex;
 		flex-direction: column;
@@ -153,7 +153,7 @@
 		font-weight: 400;
 		color: var(--header)
 	}
-	header {
+	h1 {
 		font-family: 'Modak';
 		font-size: 4.5em;
 		font-weight: 400;
@@ -170,6 +170,7 @@
 		font-size: 1.5em;
 		font-weight: 400;
 		color: var(--body-text);
+		line-height: 2rem;
 	}
 	.caption {
 		font-family: 'PT Sans';
@@ -233,7 +234,7 @@
 		display: flex; 
 		align-items:center;
 		position: fixed;
-		top: 4rem;
+		top: 2rem;
 		left: 8rem;
 		right: 8rem;
 		z-index: 100000;
@@ -267,8 +268,8 @@
 		align-items: flex-start;
 		justify-content: flex-end;
 		flex-direction: column;
-		gap: 1.75rem;
-		min-height: 100vh;
+		gap: 1.625rem;
+		min-height: 107vh;
 	}
 	.sub-container {
 		display: flex;
@@ -285,44 +286,50 @@
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
-		width: 600px;
-		max-width: 80%;
+		width: 40rem;
+		max-width: 80vw;
 		justify-content: space-around;
+		gap: 0.75rem;
 		margin: auto;
 	}
 
 	/* ACCORDIAN */
 	.accordion {
-		background-color: var(--background);
-		font-family: 'PT Sans';
-		color: var(--body-text);
+		background-color: var(--body-text);
 		cursor: pointer;
-		padding: 18px;
+		padding: .75rem 2rem;
 		text-align: left;
 		border: none;
 		outline: none;
 		transition: 0.4s;
-		font-size: 1em;
-		color: var(--body-text);
+
+		font-family: 'PT Sans';
+		font-size: 1.5em;
 		font-weight: 400;
+		line-height: 2rem;
+		color: var(--background);
 	}
 	/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-	.active, .accordion:hover {
-		background-color: var(--background);
+	.accordion:hover {
+		background-color: var(--accent1);
 	}
 	/* Style the accordion panel. Note: hidden by default */
 	.panel {
-		padding: 0 18px;
+		padding: .75rem 2rem;
 		background-color: var(--background);
 		display: none;
 		overflow: hidden;
-		font-size: 1em;
-		color: var(--header);
+		border: 0.1875rem solid var(--body-text);
+
+		font-family: 'PT Sans';
+		font-size: 1.5em;
 		font-weight: 400;
+		line-height: 2rem;
+		color: var(--body-text);
 	}
 	.accordion:after {
 		content: '\02795'; /* Unicode character for "plus" sign (+) */
-		font-size: 13px;
+		font-size: 1rem;
 		color: var(--body-text) !important;
 		float: right;
 		margin-left: 5px;
@@ -413,7 +420,7 @@
 					<li><a class="link" href=#faq>FAQ</a></li>
 					<li><a class="link" href=#sponsors>SPONSORS</a></li>
 					<li><a class="link" href=#prizes>PRIZES</a></li>
-					<li><a class="link" href=#contact>CONTACT</a></li>
+					<li><a class="link" href=#contact>MEET the TEAM</a></li>
 					<li style="color:var(--header)"><a class="link" href="https://forms.gle/KwRNWYcxXyqf3EdZ7" target="_blank">REGISTER NOW!</a></li>
 				</ul>
 			</nav>
@@ -437,11 +444,9 @@
 	</div>
 
 	<div class="section" id="about">
-		<div class="header">
-			What is HackKU?
-		</div>
+		<h1>What is HackKU?</h1>
 		<br>
-		<div class="paragraph" id="about" style="width: 45%">
+		<div class="body-text" id="about" style="width: 45%">
 			HackKU is an annual 36-hour hackathon hosted by the University of Kansas, where students can have the opportunity to innovate new ideas, discover different paths, and push the boundaries of technology. Work with teams of up to four people to create unique solutions to real-world problems. Projects can range from web applications and video games to drones and fitness devices.
 			<br>
 			<br>
@@ -453,9 +458,7 @@
 		</div>
 	</div>
 	<div class="section" id="faq">
-		<div class="header">
-			FAQ
-		</div>
+		<h1>FAQ</h1>
 		<br>
 		<div class="qanda-container">
 			<button class="accordion">What is HackKU?</button>
@@ -491,7 +494,7 @@
 			<div class="panel">
 				<p>Yes. You will be able to access food with a badge and ticket given during registration.</p>
 			</div>
-			<button class="accordion">As an MLH-affiliated event, all participants will be expected to follow the MLH Code of Conduct.<br>What does this mean?</button>
+			<button class="accordion">As an MLH-affiliated event, all participants will be expected to follow the MLH Code of Conduct. What does this mean?</button>
 			<div class="panel">
 				<a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" class="link">Read the MLH Code of Conduct here!</a>
 			</div>
@@ -506,84 +509,17 @@
 		</div>
 	</div>
 	<div class="section" id="sponsors">
-		<div class="header">
-			Sponsors
-		</div>
+		<h1>Sponsors</h1>
 		<br>
-		<br>
-		<br>
-		<div>
-			<ul style="list-style: none;">
-				<li class="subheader">Peta Tier
-					<p>Coming soon!</p>
-				</li>
-				<br>
-				<br>
-				<br>
-				<br>
-				<li class="subheader">Tera Tier
-					<p>Coming soon!</p>
-				</li>
-				<br>
-				<br>
-				<br>
-				<br>
-				<li class="subheader">Giga Tier
-					<p>Coming soon!</p>
-				</li>
-				<br>
-				<br>
-				<br>
-				<br>
-				<li class="subheader">Mega Tier
-					<p>Coming soon!</p>
-				</li>
-				<br>
-				<br>
-				<br>
-				<br>
-				<li class="subheader">In-Kind Tier
-					<p>Coming soon!</p>
-				</li>
-			</ul>
-		</div>
+		<h2>Coming soon!</h2>
 	</div>
 	<div class="section" id="prizes">
-		<div class="header">
-			Prizes
-		</div>
+		<h1>Prizes</h1>
 		<br>
-		<div class="qanda-container">
-			<button class="accordion">General Track Prizes</button>
-			<div class="panel">
-				<p>Coming soon!</p>
-			</div>
-			<button class="accordion">Secret Track Prizes</button>
-			<div class="panel">
-				<p>Coming soon!</p>
-			</div>
-			<button class="accordion">Blockchain Prize</button>
-			<div class="panel">
-				<p>Coming soon!</p>
-			</div>
-			<button class="accordion">Trivia Prize</button>
-			<div class="panel">
-				<p>Coming soon!</p>
-			</div>
-			<button class="accordion">Hackers' Choice Prize</button>
-			<div class="panel">
-				<p>Coming soon!</p>
-			</div>
-			<button class="accordion">MLH-sponsored prizes</button>
-			<div class="panel">
-				<p>Coming soon!</p>
-			</div>
-		</div>
+		<h2>Coming soon!</h2>
 	</div>
 	<div class="section" id="contact" style="min-height: 65vh">
-		<div class="header">
-			Meet the Team
-		</div>
+		<h1>Meet the Team</h1>
 		<br>
 		<div class="team">
 			<div id="zoe">
