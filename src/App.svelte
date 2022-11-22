@@ -31,7 +31,6 @@
 	}
 	let links = [
 		{ display: "about", action: () => scrollToID("about")},
-		{ display: "schedule", action: () => scrollToID("schedule")},
 		{ display: "faq", action: () => scrollToID("faq")},
 		{ display: "sponsors", action: () => scrollToID("sponsors")},
 		{ display: "prizes", action: () => scrollToID("prizes")},
@@ -52,16 +51,6 @@
 
 	$: smallScreen = innerWidth < 750
 	$: hamburgerExpanded = hamburgerExpanded && smallScreen
-
-	let selectedDay = "friday"
-	let schedule = {
-		friday: [
-		],
-		saturday: [
-		],
-		sunday: [
-		]
-	}
 
 	onMount(() => {
 		let acc = document.getElementsByClassName("accordion");
@@ -86,6 +75,7 @@
 	@tailwind components;
 	@tailwind utilities;
 
+	/* COLORS */
 	:root {
 		--background: #F3F7E1;
 		--background-accent: #EDF1C0;
@@ -96,110 +86,95 @@
 		--accent3: #BFC6D5;
 		--accent4: #CED4DA;
 	}
-	
 
-	.blue {
-		color: #0051ba;
-	}
-	.red {
-		color: #e8000d;
-	}
-
+	/* BODY */
 	main {
 		margin: 0;
 	}
-
 	.section {
-		min-height: 100vh;
 		background-color: var(--background);
 		position: relative;
-		padding: 64px;
+		padding: 4rem 8rem 4rem 8rem;
 		overflow: hidden;
 		display: flex;
 		flex-direction: column;
 	}
 
+	/* FONTS */
 	.title {
 		font-family: 'Modak';
-		font-size: 8em;
+		font-size: 12em;
 		font-weight: 400;
 		color: var(--header)
 	}
-
-	.header {
-		font-family: 'PT Sans';
-		font-size: 2em;
+	header {
+		font-family: 'Modak';
+		font-size: 4.5em;
 		font-weight: 400;
 		color: var(--header);
 	}
-
-	.subheader {
+	h2 {
 		font-family: 'PT Sans';
-		font-size: 1.2em;
-		color: var(--body-text);
+		font-size: 2.25em;
 		font-weight: 700;
-		text-align: center;
-	}
-
-	.paragraph {
-		font-family: 'PT Sans';
-		font-size: 1.2em;
 		color: var(--body-text);
-		font-weight: 400;
 	}
-
+	.body-text {
+		font-family: 'PT Sans';
+		font-size: 1.5em;
+		font-weight: 400;
+		color: var(--body-text);
+	}
 	.caption {
 		font-family: 'PT Sans';
-		font-size: 0.75em;
-		color: var(--body-text);
+		font-size: 1.25em;
 		font-weight: 400;
+		color: var(--body-text);
 	}
 
-	#navbar {
-		position: fixed;
-		padding: 10px;
-		top: 20px;
-		left: 0px;
-		right: 120px;
-		display: flex;
-		justify-content: between;
-		background-color: var(--background);
-		z-index: 500;
-		height: 50px;
+	/* REM SETTINGS */
+	html {
+    font-size: 8px;
+	}
+	@media only screen and (min-width: 720px) {
+		html {
+			font-size: 10px;
+		}
+	}
+	@media only screen and (min-width: 960px) {
+		html {
+			font-size: 12px;
+		}
+	}
+	@media only screen and (min-width: 1240px) {
+		html {
+			font-size: 14px;
+		}
 	}
 
-	#navBarLogo {
-		height: 100%;
-		flex-grow: 1;
-	}
-
+	/* SVGS */
 	svg {
 		height: 100%;
 	}
 
+	/* LINKS */
 	.linkCont {
 		display: flex;
 		justify-content: end;
 		flex-grow: 1;
 	}
-
 	.link {
 		cursor: pointer;
-		color: var(--body-text);
 		transition: .2s;
-		padding: 10px 20px 0px;
-		height: 100%;
-		display: flex;
-		justify-content: center;
-		justify-items: center;
-		text-decoration: none;
+		height: 4rem;
 	}
-
 	.link:hover {
-		color: #f2f2dd;
-		background-color: var(--header);
+		padding: 0 4rem 0 4rem;
+		color: var(--background);
+		background-color: var(--accent1);
 	}
 
+	/* HAMBURGER */
 	.hamburgerMenu {
 		height: 2em;
 	}
@@ -207,16 +182,59 @@
 		height: 100%;
 	}
 
-	#home {
-		display: flex;
-		flex-direction: column;
+	/* NAV */
+	.navbar {
+		display: flex; 
+		align-items:center;
+		position: fixed;
+		top: 4rem;
+		left: 8rem;
+		right: 8rem;
+		z-index: 100000;
 	}
-
-	.selected {
-		background-color: var(--header);
+	.right-nav {
+		display: flex;
+		justify-content: right;
+		align-items: center;
+		column-gap: 2.25rem;
+		height: 4rem;
+		padding-right: 2rem;
+		border: 0.1875rem solid var(--body-text);
+		border-left: none;
+		background-color: var(--background);
+	}
+	.left-nav {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 4rem;
+		border: 0.1875rem solid var(--body-text); 
+		margin: none;
+		padding: 0 3.5rem 0 3.5rem;
+		background-color: var(--body-text);
 		color: var(--background);
 	}
+	
+	/* HOME */
+	#home {
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-end;
+		flex-direction: column;
+		gap: 1.75rem;
+		min-height: 100vh;
+	}
+	.sub-container {
+		display: flex;
+		min-width: 85vw;
+		align-items: flex-end;
+		justify-content: space-between;
+	}
+	.fishbowl-image {
+		height: 19rem;
+	}
 
+	/* FAQ */
 	.qanda-container {
 		display: flex;
 		justify-content: center;
@@ -227,6 +245,7 @@
 		margin: auto;
 	}
 
+	/* ACCORDIAN */
 	.accordion {
 		background-color: var(--background);
 		font-family: 'PT Sans';
@@ -241,12 +260,10 @@
 		color: #0051ba;
 		font-weight: 400;
 	}
-
 	/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 	.active, .accordion:hover {
 		background-color: var(--background);
 	}
-
 	/* Style the accordion panel. Note: hidden by default */
 	.panel {
 		padding: 0 18px;
@@ -257,7 +274,6 @@
 		color: var(--header);
 		font-weight: 400;
 	}
-
 	.accordion:after {
 		content: '\02795'; /* Unicode character for "plus" sign (+) */
 		font-size: 13px;
@@ -265,12 +281,12 @@
 		float: right;
 		margin-left: 5px;
 	}
-
 	.active:after {
 		content: "\2796"; /* Unicode character for "minus" sign (-) */
 		color: var(--body-text) !important;
 	}
 
+	/* SPONSORS */
 	.sponsors {
 		max-width: 70vw;
 		margin: auto;
@@ -281,7 +297,6 @@
 		flex-wrap: wrap;
 		gap: 5%;
 	}
-
 	.sponsor-image {
 		width: 250px;
 		margin-top: 4%;
@@ -295,117 +310,7 @@
 			background-position-x: 100%;
 		}
 	}
-
-	/*Tej Gumaste CSS Website Landing Page*/
-	:root
-        {
-            --background: #F3F7E1;
-            --bgaccent:#EDF1C0;
-            --header-modak:#F37A63;
-            --accent1:#F4AD9A;
-            --bodytext:#7085C1;
-            --accent2:#92A0CA;
-            --heightnavbar:50px;
-        }
-
-        body
-        {
-            background-color: var(--background);
-        }
-
-        .navigation
-        {
-            display: flex;
-            flex-direction: row;
-            column-gap: 40px;
-            list-style: none;
-            justify-content: right;
-            border: solid;
-            height: var(--heightnavbar);
-            align-items: center;
-            border-color: var(--accent2);
-            font-family: 'PT Sans', sans-serif;
-            font-weight: 50;
-            padding-right: 20px;
-            color: var(--accent2);
-			background-color: var(--background);
-            
-        }
-        
-        .outerDiv
-        {
-            display: flex; align-items:center; margin-left: 20px;
-            margin-right: 20px;
-			position: fixed;
-			top: 5px;
-			left: 20px;
-			right: 20px;
-			z-index: 100000;
-        }
-        .VolBar
-        {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-             border:solid; 
-            background-color: var(--bodytext);
-            height:var(--heightnavbar); 
-            flex: 0.1;
-            
-            color: var(--bgaccent);
-            border-color: var(--accent2);
-            font-family: 'PT Sans', sans-serif;
-            font-weight: lighter;
-        }
-
-        .title1
-        {
-            font-size: 8em;
-            font-family: 'Modak', cursive;
-            margin-bottom: 0px;
-            margin-top: 0px;
-            color: var(--header-modak);
-        }
-
-        .sub-title
-        {
-            position: absolute;
-            top: 115px;
-            font-family: 'PT Sans', sans-serif;
-            color: var(--bodytext);
-			font-weight: 700;
-        }
-
-        .cornertext
-        {
-            display: inline-block;
-            margin-right: 60%;
-            flex: 0.8;
-            font-size: 1.5em;
-        }
-
-        .fishimage
-        {
-            height: 200px;
-        }
-        nav ul li a 
-        {
-            text-decoration: none;
-            box-shadow: none;
-            color: inherit;
-        }
-		/*Tej CSS Landing Page Ends*/
 </style>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Modak&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 
 <svelte:window bind:innerHeight bind:innerWidth bind:scrollY />
 
@@ -448,72 +353,39 @@
 
 	{/if} -->
 	<div class="section" id="home">
-
-		<div class="outerDiv">
-			<nav class="VolBar">
-				Vol 5
+		<div class="navbar">
+			<nav class="left-nav body-text link">
+				HACKERDOCS
 			</nav>
-				<nav style="display:inline-block; flex: 1">
-					<ul class="navigation">
-						<li> <a href=#about>About</a></li>
-						<li><a href=#schedule>Schedule</a></li>
-						<li><a href=#faq>FAQ</a></li>
-						<li><a href=#sponsors>SPONSORS</a></li>
-						<li><a href=#prizes>PRIZES</a></li>
-						<li><a href=#contact>CONTACT</a></li>
-						<li style="color:var(--header-modak)"><a href="https://forms.gle/KwRNWYcxXyqf3EdZ7" target="_blank">REGISTER NOW!</a></li>
-					</ul>
-			
-				</nav>
+			<nav style="display:inline-block; flex: 1">
+				<ul class="right-nav body-text">
+					<li><a class="link" href=#about>ABOUT</a></li>
+					<li><a class="link" href=#faq>FAQ</a></li>
+					<li><a class="link" href=#sponsors>SPONSORS</a></li>
+					<li><a class="link" href=#prizes>PRIZES</a></li>
+					<li><a class="link" href=#contact>CONTACT</a></li>
+					<li style="color:var(--header)"><a class="link" href="https://forms.gle/KwRNWYcxXyqf3EdZ7" target="_blank">REGISTER NOW!</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div style="line-height:250%">
+			<p class="title">HackKU23!</p> 
+			<br>
+			<h2>UNIVERSITY OF KANSAS</h2>
 		</div>
 		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-
-	
-		
-			<div style="position: relative;">
-				<p class="title1">HackKU23!</p> 
-			   <h2 class="sub-title">UNIVERSITY OF KANSAS</h2>
-			 </div>
-
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		
-	
-			 <div style="display: grid; grid-template-columns: 4.5fr 1fr;">
-				<div class="cornertext">
-					<p style="font-family: 'PT Sans', sans-serif; color: var(--bodytext);">
-						HACKATHON
-					</p>
-					<p style="font-family: 'PT Sans', sans-serif; font-weight: 700; color: var(--bodytext);">
-						4.14.2023 - 4.16.2023
-					</p>
-				</div>
-	
-				<div style="display: inline-block; margin-left:10%;">
-					<img src="./newfish.png" class="fishimage" alt="Fish Bowl">
-				</div>
+		<div class="sub-container">
+			<div>
+				<p class="body-text">HACKATHON</p>
+				<br>
+				<h2>4.14.2023 - 4.16.2023</h2>
 			</div>
-
-			<br>
-			<br>
-
-		<div class="flex justify-center" on:click={() => scrollToID("about")}>
-			<RegisterButton>
-				learn more
-			</RegisterButton>
+			<div>
+				<img src="./fishbowl.png" class="fishbowl-image" alt="Fish Bowl">
+			</div>
 		</div>
 	</div>
+
 	<div class="section" id="about">
 		<div class="header">
 			What is HackKU?
@@ -530,51 +402,9 @@
 			</a>
 		</div>
 	</div>
-	<div class="section" id="schedule">
-		<div class="header">
-			Schedule
-		</div>
-		<div class="flex mt-10 flex-wrap justify-center items-center gap-8" style="max-width: 80vw">
-			<div class="flex flex-col flex-grow">
-				<div class="flex">
-					{#each Object.keys(schedule) as day}
-						<div class="border-[4px] border-b-0 border-[#F37A63] rounded-t-lg py-2 px-4 cursor-pointer" class:selected={selectedDay == day} on:click={() => selectedDay = day}>{day}</div>
-					{/each}
-				</div>
-				<div class="border-[4px] border-[#F37A63] rounded-lg rounded-tl-none p-4 blue grid grid-cols-[100px_260px_200px] grid-rows-[repeat(10,40px)] max-w-[600px] flex-grow">
-					<i>Time</i>
-					<i>Event</i>
-					<i>Location</i>
-					{#each schedule[selectedDay] as event}
-						<div>{event.time}</div>
-						<div>{event.event}</div>
-						<div>{event.location}</div>
-					{/each}
-				</div>
-				<!---<div id="stickyNote">
-					<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 396 396"><defs><style>.stickySVG1{fill:none;stroke:#e8000d;stroke-miterlimit:10;stroke-width:4.21px;}.stickySVG2{fill:#e8000d;}</style></defs><path class="stickySVG1" d="M286,361H53a18,18,0,0,1-18-18V53A18,18,0,0,1,53,35H343a18,18,0,0,1,18,18V286Z"/><path class="stickySVG2" d="M304,286h57l-75,75V304A18,18,0,0,1,304,286Z"/></svg>
-				</div>--->
-			</div>
-			<div class="flex flex-col w-[500px] sm:text-base flex-grow">
-				<div class="border-[4px] rounded-t p-2 min-h-[20px] border-b-0 border-[#F37A63] header">Housekeeping</div>
-				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#F37A63]"></div>
-				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#F37A63]"></div>
-				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#F37A63]"></div>
-				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#F37A63]"></div>
-				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#F37A63]"></div>
-				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#F37A63]"></div>
-				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#F37A63]"></div>
-				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#F37A63]"></div>
-				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#F37A63]"></div>
-				<div class="border-[4px] p-2 min-h-[40px] border-b-0 border-[#F37A63]"></div>
-				<div class="border-[4px] rounded-b p-2 min-h-[40px] border-[#F37A63]"></div>
-			</div>
-			<p class="paragraph">*Meals will be served at the Burns & McDonnell Student Lounge in LEEP2</p>
-		</div>
-	</div>
 	<div class="section" id="faq">
 		<div class="header">
-			Question & Answers
+			FAQ
 		</div>
 		<br>
 		<div class="qanda-container">
