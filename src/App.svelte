@@ -143,75 +143,42 @@
 		overflow: hidden;
 		display: flex;
 		flex-direction: column;
-		padding: 3rem;
+		padding: 5rem 3rem;
 	}
 
 	/* FONTS */
 	.title {
 		font-family: 'Modak';
-		font-size: 12em;
+		font-size: 14rem;
 		font-weight: 400;
 		color: var(--header);
-		line-height: 9rem;
+		line-height: 10rem;
 	}
 	h1 {
 		font-family: 'Modak';
-		font-size: 4.5em;
+		font-size: 5.25rem;
 		font-weight: 400;
 		color: var(--header);
-		line-height: 4.5rem;
+		line-height: 5rem;
 	}
 	h2 {
 		font-family: 'PT Sans';
-		font-size: 2.25em;
+		font-size: 2.625rem;
 		font-weight: 700;
 		color: var(--body-text);
 	}
 	.body-text {
 		font-family: 'PT Sans';
-		font-size: 1.375em;
+		font-size: 2rem;
 		font-weight: 400;
 		color: var(--body-text);
-		line-height: 2.375rem;
+		line-height: 2.5rem;
 	}
 	.caption {
 		font-family: 'PT Sans';
-		font-size: 1.25em;
+		font-size: 1.75rem;
 		font-weight: 400;
 		color: var(--body-text);
-	}
-
-	/* REM SETTINGS */
-	html {
-    font-size: 8px;
-	}
-	@media only screen and (min-width: 480px) {
-		html {
-			font-size: 8px;
-		}
-	}
-	@media only screen and (min-width: 720px) {
-		html {
-			font-size: 10px;
-		}
-		.title {
-			line-height: 11rem;
-		}
-	}
-	@media only screen and (min-width: 750px) {
-		.section {
-			padding: 8rem;
-		}
-	}
-	@media only screen and (min-width: 960px) {
-		html {
-			font-size: 12px;
-		}
-	}
-	@media only screen and (min-width: 1240px) {
-		html {
-			font-size: 14px;
-		}
 	}
 
 	/* SVGS */
@@ -237,7 +204,8 @@
 
 	/* HAMBURGER */
 	.hamburgerMenu {
-		height: 2em;
+		height: 4rem;
+		z-index: 1000;
 	}
 	.hamburgerMenu svg{
 		height: 100%;
@@ -251,7 +219,7 @@
 		top: 2rem;
 		left: 8rem;
 		right: 8rem;
-		z-index: 100000;
+		z-index: 1000;
 	}
 	.right-nav {
 		display: flex;
@@ -282,8 +250,7 @@
 		align-items: flex-start;
 		justify-content: flex-end;
 		flex-direction: column;
-		gap: 1.625rem;
-		min-height: 108vh;
+		min-height: 100vh;
 	}
 	.sub-container {
 		display: flex;
@@ -316,11 +283,6 @@
 		border: none;
 		outline: none;
 		transition: 0.4s;
-
-		font-family: 'PT Sans';
-		font-size: 1.5em;
-		font-weight: 400;
-		line-height: 2rem;
 		color: var(--background);
 	}
 	/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -334,12 +296,6 @@
 		display: none;
 		overflow: hidden;
 		border: 0.1875rem solid var(--body-text);
-
-		font-family: 'PT Sans';
-		font-size: 1.5em;
-		font-weight: 400;
-		line-height: 2rem;
-		color: var(--body-text);
 	}
 	.accordion:after {
 		content: '\02795'; /* Unicode character for "plus" sign (+) */
@@ -381,6 +337,47 @@
 		}
 		to {
 			background-position-x: 100%;
+		}
+	}
+
+	/* REM SETTINGS */
+	html {
+    font-size: 8px;
+	}
+	@media only screen and (min-width: 240px) {
+		html {
+			font-size: 8px;
+		}
+	}
+	@media only screen and (min-width: 720px) {
+		html {
+			font-size: 10px;
+		}
+	}
+	/* use this one to differentiate between mobile/desktop (set things to mobile sizings and in this @media block set it to the desktop sizing)*/
+	@media only screen and (min-width: 750px) {
+		.section {
+			padding: 8rem;
+		}
+		.body-text {
+			font-size: 1.625rem;
+			line-height: 2.125rem;
+		}
+		.caption {
+			font-size: 1.375rem;
+		}
+		.home {
+			min-height: 108vh;
+		}
+	}
+	@media only screen and (min-width: 960px) {
+		html {
+			font-size: 12px;
+		}
+	}
+	@media only screen and (min-width: 1240px) {
+		html {
+			font-size: 14px;
 		}
 	}
 </style>
@@ -452,49 +449,49 @@
 		<h1>FAQ</h1>
 		<br>
 		<div class="qanda-container">
-			<button class="accordion">What is HackKU?</button>
-			<div class="panel">
+			<button class="accordion body-text">What is HackKU?</button>
+			<div class="panel body-text">
 				<p>The annual 36-hour hackathon hosted by students at the University of Kansas.</p>
 			</div>
-			<button class="accordion">When is HackKU?</button>
-			<div class="panel">
+			<button class="accordion body-text">When is HackKU?</button>
+			<div class="panel body-text">
 				<p>HackKU will run from 5:00 pm April 8 until 12:00 pm April 10 in the Engineering Complex at the University of Kansas.</p>
 			</div>
-			<button class="accordion">Who can participate in HackKU?</button>
-			<div class="panel">
+			<button class="accordion body-text">Who can participate in HackKU?</button>
+			<div class="panel body-text">
 				<p>HackKU is open to all college and university students, both undergraduate and graduate. Unfortunately, high school students may not participate in HackKU.</p>
 			</div>
-			<button class="accordion">What is the cost?</button>
-			<div class="panel">
+			<button class="accordion body-text">What is the cost?</button>
+			<div class="panel body-text">
 				<p>Nothing! It’s free to participate. Meals, drinks, and snacks are provided.</p>
 			</div>
-			<button class="accordion">Is coding experience required?</button>
-			<div class="panel">
+			<button class="accordion body-text">Is coding experience required?</button>
+			<div class="panel body-text">
 				<p>No! All students who want to learn about coding, technology, design, and building new things are welcome. If you’re a beginner, this is the perfect opportunity to learn something new!</p>
 			</div>
-			<button class="accordion">What should I bring?</button>
-			<div class="panel">
+			<button class="accordion body-text">What should I bring?</button>
+			<div class="panel body-text">
 				<p>
-					<b>Hardware:</b> Bring your hacking device and any accessories it requires.<br>
-					<b>Sleeping:</b> Feel free to bring a sleeping bag, pillows, and/or blankets.<br>
-					<b>Personal Hygiene:</b> Showers will be provided. Bring a bath towel and personal hygiene products.<br>
+					<b>Hardware:</b> Bring your hacking device and any accessories it requires.<br><br>
+					<b>Sleeping:</b> Feel free to bring a sleeping bag, pillows, and/or blankets.<br><br>
+					<b>Personal Hygiene:</b> Showers will be provided. Bring a bath towel and personal hygiene products.<br><br>
 					<b>Photo ID:</b> You must bring a photo ID with you to check in, and the name on the ID must match the name entered during registration.<br>
 				</p>
 			</div>
-			<button class="accordion">Are meals provided?</button>
-			<div class="panel">
+			<button class="accordion body-text">Are meals provided?</button>
+			<div class="panel body-text">
 				<p>Yes. You will be able to access food with a badge and ticket given during registration.</p>
 			</div>
-			<button class="accordion">As an MLH-affiliated event, all participants will be expected to follow the MLH Code of Conduct. What does this mean?</button>
-			<div class="panel">
+			<button class="accordion body-text">As an MLH-affiliated event, all participants will be expected to follow the MLH Code of Conduct. What does this mean?</button>
+			<div class="panel body-text">
 				<a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" class="link">Read the MLH Code of Conduct here!</a>
 			</div>
-			<button class="accordion">I’m stuck. How do I get help?</button>
-			<div class="panel">
+			<button class="accordion body-text">I’m stuck. How do I get help?</button>
+			<div class="panel body-text">
 				<p>There will be a lot of different ways to get help. We will have mentors, both students, and engineers from industry, in the #mentoring channel on Discord</p>
 			</div>
-			<button class="accordion">What if I need to contact the organizers?</button>
-			<div class="panel">
+			<button class="accordion body-text">What if I need to contact the organizers?</button>
+			<div class="panel body-text">
 				<p>Message us in the #ask-the-organizers channel! There will always be a couple of organizers online that will be able to answer questions. For urgent event-related problems, please go to LEEP2 1415A, or reach out to any HackKU organizer. </p>
 			</div>
 		</div>
