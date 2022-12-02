@@ -6,7 +6,6 @@
 	import MemberButton from './components/MemberButton.svelte'
 	import { onMount } from 'svelte';
 	import './tw.css'
-  import HackerDocs from './HackerDocs.svelte';
 
 	let members = {
 		"zoe": {
@@ -145,7 +144,7 @@
 		flex-direction: column;
 		padding: 5rem 3rem;
 	}
-
+  
 	/* FONTS */
 	.title {
 		font-family: 'Modak';
@@ -396,7 +395,8 @@
 		{#if !smallScreen}
 			<div class="navbar">
 				<nav class="left-nav body-text link">
-					HACKERDOCS
+					<!-- make so is embedded html instead of going to external site -->
+					<a href="https://hackku.notion.site/HackerDoc-HackKU-2023-d870cdb8e84b425ab67a2eedcb41344c">HACKERDOC</a>
 				</nav>
 				<nav style="display:inline-block; flex: 1">
 					<ul class="right-nav body-text">
