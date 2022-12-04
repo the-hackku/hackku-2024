@@ -7,31 +7,50 @@
 	import { onMount } from 'svelte';
 	import './tw.css'
 
-	let members = {
+	let director = {
 		"zoe": {
 			display: "Zoe Kulphongpatana",
 			title: "Director",
 			link: "https://www.linkedin.com/in/kulphongpatana/",
+		}
+	}
+	let back = {
+		"tej": {
+			display: "Tej Gumaste",
+			title: "Tech",
+			link: "https://www.linkedin.com/in/tej-gumaste/", 
+		},
+		"mikaela": {
+			display: "Mikaela Navarro",
+			title: "Food",
+			link: "https://www.linkedin.com/in/mikaela-navarro-489b0023a/", 
 		},
 		"james":{
 			display: "James Hurd",
 			title: "Vice Director",
 			link: "jameshurd.net",
 		},
+		"raj": {
+			display: "Raj Kaura",
+			title: "Tech",
+			link: "", 
+		},
 		"firangiz": {
 			display: "Firangiz Ganbarli",
 			title: "Logistics",
 			link: "https://www.linkedin.com/in/firangizganbarli/",
+		}
+	}
+	let middle = {
+		"sungin": {
+			display: "Sungin Huh",
+			title: "Food",
+			link: "https://www.linkedin.com/in/sungin-huh-730b97173/", 
 		},
-		"jerusha": {
-			display: "Jerusha Rowden",
-			title: "Swag",
-			link: "https://www.linkedin.com/in/jerusha-rowden/", 
-		},
-		"skyler": {
-			display: "Skyler Bosch",
+		"shayna": {
+			display: "Shayna Weinstein",
 			title: "Sponsorship",
-			link: "https://www.linkedin.com/in/skyler-bosch-37393a159/", 
+			link: "https://www.linkedin.com/in/shayna-weinstein/", 
 		},
 		"raven": {
 			display: "Raven Duong",
@@ -42,39 +61,27 @@
 			display: "Michelle Chen",
 			title: "Finance",
 			link: "https://www.linkedin.com/in/michelle-chen3", 
-		},
-		"shayna": {
-			display: "Shayna Weinstein",
-			title: "Sponsorship",
-			link: "", 
-		},
-		"mikaela": {
-			display: "Mikaela Navarro",
-			title: "Food",
-			link: "", 
-		},
-		"sungin": {
-			display: "Sungin Huh",
-			title: "Food",
-			link: "https://www.linkedin.com/in/sungin-huh-730b97173/", 
+		}
+	}
+	let front = {
+		"jerusha": {
+			display: "Jerusha Rowden",
+			title: "Design",
+			link: "https://www.linkedin.com/in/jerusha-rowden/", 
 		},
 		"ameera": {
-			display: "Ameera Alhajeri",
+			display: "Ameera Alhajri",
 			title: "Marketing",
 			link: "https://www.linkedin.com/in/ameera-alhajri-740273255", 
 		},
-		"tej": {
-			display: "Tej Gumaste",
-			title: "Tech",
-			link: "", 
-		},
-		"raj": {
-			display: "Raj Kaura",
-			title: "Tech",
-			link: "", 
+		"skyler": {
+			display: "Skyler Bosch",
+			title: "Sponsorship",
+			link: "https://www.linkedin.com/in/skyler-bosch-37393a159/", 
 		}
 	}
 	let links = [
+		{ display: "HACKERDOC", action: () => window.open("https://hackku.notion.site/hackku/HackerDoc-HackKU-2023-d870cdb8e84b425ab67a2eedcb41344c", "_blank")},
 		{ display: "ABOUT", action: () => scrollToID("about")},
 		{ display: "FAQ", action: () => scrollToID("faq")},
 		{ display: "SPONSORS", action: () => scrollToID("sponsors")},
@@ -177,6 +184,7 @@
 		font-family: 'PT Sans';
 		font-size: 1.75rem;
 		font-weight: 400;
+		font-style: italic;
 		color: var(--body-text);
 	}
 
@@ -324,10 +332,18 @@
 		margin-top: 4%;
 	}
 
+	/* TEAM */
 	.team {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		flex-wrap: wrap;
+	}
+	.row {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 4rem;
 	}
 
 	@keyframes backgroundScroll {
@@ -396,7 +412,7 @@
 			<div class="navbar">
 				<nav class="left-nav body-text link">
 					<!-- make so is embedded html instead of going to external site -->
-					<a href="https://hackku.notion.site/HackerDoc-HackKU-2023-d870cdb8e84b425ab67a2eedcb41344c">HACKERDOC</a>
+					<a href="https://hackku.notion.site/HackerDoc-HackKU-2023-d870cdb8e84b425ab67a2eedcb41344c" target="_blank">HACKERDOC</a>
 				</nav>
 				<nav style="display:inline-block; flex: 1">
 					<ul class="right-nav body-text">
@@ -511,10 +527,56 @@
 		<br>
 		<div class="team">
 			<div id="zoe">
-				<img id="zoe" src="zoe.png" alt="HackKU Director">
+				<img id="zoe" src="zoe.png" alt="HackKU Director" style="height:22rem;object-fit: contain">
+				<div class="row">
+					{#each Object.entries(director) as [name, data]}
+					<MemberButton {name} {data} />
+					{/each}
+				</div>
 			</div>
+			<br>
 			<div id="group">
-				<img id="group" src="group.png" alt="HackKU Organizers">
+				<img id="group" src="group.png" alt="HackKU Organizers" style="max-width:80vw;width:68rem;object-fit: contain">
+				<br>
+				{#if !smallScreen}
+					<div class="row">
+						{#each Object.entries(back) as [name, data]}
+						<MemberButton {name} {data} />
+						{/each}
+					</div>
+					<br>
+					<div class="row">
+						{#each Object.entries(middle) as [name, data]}
+						<MemberButton {name} {data} />
+						{/each}
+					</div>
+					<br>
+					<div class="row">
+						{#each Object.entries(front) as [name, data]}
+						<MemberButton {name} {data} />
+						{/each}
+					</div>
+				{:else}
+					<h2 style="text-align:center">Back Row</h2>
+					<br>
+					{#each Object.entries(back) as [name, data]}
+					<MemberButton {name} {data} />
+					{/each}
+					<br>
+					<br>
+					<h2 style="text-align:center">Middle Row</h2>
+					<br>
+					{#each Object.entries(middle) as [name, data]}
+					<MemberButton {name} {data} />
+					{/each}
+					<br>
+					<br>
+					<h2 style="text-align:center">Front Row</h2>
+					<br>
+					{#each Object.entries(front) as [name, data]}
+					<MemberButton {name} {data} />
+					{/each}
+				{/if}
 			</div>
 		</div>
 		<br>

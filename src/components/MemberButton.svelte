@@ -1,31 +1,26 @@
 <script>
-    export let name
-    export let data
-
-    const hands = ["peace", "wave"]
+	export let name
+	export let data
 </script>
 
 <style>
-    .hand {
-        transform-origin: 100% 100%;
-        transform: rotate(-90deg);
-        transition: .3s;
-        opacity: 0;
-    }
-    
-    .handCont:hover .hand {
-        transform: rotate(0deg);
-        opacity: 1;
-    }
+  .name-title {
+		text-align: center;
+		cursor: pointer;
+		transition: .2s;
+	}
+	.name-title:hover {
+		padding: 0 1rem 0 1rem;
+		color: var(--background);
+		background-color: var(--accent1);
+	}
 </style>
 
 {#if name}
-<div class="flex flex-col gap-4">
-    <div on:click={() => window.open(data.link, "_blank")} class="handCont cursor-pointer relative overflow-hidden w-[250px] h-[250px] border-[#e8000d] border-4 rounded-full">
-        <img class="hand absolute w-[60px] left-[10px] top-[90px]" alt="hand" src={`${hands[Math.floor(Math.random() * hands.length)]}.png`} />
-        <img alt={name} src={`${name}.png`} />
-    </div>
-    <div class="text-center red font-bold text-2xl">{data.display}</div>
-    <div class="text-center red text-lg">{data.title}</div>
-</div>
+	<div class="flex flex-col gap-4">
+		<div on:click={() => window.open(data.link, "_blank")} class="body-text name-title">
+			<div>{data.display}</div>
+			<div style="font-size:1.375rem;font-style:italic">{data.title}</div>
+		</div>
+	</div>
 {/if}
