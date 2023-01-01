@@ -5,8 +5,9 @@
 	import RegisterButton from './components/RegisterButton.svelte'
 	import MemberButton from './components/MemberButton.svelte'
 	import { onMount } from 'svelte';
+	import Footer from './Footer.svelte';
 	import './tw.css'
-  import HackerDocs from './HackerDocs.svelte';
+    import HackerDocs from './HackerDocs.svelte';
 
 	let members = {
 		"zoe": {
@@ -262,6 +263,19 @@
 		height: 19rem;
 	}
 
+	.about-image {
+		height: 30rem;
+		display: flex;
+        margin: 0 auto;
+        text-align: right;
+	}
+	.register-button {
+ 		width: 12rem;
+  		height: 3rem;
+		background-color: var(--header);
+		color: white;
+
+	}
 	/* FAQ */
 	.qanda-container {
 		display: flex;
@@ -441,10 +455,17 @@
 	<div class="section" id="about">
 		<h1>What is HackKU?</h1>
 		<br>
-		<div class="body-text" id="about" style="width:40rem;max-width:80%">
+		<div class="body-tex>t" id="about" style="width:40rem;max-width:80%">
 			HackKU is an annual 36-hour hackathon hosted by the University of Kansas, where students can have the opportunity to innovate new ideas, discover different paths, and push the boundaries of technology. Work with teams of up to four people to create unique solutions to real-world problems. Projects can range from web applications and video games to drones and fitness devices.
 		</div>
+		<div class="sub-container">
+			<a href="https://google.com">
+				<button class="register-button">Register Now!</button>
+			  </a>
+			<img src= "about.png" class="about-image" alt="about"> 
+		</div>
 	</div>
+
 	<div class="section" id="faq">
 		<h1>FAQ</h1>
 		<br>
@@ -527,3 +548,4 @@
 		</div>
 	</div>
 </main>
+<Footer />
