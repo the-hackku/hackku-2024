@@ -264,17 +264,15 @@
 	}
 
 	.about-image {
-		height: 30rem;
-		display: flex;
-        margin: 0 auto;
-        text-align: right;
+		height: 32rem;
+		float: right;
 	}
+
 	.register-button {
- 		width: 12rem;
+ 		width: 15rem;
   		height: 3rem;
 		background-color: var(--header);
 		color: white;
-
 	}
 	/* FAQ */
 	.qanda-container {
@@ -455,7 +453,7 @@
 	<div class="section" id="about">
 		<h1>What is HackKU?</h1>
 		<br>
-		<div class="body-tex>t" id="about" style="width:40rem;max-width:80%">
+		<div class="body-text" id="about" style="width:40rem;max-width:80%;">
 			HackKU is an annual 36-hour hackathon hosted by the University of Kansas, where students can have the opportunity to innovate new ideas, discover different paths, and push the boundaries of technology. Work with teams of up to four people to create unique solutions to real-world problems. Projects can range from web applications and video games to drones and fitness devices.
 		</div>
 		<div class="sub-container">
@@ -465,7 +463,6 @@
 			<img src= "about.png" class="about-image" alt="about"> 
 		</div>
 	</div>
-
 	<div class="section" id="faq">
 		<h1>FAQ</h1>
 		<br>
