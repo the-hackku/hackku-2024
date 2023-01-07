@@ -417,7 +417,7 @@
 						<li><a class="link" href=#sponsors>SPONSORS</a></li>
 						<li><a class="link" href=#prizes>PRIZES</a></li>
 						<li><a class="link" href=#contact>MEET the TEAM</a></li>
-						<li style="color:var(--header)"><a class="link" href="https://forms.gle/KwRNWYcxXyqf3EdZ7" target="_blank">REGISTER NOW!</a></li>
+						<li style="color:var(--header)"><a class="link" href="https://forms.gle/Sck3FsitxKgNQMpP8" target="_blank">REGISTER NOW!</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -449,20 +449,25 @@
 			</div>
 		</div>
 	</div>
+	
+    <div class="section" id="about">
+        <h1>What is HackKU?</h1>
+        <br>
+        <div class="flex-container" style="display: flex; flex-direction: row; justify-content: space-between;">
+          <div class="left-flex-item">
+            <div class="body-text" id="about" style="width:40rem;max-width:80%; ">
+              HackKU is an annual 36-hour hackathon hosted by the University of Kansas, where students can have the opportunity to innovate new ideas, discover different paths, and push the boundaries of technology. Work with teams of up to four people to create unique solutions to real-world problems. Projects can range from web applications and video games to drones and fitness devices.
+            </div>
+            <a href=" https://forms.gle/Sck3FsitxKgNQMpP8" target="_blank">
+              <button class="register-button" style="margin-top: 1rem; ">Register Now!</button>
+            </a>
+          </div>
+          <div class="right-flex-item">
+            <img src="about.png" class="about-image" alt="about">
+          </div>
+        </div>
+      </div> 
 
-	<div class="section" id="about">
-		<h1>What is HackKU?</h1>
-		<br>
-		<div class="body-text" id="about" style="width:40rem;max-width:80%;">
-			HackKU is an annual 36-hour hackathon hosted by the University of Kansas, where students can have the opportunity to innovate new ideas, discover different paths, and push the boundaries of technology. Work with teams of up to four people to create unique solutions to real-world problems. Projects can range from web applications and video games to drones and fitness devices.
-		</div>
-		<div class="sub-container">
-			<a href="https://google.com">
-				<button class="register-button">Register Now!</button>
-			  </a>
-			<img src= "about.png" class="about-image" alt="about"> 
-		</div>
-	</div>
 	<div class="section" id="faq">
 		<h1>FAQ</h1>
 		<br>

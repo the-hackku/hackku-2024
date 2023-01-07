@@ -1,36 +1,41 @@
 
 <style>
-    footer {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #333;
-      color: #fff;
-      padding: 1rem;
-      background-color: #7085C1;
-    }
-    footer img {
-      width: 2rem;
-      height: 2rem;
-      margin: 0 1rem;
-      object-fit: contain;
-    }
-  </style>
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 1rem;
+    background-color: #7085C1;
+    width: 50rem;
+    height: 4rem;
+    margin: 0 auto;
+    bottom: 3rem;
+  }
+  footer img {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 1rem;
+    object-fit: contain;
+  }
+</style>
+
+<footer>
+  <div>
+    <a href="https://www.instagram.com/_hackku_/" target="_blank">
+      <img src="ig-logo.png" alt="Instagram icon" />
+    </a>
+  </div>
+  <div>
+    <a href="https://github.com/theHackKU" target="_blank">
+      <img src="github.png" alt="GitHub icon" />
+    </a>
+  </div>
+  <div>
+    <a href="mailto: info.hackku@gmail.com">
+      <img src="email-logo.png" alt="Email icon" />
+    </a>
+  </div>
+</footer>
+
   
-  <footer>
-    <div>
-      <a href="https://www.instagram.com/_hackku_/">
-        <img src="ig-logo.png" alt="Instagram icon" />
-      </a>
-    </div>
-    <div>
-      <a href="https://github.com/hackku-2023">
-        <img src="github.png" alt="GitHub icon" />
-      </a>
-    </div>
-    <div>
-      <a href="https://google.com">
-        <img src="email-logo.png" alt="Email icon" />
-      </a>
-    </div>
-  </footer>
