@@ -4,13 +4,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
     padding: 1rem;
     background-color: #7085C1;
-    width: 50rem;
+    width: fill;
     height: 4rem;
     margin: 0 auto;
-    bottom: 3rem;
   }
   footer img {
     width: 3rem;
