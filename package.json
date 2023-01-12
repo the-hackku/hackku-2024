@@ -21,7 +21,6 @@
     "tailwindcss": "^3.0.23"
   },
   "dependencies": {
-    "build": "^0.1.4",
     "sirv-cli": "^2.0.0",
     "svelte-preprocess": "^4.10.4"
   }
