@@ -280,7 +280,7 @@
  		width: 15rem;
   		height: 3rem;
 		background-color: var(--header);
-		color: white;
+		color: var(--background);
 	}
 	/* FAQ */
 	.qanda-container {
