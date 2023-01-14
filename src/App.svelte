@@ -5,7 +5,7 @@
 	import RegisterButton from './components/RegisterButton.svelte'
 	import MemberButton from './components/MemberButton.svelte'
 	import { onMount } from 'svelte';
-	import Footer from './Footer.svelte';
+	import Footer from './components/Footer.svelte';
 	import './tw.css'
   import HackerDocs from './HackerDocs.svelte';
   
