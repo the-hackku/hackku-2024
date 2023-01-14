@@ -7,33 +7,52 @@
 	import { onMount } from 'svelte';
 	import Footer from './Footer.svelte';
 	import './tw.css'
-    import HackerDocs from './HackerDocs.svelte';
-
-	let members = {
+  import HackerDocs from './HackerDocs.svelte';
+  
+	let director = {
 		"zoe": {
 			display: "Zoe Kulphongpatana",
 			title: "Director",
 			link: "https://www.linkedin.com/in/kulphongpatana/",
+		}
+	}
+	let back = {
+		"tej": {
+			display: "Tej Gumaste",
+			title: "Tech",
+			link: "https://www.linkedin.com/in/tej-gumaste/", 
+		},
+		"mikaela": {
+			display: "Mikaela Navarro",
+			title: "Food",
+			link: "https://www.linkedin.com/in/mikaela-navarro-489b0023a/", 
 		},
 		"james":{
 			display: "James Hurd",
 			title: "Vice Director",
 			link: "jameshurd.net",
 		},
+		"raj": {
+			display: "Raj Kaura",
+			title: "Tech",
+			link: "", 
+		},
 		"firangiz": {
 			display: "Firangiz Ganbarli",
 			title: "Logistics",
 			link: "https://www.linkedin.com/in/firangizganbarli/",
+		}
+	}
+	let middle = {
+		"sungin": {
+			display: "Sungin Huh",
+			title: "Food",
+			link: "https://www.linkedin.com/in/sungin-huh-730b97173/", 
 		},
-		"jerusha": {
-			display: "Jerusha Rowden",
-			title: "Swag",
-			link: "https://www.linkedin.com/in/jerusha-rowden/", 
-		},
-		"skyler": {
-			display: "Skyler Bosch",
+		"shayna": {
+			display: "Shayna Weinstein",
 			title: "Sponsorship",
-			link: "https://www.linkedin.com/in/skyler-bosch-37393a159/", 
+			link: "https://www.linkedin.com/in/shayna-weinstein/", 
 		},
 		"raven": {
 			display: "Raven Duong",
@@ -44,39 +63,27 @@
 			display: "Michelle Chen",
 			title: "Finance",
 			link: "https://www.linkedin.com/in/michelle-chen3", 
-		},
-		"shayna": {
-			display: "Shayna Weinstein",
-			title: "Sponsorship",
-			link: "", 
-		},
-		"mikaela": {
-			display: "Mikaela Navarro",
-			title: "Food",
-			link: "", 
-		},
-		"sungin": {
-			display: "Sungin Huh",
-			title: "Food",
-			link: "https://www.linkedin.com/in/sungin-huh-730b97173/", 
+		}
+	}
+	let front = {
+		"jerusha": {
+			display: "Jerusha Rowden",
+			title: "Design",
+			link: "https://www.linkedin.com/in/jerusha-rowden/", 
 		},
 		"ameera": {
-			display: "Ameera Alhajeri",
+			display: "Ameera Alhajri",
 			title: "Marketing",
 			link: "https://www.linkedin.com/in/ameera-alhajri-740273255", 
 		},
-		"tej": {
-			display: "Tej Gumaste",
-			title: "Tech",
-			link: "", 
-		},
-		"raj": {
-			display: "Raj Kaura",
-			title: "Tech",
-			link: "", 
+		"skyler": {
+			display: "Skyler Bosch",
+			title: "Sponsorship",
+			link: "https://www.linkedin.com/in/skyler-bosch-37393a159/", 
 		}
 	}
 	let links = [
+		{ display: "HACKERDOC", action: () => window.open("https://hackku.notion.site/hackku/HackerDoc-HackKU-2023-d870cdb8e84b425ab67a2eedcb41344c", "_blank")},
 		{ display: "ABOUT", action: () => scrollToID("about")},
 		{ display: "FAQ", action: () => scrollToID("faq")},
 		{ display: "SPONSORS", action: () => scrollToID("sponsors")},
@@ -146,7 +153,7 @@
 		flex-direction: column;
 		padding: 5rem 3rem;
 	}
-
+  
 	/* FONTS */
 	.title {
 		font-family: 'Modak';
@@ -179,6 +186,7 @@
 		font-family: 'PT Sans';
 		font-size: 1.75rem;
 		font-weight: 400;
+		font-style: italic;
 		color: var(--body-text);
 	}
 
@@ -265,14 +273,14 @@
 
 	.about-image {
 		height: 32rem;
-		float: right;
+		object-fit: cover;
 	}
 
 	.register-button {
  		width: 15rem;
   		height: 3rem;
 		background-color: var(--header);
-		color: white;
+		color: var(--background);
 	}
 	/* FAQ */
 	.qanda-container {
@@ -337,10 +345,18 @@
 		margin-top: 4%;
 	}
 
+	/* TEAM */
 	.team {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		flex-wrap: wrap;
+	}
+	.row {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 4rem;
 	}
 
 	@keyframes backgroundScroll {
@@ -408,7 +424,8 @@
 		{#if !smallScreen}
 			<div class="navbar">
 				<nav class="left-nav body-text link">
-					HACKERDOCS
+					<!-- make so is embedded html instead of going to external site -->
+					<a href="https://hackku.notion.site/HackerDoc-HackKU-2023-d870cdb8e84b425ab67a2eedcb41344c" target="_blank">HACKERDOC</a>
 				</nav>
 				<nav style="display:inline-block; flex: 1">
 					<ul class="right-nav body-text">
@@ -452,14 +469,13 @@
 	
     <div class="section" id="about">
         <h1>What is HackKU?</h1>
-        <br>
-        <div class="flex-container" style="display: flex; flex-direction: row; justify-content: space-between;">
-          <div class="left-flex-item">
-            <div class="body-text" id="about" style="width:40rem;max-width:80%; ">
+        <div class="flex-container" style="display: flex; flex-direction: row; justify-content: space-between">
+          <div class="left-flex-item" style="margin-left:6rem; margin-top:4rem">
+            <div class="body-text" id="about" style="width:42rem;max-width:80%">
               HackKU is an annual 36-hour hackathon hosted by the University of Kansas, where students can have the opportunity to innovate new ideas, discover different paths, and push the boundaries of technology. Work with teams of up to four people to create unique solutions to real-world problems. Projects can range from web applications and video games to drones and fitness devices.
             </div>
             <a href=" https://forms.gle/Sck3FsitxKgNQMpP8" target="_blank">
-              <button class="register-button" style="margin-top: 1rem; ">Register Now!</button>
+              <button class="register-button" style="margin-top: 2rem; ">REGISTER NOW!</button>
             </a>
           </div>
           <div class="right-flex-item">
@@ -529,15 +545,61 @@
 		<br>
 		<h2>Coming soon!</h2>
 	</div>
-	<div class="section" id="contact" style="min-height: 65vh">
+	<div class="section" id="contact" style="min-height:65vh; padding-bottom:2rem">
 		<h1>Meet the Team</h1>
 		<br>
 		<div class="team">
 			<div id="zoe">
-				<img id="zoe" src="zoe.png" alt="HackKU Director">
+				<img id="zoe" src="zoe.png" alt="HackKU Director" style="height:22rem;object-fit: contain">
+				<div class="row">
+					{#each Object.entries(director) as [name, data]}
+					<MemberButton {name} {data} />
+					{/each}
+				</div>
 			</div>
+			<br>
 			<div id="group">
-				<img id="group" src="group.png" alt="HackKU Organizers">
+				<img id="group" src="group.png" alt="HackKU Organizers" style="max-width:80vw;width:68rem;object-fit: contain">
+				<br>
+				{#if !smallScreen}
+					<div class="row">
+						{#each Object.entries(back) as [name, data]}
+						<MemberButton {name} {data} />
+						{/each}
+					</div>
+					<br>
+					<div class="row">
+						{#each Object.entries(middle) as [name, data]}
+						<MemberButton {name} {data} />
+						{/each}
+					</div>
+					<br>
+					<div class="row">
+						{#each Object.entries(front) as [name, data]}
+						<MemberButton {name} {data} />
+						{/each}
+					</div>
+				{:else}
+					<h2 style="text-align:center">Back Row</h2>
+					<br>
+					{#each Object.entries(back) as [name, data]}
+					<MemberButton {name} {data} />
+					{/each}
+					<br>
+					<br>
+					<h2 style="text-align:center">Middle Row</h2>
+					<br>
+					{#each Object.entries(middle) as [name, data]}
+					<MemberButton {name} {data} />
+					{/each}
+					<br>
+					<br>
+					<h2 style="text-align:center">Front Row</h2>
+					<br>
+					{#each Object.entries(front) as [name, data]}
+					<MemberButton {name} {data} />
+					{/each}
+				{/if}
 			</div>
 		</div>
 		<br>
@@ -548,6 +610,7 @@
 				Made with love by the HackKU team
 			</div>
 		</div>
+		<br>
+		<Footer />
 	</div>
 </main>
-<Footer />
