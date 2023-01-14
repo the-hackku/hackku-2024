@@ -5,8 +5,10 @@
 	import RegisterButton from './components/RegisterButton.svelte'
 	import MemberButton from './components/MemberButton.svelte'
 	import { onMount } from 'svelte';
+	import Footer from './Footer.svelte';
 	import './tw.css'
-
+  import HackerDocs from './HackerDocs.svelte';
+  
 	let director = {
 		"zoe": {
 			display: "Zoe Kulphongpatana",
@@ -269,6 +271,17 @@
 		height: 19rem;
 	}
 
+	.about-image {
+		height: 32rem;
+		object-fit: cover;
+	}
+
+	.register-button {
+ 		width: 15rem;
+  		height: 3rem;
+		background-color: var(--header);
+		color: var(--background);
+	}
 	/* FAQ */
 	.qanda-container {
 		display: flex;
@@ -421,7 +434,7 @@
 						<li><a class="link" href=#sponsors>SPONSORS</a></li>
 						<li><a class="link" href=#prizes>PRIZES</a></li>
 						<li><a class="link" href=#contact>MEET the TEAM</a></li>
-						<li style="color:var(--header)"><a class="link" href="https://forms.gle/KwRNWYcxXyqf3EdZ7" target="_blank">REGISTER NOW!</a></li>
+						<li style="color:var(--header)"><a class="link" href="https://forms.gle/Sck3FsitxKgNQMpP8" target="_blank">REGISTER NOW!</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -453,14 +466,24 @@
 			</div>
 		</div>
 	</div>
+	
+    <div class="section" id="about">
+        <h1>What is HackKU?</h1>
+        <div class="flex-container" style="display: flex; flex-direction: row; justify-content: space-between">
+          <div class="left-flex-item" style="margin-left:6rem; margin-top:4rem">
+            <div class="body-text" id="about" style="width:42rem;max-width:80%">
+              HackKU is an annual 36-hour hackathon hosted by the University of Kansas, where students can have the opportunity to innovate new ideas, discover different paths, and push the boundaries of technology. Work with teams of up to four people to create unique solutions to real-world problems. Projects can range from web applications and video games to drones and fitness devices.
+            </div>
+            <a href=" https://forms.gle/Sck3FsitxKgNQMpP8" target="_blank">
+              <button class="register-button" style="margin-top: 2rem; ">REGISTER NOW!</button>
+            </a>
+          </div>
+          <div class="right-flex-item">
+            <img src="about.png" class="about-image" alt="about">
+          </div>
+        </div>
+      </div> 
 
-	<div class="section" id="about">
-		<h1>What is HackKU?</h1>
-		<br>
-		<div class="body-text" id="about" style="width:40rem;max-width:80%">
-			HackKU is an annual 36-hour hackathon hosted by the University of Kansas, where students can have the opportunity to innovate new ideas, discover different paths, and push the boundaries of technology. Work with teams of up to four people to create unique solutions to real-world problems. Projects can range from web applications and video games to drones and fitness devices.
-		</div>
-	</div>
 	<div class="section" id="faq">
 		<h1>FAQ</h1>
 		<br>
@@ -522,7 +545,7 @@
 		<br>
 		<h2>Coming soon!</h2>
 	</div>
-	<div class="section" id="contact" style="min-height: 65vh">
+	<div class="section" id="contact" style="min-height:65vh; padding-bottom:2rem">
 		<h1>Meet the Team</h1>
 		<br>
 		<div class="team">
@@ -587,5 +610,7 @@
 				Made with love by the HackKU team
 			</div>
 		</div>
+		<br>
+		<Footer />
 	</div>
 </main>
