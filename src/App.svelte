@@ -103,7 +103,7 @@
 	let innerWidth
 	let scrollY
 
-	$: smallScreen = innerWidth < 750
+	$: smallScreen = innerWidth < 1080
 	$: hamburgerExpanded = hamburgerExpanded && smallScreen
 
 	onMount(() => {
@@ -424,7 +424,6 @@
 		{#if !smallScreen}
 			<div class="navbar">
 				<nav class="left-nav body-text link">
-					<!-- make so is embedded html instead of going to external site -->
 					<a href="https://hackku.notion.site/HackerDoc-HackKU-2023-d870cdb8e84b425ab67a2eedcb41344c" target="_blank">HACKERDOC</a>
 				</nav>
 				<nav style="display:inline-block; flex: 1">
@@ -625,4 +624,5 @@
 		<br>
 		<Footer />
 	</div>
+	<a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:20px;top:0;width:10%;z-index:10000" href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2023-season&utm_content=blue" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2023/mlh-trust-badge-2023-blue.svg" alt="Major League Hacking 2023 Hackathon Season" style="width:100%"></a>
 </main>
