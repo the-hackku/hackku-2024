@@ -5,7 +5,7 @@
 	import RegisterButton from './components/RegisterButton.svelte'
 	import MemberButton from './components/MemberButton.svelte'
 	import { onMount } from 'svelte';
-	import Footer from './Footer.svelte';
+	import Footer from './components/Footer.svelte';
 	import './tw.css'
   import HackerDocs from './HackerDocs.svelte';
   
@@ -103,7 +103,7 @@
 	let innerWidth
 	let scrollY
 
-	$: smallScreen = innerWidth < 750
+	$: smallScreen = innerWidth < 1080
 	$: hamburgerExpanded = hamburgerExpanded && smallScreen
 
 	onMount(() => {
@@ -424,7 +424,6 @@
 		{#if !smallScreen}
 			<div class="navbar">
 				<nav class="left-nav body-text link">
-					<!-- make so is embedded html instead of going to external site -->
 					<a href="https://hackku.notion.site/HackerDoc-HackKU-2023-d870cdb8e84b425ab67a2eedcb41344c" target="_blank">HACKERDOC</a>
 				</nav>
 				<nav style="display:inline-block; flex: 1">
@@ -490,36 +489,48 @@
 		<div class="qanda-container">
 			<button class="accordion body-text">What is HackKU?</button>
 			<div class="panel body-text">
-				<p>The annual 36-hour hackathon hosted by students at the University of Kansas.</p>
+				<p>HackKU is the annual 36-hour hackathon hosted by students at the University of Kansas’ School of Engineering.</p>
+			</div>
+			<button class="accordion body-text">What is a hackathon?</button>
+			<div class="panel body-text">
+				<p>A hackathon is a weekend-long competition where students work individually or on teams to develop their programming skills through working on a software/hardware project, attending workshops, and collaborating with peers and mentors. Participants interact with industry sponsors, compete for prizes, and get lots of free food and swag!</p>
 			</div>
 			<button class="accordion body-text">When is HackKU?</button>
 			<div class="panel body-text">
-				<p>HackKU will run from 5:00 pm April 8 until 12:00 pm April 10 in the Engineering Complex at the University of Kansas.</p>
+				<p>HackKU 2023 will take place from 5:00 pm April 14 until 12:00 pm April 16 at the University of Kansas’ School of Engineering</p>
 			</div>
 			<button class="accordion body-text">Who can participate in HackKU?</button>
 			<div class="panel body-text">
 				<p>HackKU is open to all college and university students, both undergraduate and graduate. Unfortunately, high school students may not participate in HackKU.</p>
 			</div>
+			<button class="accordion body-text">What if I’m a beginner?</button>
+			<div class="panel body-text">
+				<p>All students who want to learn about programming, technology, hardware, and design are welcome. If you want to build something cool and learn some new skills, this is the perfect opportunity! There will be workshops and prizes geared specifically towards beginner hackers, and lots of mentors to provide support throughout the event.</p>
+			</div>
+			<button class="accordion body-text">What if I don’t have a team?</button>
+			<div class="panel body-text">
+				<p>No worries! You can participate individually or on a team of up to four. If you would like to work with a team, there will be a team formation event to find others to hack with. Additionally, there will be a teambuilding channel on Discord to find teammates before the event.</p>
+			</div>
 			<button class="accordion body-text">What is the cost?</button>
 			<div class="panel body-text">
-				<p>Nothing! It’s free to participate. Meals, drinks, and snacks are provided.</p>
-			</div>
-			<button class="accordion body-text">Is coding experience required?</button>
-			<div class="panel body-text">
-				<p>No! All students who want to learn about coding, technology, design, and building new things are welcome. If you’re a beginner, this is the perfect opportunity to learn something new!</p>
+				<p>Nothing! Participation is completely free. All meals, snacks, and drinks will be provided.</p>
 			</div>
 			<button class="accordion body-text">What should I bring?</button>
 			<div class="panel body-text">
 				<p>
-					<b>Hardware:</b> Bring your hacking device and any accessories it requires.<br><br>
+					<b>Hardware:</b> Bring your hacking device and any accessories (like chargers!) required.<br><br>
 					<b>Sleeping:</b> Feel free to bring a sleeping bag, pillows, and/or blankets.<br><br>
-					<b>Personal Hygiene:</b> Showers will be provided. Bring a bath towel and personal hygiene products.<br><br>
-					<b>Photo ID:</b> You must bring a photo ID with you to check in, and the name on the ID must match the name entered during registration.<br>
+					<b>Personal Hygiene:</b> Please bring personal hygiene products, and a bath towel if you choose to use the provided showers.<br><br>
+					<b>Photo ID:</b> You must bring a photo ID (ex. student ID, drivers license) to check in. The name on the ID must match the name entered during registration.<br>
 				</p>
 			</div>
 			<button class="accordion body-text">Are meals provided?</button>
 			<div class="panel body-text">
-				<p>Yes. You will be able to access food with a badge and ticket given during registration.</p>
+				<p>Yes! All meals, snacks, and drinks from Friday dinner through Sunday breakfast will be provided for free. Accomodations will be available for those observing Ramadan during this time.</p>
+			</div>
+			<button class="accordion body-text">Swag?</button>
+			<div class="panel body-text">
+				<p>All swag will be distributed at HackKU!</p>
 			</div>
 			<button class="accordion body-text">As an MLH-affiliated event, all participants will be expected to follow the MLH Code of Conduct. What does this mean?</button>
 			<div class="panel body-text">
@@ -527,7 +538,7 @@
 			</div>
 			<button class="accordion body-text">I’m stuck. How do I get help?</button>
 			<div class="panel body-text">
-				<p>There will be a lot of different ways to get help. We will have mentors, both students, and engineers from industry, in the #mentoring channel on Discord</p>
+				<p>There will be a lot of different ways to get help. A variety of mentors, from students to alumni to industry engineers, will be available in the #ask-a-mentor channel on Discord. Also, see the HackerDocs’ list of compiled resources <a href="https://hackku.notion.site/HackerDoc-HackKU-2023-d870cdb8e84b425ab67a2eedcb41344c" class="link">here.</a></p>
 			</div>
 			<button class="accordion body-text">What if I need to contact the organizers?</button>
 			<div class="panel body-text">
@@ -613,4 +624,5 @@
 		<br>
 		<Footer />
 	</div>
+	<a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:20px;top:0;width:10%;z-index:10000" href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2023-season&utm_content=blue" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2023/mlh-trust-badge-2023-blue.svg" alt="Major League Hacking 2023 Hackathon Season" style="width:100%"></a>
 </main>
