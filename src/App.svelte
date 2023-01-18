@@ -7,7 +7,6 @@
 	import { onMount } from 'svelte';
 	import Footer from './components/Footer.svelte';
 	import './tw.css'
-  import HackerDocs from './HackerDocs.svelte';
   
 	let director = {
 		"zoe": {
