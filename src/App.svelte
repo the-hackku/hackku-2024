@@ -7,6 +7,8 @@
 	import { onMount } from 'svelte';
 	import Footer from './components/Footer.svelte';
 	import './tw.css'
+  import {notifications} from './components/notifications.js'
+	import Toast from './components/Toast.svelte'
   
 	let director = {
 		"zoe": {
@@ -104,6 +106,8 @@
 	$: hamburgerExpanded = hamburgerExpanded && smallScreen
 	onMount(() => {
 		let acc = document.getElementsByClassName("accordion");
+		notifications.info('Checkout the HackerDoc for more participant details!', 6000)
+		
 		let i;
 		
 		for (i = 0; i < acc.length; i++) {
@@ -396,6 +400,7 @@
 <svelte:window bind:innerHeight bind:innerWidth bind:scrollY />
 
 <main class="text-base sm:text-xl relative">
+	<Toast />
 	<div class="section home" id="home" style="padding-top:4rem">
 		{#if hamburgerExpanded}
 			<div on:click={() => hamburgerExpanded = false} transition:fade class="fixed z-20 top-0 left-0 w-screen h-screen flex flex-col p-4 gap-2 justify-between" style="background-color:var(--background)">
