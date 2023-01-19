@@ -7,7 +7,8 @@
 	import { onMount } from 'svelte';
 	import Footer from './components/Footer.svelte';
 	import './tw.css'
-  import HackerDocs from './HackerDocs.svelte';
+  import {notifications} from './components/notifications.js'
+	import Toast from './components/Toast.svelte'
   
 	let director = {
 		"zoe": {
@@ -98,16 +99,15 @@
 		})
 	}
 	let hamburgerExpanded = false
-
 	let innerHeight
 	let innerWidth
 	let scrollY
-
 	$: smallScreen = innerWidth < 1080
 	$: hamburgerExpanded = hamburgerExpanded && smallScreen
-
 	onMount(() => {
 		let acc = document.getElementsByClassName("accordion");
+		notifications.info('Checkout the HackerDoc for more participant details!', 6000)
+		
 		let i;
 		
 		for (i = 0; i < acc.length; i++) {
@@ -128,7 +128,6 @@
 	@tailwind base;
 	@tailwind components;
 	@tailwind utilities;
-
 	/* COLORS */
 	:root {
 		--background: #F3F7E1;
@@ -140,7 +139,6 @@
 		--accent3: #BFC6D5;
 		--accent4: #CED4DA;
 	}
-
 	/* BODY */
 	main {
 		margin: 0;
@@ -189,12 +187,10 @@
 		font-style: italic;
 		color: var(--body-text);
 	}
-
 	/* SVGS */
 	svg {
 		height: 100%;
 	}
-
 	/* LINKS */
 	.linkCont {
 		display: flex;
@@ -210,7 +206,6 @@
 		color: var(--background);
 		background-color: var(--accent1);
 	}
-
 	/* HAMBURGER */
 	.hamburgerMenu {
 		height: 4rem;
@@ -219,7 +214,6 @@
 	.hamburgerMenu svg{
 		height: 100%;
 	}
-
 	/* NAV */
 	.navbar {
 		display: flex; 
@@ -270,12 +264,10 @@
 	.fishbowl-image {
 		height: 19rem;
 	}
-
 	.about-image {
 		height: 32rem;
 		object-fit: cover;
 	}
-
 	.register-button {
  		width: 15rem;
   		height: 3rem;
@@ -293,7 +285,6 @@
 		gap: 0.75rem;
 		margin: auto;
 	}
-
 	/* ACCORDIAN */
 	.accordion {
 		background-color: var(--body-text);
@@ -328,7 +319,6 @@
 		content: "\2796"; /* Unicode character for "minus" sign (-) */
 		color: var(--body-text) !important;
 	}
-
 	/* SPONSORS */
 	.sponsors {
 		max-width: 70vw;
@@ -344,7 +334,6 @@
 		width: 250px;
 		margin-top: 4%;
 	}
-
 	/* TEAM */
 	.team {
 		display: flex;
@@ -358,7 +347,6 @@
 		align-items: center;
 		gap: 4rem;
 	}
-
 	@keyframes backgroundScroll {
 		from {
 			background-position-x: 0%;
@@ -367,7 +355,6 @@
 			background-position-x: 100%;
 		}
 	}
-
 	/* REM SETTINGS */
 	html {
     font-size: 8px;
@@ -413,6 +400,7 @@
 <svelte:window bind:innerHeight bind:innerWidth bind:scrollY />
 
 <main class="text-base sm:text-xl relative">
+	<Toast />
 	<div class="section home" id="home" style="padding-top:4rem">
 		{#if hamburgerExpanded}
 			<div on:click={() => hamburgerExpanded = false} transition:fade class="fixed z-20 top-0 left-0 w-screen h-screen flex flex-col p-4 gap-2 justify-between" style="background-color:var(--background)">
