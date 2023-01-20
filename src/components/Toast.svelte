@@ -20,7 +20,7 @@
   .notifications {
     position: fixed;
     top: 6rem;
-    left: 2.5rem;
+    left: 7.5rem;
     z-index: 9999;
     pointer-events: none;
   }
