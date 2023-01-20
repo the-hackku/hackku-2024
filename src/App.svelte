@@ -210,6 +210,8 @@
 	.hamburgerMenu {
 		height: 4rem;
 		z-index: 1000;
+		position: fixed;
+		top: 2rem;
 	}
 	.hamburgerMenu svg{
 		height: 100%;
