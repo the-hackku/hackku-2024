@@ -84,12 +84,12 @@
 		}
 	}
 	let links = [
-		{ display: "HACKERDOC", action: () => window.open("https://hackku.notion.site/hackku/HackerDoc-HackKU-2023-d870cdb8e84b425ab67a2eedcb41344c", "_blank")},
 		{ display: "ABOUT", action: () => scrollToID("about")},
 		{ display: "FAQ", action: () => scrollToID("faq")},
 		{ display: "SPONSORS", action: () => scrollToID("sponsors")},
 		{ display: "PRIZES", action: () => scrollToID("prizes")},
 		{ display: "MEET the TEAM", action: () => scrollToID("contact")},
+		{ display: "HACKERDOC", action: () => window.open("https://hackku.notion.site/hackku/HackerDoc-HackKU-2023-d870cdb8e84b425ab67a2eedcb41344c", "_blank")},
 		{ display: "REGISTER NOW!", action: () => window.open("https://forms.gle/KwRNWYcxXyqf3EdZ7", "_blank")}
 	]
 	const scrollToID = (id) => {
@@ -103,10 +103,10 @@
 	let innerWidth
 	let scrollY
 	$: smallScreen = innerWidth < 1080
+	$: bigScreen = innerWidth > 1080
 	$: hamburgerExpanded = hamburgerExpanded && smallScreen
 	onMount(() => {
 		let acc = document.getElementsByClassName("accordion");
-		notifications.info('Checkout the HackerDoc for more participant details!', 6000)
 		
 		let i;
 		
@@ -122,6 +122,20 @@
 			});
 		}
 	})
+
+	let loaded = 0
+	function popup(desktop) {
+		if (loaded == 0 || loaded == 1) {
+			console.log(loaded+" " +desktop)
+			loaded = loaded + 1
+			if (desktop) {
+				console.log(loaded+" " +desktop)
+				notifications.info(' ', 6000)
+			} else {
+				console.log("___" +loaded+" " +desktop)
+			}
+		}
+	}
 </script>
 
 <style global>
@@ -211,7 +225,6 @@
 		height: 4rem;
 		z-index: 1000;
 		position: fixed;
-		top: 2rem;
 	}
 	.hamburgerMenu svg{
 		height: 100%;
@@ -411,8 +424,8 @@
 				{/each}
 			</div>
 		{/if}
-		{#if !smallScreen}
-			<div class="navbar">
+		{#if bigScreen}
+			<div class="navbar" on:load={popup(1)}>
 				<nav class="left-nav body-text link">
 					<a href="https://hackku.notion.site/HackerDoc-HackKU-2023-d870cdb8e84b425ab67a2eedcb41344c" target="_blank">HACKERDOC</a>
 				</nav>
@@ -428,7 +441,7 @@
 				</nav>
 			</div>
 		{:else}
-			<div class="linkCont" transition:fly>
+			<div class="linkCont" on:load={popup(0)} transition:fly>
 				<div class="hamburgerMenu cursor-pointer" on:click={() => hamburgerExpanded = !hamburgerExpanded}>
 					<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54"><defs><style>.hamburgerMenuSvg{fill:none;stroke:var(--body-text);stroke-linecap:round;stroke-miterlimit:10;stroke-width:4px;}</style></defs><line class="hamburgerMenuSvg" x1="6.36" y1="9.61" x2="47.33" y2="9.61"/><line class="hamburgerMenuSvg" x1="6.52" y1="27" x2="47.48" y2="27"/><line class="hamburgerMenuSvg" x1="6.67" y1="44.39" x2="47.64" y2="44.39"/></svg>
 				</div>
