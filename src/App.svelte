@@ -520,7 +520,7 @@
 			</div>
 			<button class="accordion body-text">Will any travel reimbursement be offered?</button>
 			<div class="panel body-text">
-				<p>We are currently evaluating whether or not travel reimbursement will be offered. Keep an eye out on hackku.org or follow us on Instagram @thehackku for updates.</p>
+				<p>We are currently evaluating whether or not travel reimbursement will be offered. Updates will be posted here and on Instagram @thehackku.</p>
 			</div>
 			<button class="accordion body-text">What should I bring?</button>
 			<div class="panel body-text">
