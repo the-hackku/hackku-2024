@@ -518,7 +518,7 @@
 			<div class="panel body-text">
 				<p>Nothing! Participation is completely free. All meals, snacks, and drinks will be provided.</p>
 			</div>
-			<button class="accordion body-text"Will any travel reimbursement be offered?</button>
+			<button class="accordion body-text">Will any travel reimbursement be offered?</button>
 			<div class="panel body-text">
 				<p>We are currently evaluating whether or not travel reimbursement will be offered. Keep an eye out on hackku.org or follow us on Instagram @thehackku for updates.</p>
 			</div>
