@@ -20,7 +20,7 @@
 
 <footer>
   <div>
-    <a href="https://www.instagram.com/_hackku_/" target="_blank">
+    <a href="https://www.instagram.com/thehackku/" target="_blank">
       <img src="ig-logo.png" alt="Instagram icon" />
     </a>
   </div>
