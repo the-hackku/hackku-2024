@@ -36,7 +36,7 @@
 		"raj": {
 			display: "Raj Kaura",
 			title: "Tech",
-			link: "", 
+			link: "https://www.linkedin.com/in/rajkaura/", 
 		},
 		"firangiz": {
 			display: "Firangiz Ganbarli",
@@ -58,7 +58,7 @@
 		"raven": {
 			display: "Raven Duong",
 			title: "Logistics",
-			link: "", 
+			link: "https://www.linkedin.com/in/mai-duong-0128h/", 
 		},
 		"michelle": {
 			display: "Michelle Chen",
@@ -500,11 +500,11 @@
 			</div>
 			<button class="accordion body-text">When is HackKU?</button>
 			<div class="panel body-text">
-				<p>HackKU 2023 will take place from 5:00 pm April 14 until 12:00 pm April 16 at the University of Kansas’ School of Engineering</p>
+				<p>HackKU 2023 will take place from 5:00 pm April 14 until 12:00 pm April 16 at the University of Kansas’ School of Engineering.</p>
 			</div>
 			<button class="accordion body-text">Who can participate in HackKU?</button>
 			<div class="panel body-text">
-				<p>HackKU is open to all college and university students, both undergraduate and graduate. Unfortunately, high school students may not participate in HackKU.</p>
+				<p>HackKU is open to all college and university students, both undergraduate and graduate. If you are not a college or university student but would still like to be involved, sign up to mentor <a href="https://forms.gle/nWcShP8MnqJVU6yq8" target="_blank" style="text-decoration:underline">here!</a></p>
 			</div>
 			<button class="accordion body-text">What if I’m a beginner?</button>
 			<div class="panel body-text">
@@ -545,11 +545,11 @@
 			</div>
 			<button class="accordion body-text">I’m stuck. How do I get help?</button>
 			<div class="panel body-text">
-				<p>There will be a lot of different ways to get help. A variety of mentors, from students to alumni to industry engineers, will be available in the #ask-a-mentor channel on Discord. Also, see the HackerDocs’ list of compiled resources <a href="https://hackku.notion.site/HackerDoc-HackKU-2023-d870cdb8e84b425ab67a2eedcb41344c" class="link">here.</a></p>
+				<p>There will be a lot of different ways to get help. A variety of mentors, from students to alumni to industry engineers, will be available in the #ask-a-mentor channel on Discord. Also, see the HackerDocs’ list of compiled resources <a href="https://hackku.notion.site/HackerDoc-HackKU-2023-d870cdb8e84b425ab67a2eedcb41344c" target ="_blank" style="text-decoration:underline">here!</a></p>
 			</div>
 			<button class="accordion body-text">What if I need to contact the organizers?</button>
 			<div class="panel body-text">
-				<p>Message us in the #ask-the-organizers channel! There will always be a couple of organizers online that will be able to answer questions. For urgent event-related problems, please go to LEEP2 1415A, or reach out to any HackKU organizer. </p>
+				<p>Join our Discord <a href="https://discord.com/invite/gFqAz46gHv" target="_blank" style="text-decoration:underline">here!</a> Use the #ask-an-organizer channel to message the organizers during HackKU. For questions before the event, you can also email us at info.hackku@gmail.com. </p>
 			</div>
 		</div>
 	</div>
