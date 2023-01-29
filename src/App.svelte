@@ -31,7 +31,7 @@
 		"james":{
 			display: "James Hurd",
 			title: "Vice Director",
-			link: "jameshurd.net",
+			link: "https://jameshurd.net",
 		},
 		"raj": {
 			display: "Raj Kaura",
@@ -289,6 +289,7 @@
 		background-color: var(--header);
 		color: var(--background);
 	}
+	
 	/* FAQ */
 	.qanda-container {
 		display: flex;
@@ -541,7 +542,7 @@
 			</div>
 			<button class="accordion body-text">As an MLH-affiliated event, all participants will be expected to follow the MLH Code of Conduct. What does this mean?</button>
 			<div class="panel body-text">
-				<a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" class="link">Read the MLH Code of Conduct here!</a>
+				<p>Read the MLH Code of Conduct <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target ="_blank" style="text-decoration:underline">here!</a></p>
 			</div>
 			<button class="accordion body-text">I’m stuck. How do I get help?</button>
 			<div class="panel body-text">
