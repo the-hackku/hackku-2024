@@ -126,13 +126,9 @@
 	let loaded = 0
 	function popup(desktop) {
 		if (loaded == 0 || loaded == 1) {
-			console.log(loaded+" " +desktop)
 			loaded = loaded + 1
 			if (desktop) {
-				console.log(loaded+" " +desktop)
 				notifications.info(' ', 6000)
-			} else {
-				console.log("___" +loaded+" " +desktop)
 			}
 		}
 	}
