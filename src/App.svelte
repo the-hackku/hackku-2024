@@ -90,7 +90,7 @@
 		{ display: "PRIZES", action: () => scrollToID("prizes")},
 		{ display: "MEET the TEAM", action: () => scrollToID("contact")},
 		{ display: "HACKERDOC", action: () => window.open("https://hackku.notion.site/hackku/HackerDoc-HackKU-2023-d870cdb8e84b425ab67a2eedcb41344c", "_blank")},
-		{ display: "REGISTER NOW!", action: () => window.open("https://forms.gle/KwRNWYcxXyqf3EdZ7", "_blank")}
+		{ display: "REGISTER NOW!", action: () => window.open("https://forms.gle/Sck3FsitxKgNQMpP8", "_blank")}
 	]
 	const scrollToID = (id) => {
 		window.scrollTo({
