@@ -84,13 +84,13 @@
 		}
 	}
 	let links = [
+		{ display: "REGISTER NOW!", action: () => window.open("https://forms.gle/KwRNWYcxXyqf3EdZ7", "_blank")},
 		{ display: "ABOUT", action: () => scrollToID("about")},
 		{ display: "FAQ", action: () => scrollToID("faq")},
 		{ display: "SPONSORS", action: () => scrollToID("sponsors")},
 		{ display: "PRIZES", action: () => scrollToID("prizes")},
-		{display: "HACKERDOC", action: () => window.open("https://hackku.notion.site/hackku/HackerDoc-HackKU-2023-d870cdb8e84b425ab67a2eedcb41344c", "_blank")},
-		{ display: "REGISTER NOW!", action: () => window.open("https://forms.gle/KwRNWYcxXyqf3EdZ7", "_blank")},
-		{ display: "MEET the TEAM", action: () => scrollToID("contact")}
+		{ display: "MEET the TEAM", action: () => scrollToID("contact")},
+		{display: "HACKERDOC", action: () => window.open("https://hackku.notion.site/hackku/HackerDoc-HackKU-2023-d870cdb8e84b425ab67a2eedcb41344c", "_blank")}
 	]
 
 	let linksDesktop = [
@@ -300,6 +300,7 @@
 		background-color: var(--header);
 		color: var(--background);
 		transition: 0.2s;
+		margin-bottom: 5rem;
 		
 	}
 
