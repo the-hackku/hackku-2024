@@ -137,13 +137,9 @@
 	let loaded = 0
 	function popup(desktop) {
 		if (loaded == 0 || loaded == 1) {
-			console.log(loaded+" " +desktop)
 			loaded = loaded + 1
 			if (desktop) {
-				console.log(loaded+" " +desktop)
 				notifications.info(' ', 6000)
-			} else {
-				console.log("___" +loaded+" " +desktop)
 			}
 		}
 	}
@@ -571,6 +567,10 @@
 			<button class="accordion body-text">Swag?</button>
 			<div class="panel body-text">
 				<p>All swag will be distributed at HackKU!</p>
+			</div>
+			<button class="accordion body-text">What if I want to mentor?</button>
+			<div class="panel body-text">
+				<p>If you feel skillsets align with those of a great mentor, signup to mentor <a href="https://docs.google.com/forms/d/e/1FAIpQLSdCwlX3sgDvxd_PMw6N7PIJ2PlhmfCl7BzggzoR3D0ExE64jg/viewform" target ="_blank" style="text-decoration:underline">here</a>! If you are currently a university or college student, you are still welcome to mentor, but we encourage you to participate in HackKU 2023 while you still can. </p>
 			</div>
 			<button class="accordion body-text">As an MLH-affiliated event, all participants will be expected to follow the MLH Code of Conduct. What does this mean?</button>
 			<div class="panel body-text">
