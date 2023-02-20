@@ -84,20 +84,31 @@
 		}
 	}
 	let links = [
+		{ display: "REGISTER NOW!", action: () => window.open("https://forms.gle/KwRNWYcxXyqf3EdZ7", "_blank")},
 		{ display: "ABOUT", action: () => scrollToID("about")},
 		{ display: "FAQ", action: () => scrollToID("faq")},
 		{ display: "SPONSORS", action: () => scrollToID("sponsors")},
 		{ display: "PRIZES", action: () => scrollToID("prizes")},
 		{ display: "MEET the TEAM", action: () => scrollToID("contact")},
-		{ display: "HACKERDOC", action: () => window.open("https://hackku.notion.site/hackku/HackerDoc-HackKU-2023-d870cdb8e84b425ab67a2eedcb41344c", "_blank")},
-		{ display: "REGISTER NOW!", action: () => window.open("https://forms.gle/Sck3FsitxKgNQMpP8", "_blank")}
+		{display: "HACKERDOC", action: () => window.open("https://hackku.notion.site/hackku/HackerDoc-HackKU-2023-d870cdb8e84b425ab67a2eedcb41344c", "_blank")}
+	]
+
+	let linksDesktop = [
+		{ display: "ABOUT", action: () => scrollToID("about")},
+		{ display: "FAQ", action: () => scrollToID("faq")},
+		{ display: "SPONSORS", action: () => scrollToID("sponsors")},
+		{ display: "PRIZES", action: () => scrollToID("prizes")},
+		{ display: "MEET the TEAM", action: () => scrollToID("contact")}
 	]
 	const scrollToID = (id) => {
+
 		window.scrollTo({
-			top: document.getElementById(id).offsetTop - 60,
+			top: document.getElementById(id).offsetTop,
 			behavior: 'smooth'
-		})
+		});
+
 	}
+
 	let hamburgerExpanded = false
 	let innerHeight
 	let innerWidth
@@ -284,6 +295,24 @@
   		height: 3rem;
 		background-color: var(--header);
 		color: var(--background);
+		transition: 0.2s;
+		margin-bottom: 5rem;
+		
+	}
+
+	.register-button:hover{
+		background-color: var(--accent1);
+		width: 20rem;
+		padding-left: 4rem;
+		padding-right: 4rem;
+	}
+
+
+	.aboutsection{
+		display: flex; 
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
 	}
 	
 	/* FAQ */
@@ -371,6 +400,10 @@
 	html {
     font-size: 8px;
 	}
+
+	body{
+		padding: 0px;
+	}
 	@media only screen and (min-width: 240px) {
 		html {
 			font-size: 8px;
@@ -428,11 +461,9 @@
 				</nav>
 				<nav style="display:inline-block; flex: 1">
 					<ul class="right-nav body-text">
-						<li><a class="link" href=#about>ABOUT</a></li>
-						<li><a class="link" href=#faq>FAQ</a></li>
-						<li><a class="link" href=#sponsors>SPONSORS</a></li>
-						<li><a class="link" href=#prizes>PRIZES</a></li>
-						<li><a class="link" href=#contact>MEET the TEAM</a></li>
+						{#each linksDesktop as link}
+						<li><a class="link" href="/" onclick="return false;" on:click={link.action}>{link.display}</a></li>
+						{/each}
 						<li style="color:var(--header)"><a class="link" href="https://forms.gle/Sck3FsitxKgNQMpP8" target="_blank">REGISTER NOW!</a></li>
 					</ul>
 				</nav>
@@ -468,7 +499,7 @@
 	
     <div class="section" id="about">
         <h1>What is HackKU?</h1>
-        <div class="flex-container" style="display: flex; flex-direction: row; justify-content: space-between">
+        <div class="flex-container aboutsection">
           <div class="left-flex-item" style="margin-left:6rem; margin-top:4rem">
             <div class="body-text" id="about" style="width:42rem;max-width:80%">
               HackKU is an annual 36-hour hackathon hosted by the University of Kansas, where students can have the opportunity to innovate new ideas, discover different paths, and push the boundaries of technology. Work with teams of up to four people to create unique solutions to real-world problems. Projects can range from web applications and video games to drones and fitness devices.
@@ -477,11 +508,12 @@
               <button class="register-button" style="margin-top: 2rem; ">REGISTER NOW!</button>
             </a>
           </div>
-          <div class="right-flex-item">
-            <img src="about.png" class="about-image" alt="about">
-          </div>
-        </div>
-      </div> 
+					
+			<div class="right-flex-item">
+      	<img src="about.png" class="about-image" alt="about">
+			</div>
+   	</div>
+	 </div> 
 
 	<div class="section" id="faq">
 		<h1>FAQ</h1>
