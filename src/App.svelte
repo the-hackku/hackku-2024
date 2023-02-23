@@ -589,7 +589,13 @@
 	<div class="section" id="sponsors">
 		<h1>Sponsors</h1>
 		<br>
-		<h2>Coming soon!</h2>
+		<h2>More coming soon!</h2>
+		<br>
+		<div style="display:flex;justify-content:center;align-items:center">
+			<a href="http://hackp.ac/mlh-StandOutStickers-hackathons" target="_blank">
+				<img src="standoutStickers.png" style="max-width:25vw"alt="standout stickers icon" />
+			</a>
+		</div>
 	</div>
 	<div class="section" id="prizes">
 		<h1>Prizes</h1>
