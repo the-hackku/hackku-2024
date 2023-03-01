@@ -549,7 +549,7 @@
 			</div>
 			<button class="accordion body-text">Will any travel reimbursement be offered?</button>
 			<div class="panel body-text">
-				<p>We are currently evaluating whether or not travel reimbursement will be offered. Updates will be posted here and on Instagram @thehackku.</p>
+				<p>Visit <a href="https://forms.gle/q3Rwkb2XD7G7TyxN8" target="_blank" style="text-decoration:underline">this form</a> for more details and to request reimbursement.</p>
 			</div>
 			<button class="accordion body-text">What should I bring?</button>
 			<div class="panel body-text">
