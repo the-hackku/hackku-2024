@@ -84,7 +84,7 @@
 		}
 	}
 	let links = [
-		{ display: "REGISTER NOW!", action: () => window.open("https://forms.gle/KwRNWYcxXyqf3EdZ7", "_blank")},
+		{ display: "REGISTER NOW!", action: () => window.open("https://forms.gle/Sck3FsitxKgNQMpP8", "_blank")},
 		{ display: "ABOUT", action: () => scrollToID("about")},
 		{ display: "FAQ", action: () => scrollToID("faq")},
 		{ display: "SPONSORS", action: () => scrollToID("sponsors")},
