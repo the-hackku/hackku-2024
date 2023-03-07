@@ -504,7 +504,7 @@
             <div class="body-text" id="about" style="width:42rem;max-width:80%">
               HackKU is an annual 36-hour hackathon hosted by the University of Kansas, where students can have the opportunity to innovate new ideas, discover different paths, and push the boundaries of technology. Work with teams of up to four people to create unique solutions to real-world problems. Projects can range from web applications and video games to drones and fitness devices.
             </div>
-            <a href=" https://forms.gle/Sck3FsitxKgNQMpP8" target="_blank">
+            <a href="https://forms.gle/Sck3FsitxKgNQMpP8" target="_blank">
               <button class="register-button" style="margin-top: 2rem; ">REGISTER NOW!</button>
             </a>
           </div>
