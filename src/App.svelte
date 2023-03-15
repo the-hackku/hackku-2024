@@ -7,7 +7,7 @@
 	import { onMount } from 'svelte';
 	import Footer from './components/Footer.svelte';
 	import './tw.css'
-  import {notifications} from './components/notifications.js'
+    import {notifications} from './components/notifications.js'
 	import Toast from './components/Toast.svelte'
   
 	let director = {
@@ -143,6 +143,57 @@
 			}
 		}
 	}
+
+	let selectedPrize = "Theme 1";
+
+	let prizes = {
+  	  'General 1': [
+        {
+          picture: "/polaroid.png"
+        }
+      ],
+  	  'General 2': [
+        {
+          picture: "/technica.png"
+        }
+      ],
+  	  'General 3': [
+    	{
+      	  picture: "/powerbank.png"
+    	}
+  	  ],
+  	  'Theme 1': [
+    	{
+      	  picture: "/meta-quest.png"
+    	}
+  	  ],
+  	  'Theme 2': [
+    	{
+      	  picture: "/lego.png"
+    	}
+  	  ],
+  	  'Theme 3': [
+    	{
+      	  picture: "/pillow.png"
+    	}
+  	  ],
+  	  'Hacker\'s Choice': [
+    	{
+      	  picture: "/roku.png"
+    	}
+  	  ],
+  	  'Best Beginner': [
+    	{
+      	  picture: "/echo.png"
+    	}
+  	],
+	  'Open Source': [
+    	{
+      	  picture: ""
+    	}
+  	  ]
+	};
+
 </script>
 
 <style global>
@@ -307,14 +358,25 @@
 		padding-right: 4rem;
 	}
 
-
 	.aboutsection{
 		display: flex; 
 		flex-direction: row;
 		justify-content: space-between;
 		flex-wrap: wrap;
 	}
+
+	.border-prize {
+  		border-color: #7085C1;
+	}
+
+	.prize-selected {
+  		border: 4px solid #e8000d;
+	}
 	
+
+	.selected {
+  		background-color: #7085C1;
+	}
 	/* FAQ */
 	.qanda-container {
 		display: flex;
@@ -388,6 +450,7 @@
 		align-items: center;
 		gap: 4rem;
 	}
+
 	@keyframes backgroundScroll {
 		from {
 			background-position-x: 0%;
@@ -586,6 +649,7 @@
 			</div>
 		</div>
 	</div>
+
 	<div class="section" id="sponsors">
 		<h1>Sponsors</h1>
 		<br>
@@ -597,11 +661,35 @@
 			</a>
 		</div>
 	</div>
-	<div class="section" id="prizes">
-		<h1>Prizes</h1>
-		<br>
-		<h2>Coming soon!</h2>
-	</div>
+
+    <div class="section" id="prizes">
+        <h1>Prizes</h1>
+        <div class="flex mt-10 flex-wrap justify-center items-center gap-8" style="max-width: 80vw">
+          <div class="flex flex-col flex-grow">
+            <div class="flex">
+              {#each Object.keys(prizes) as prize}
+                <div class="border-[4px] border-b-0 border-[#7085C1] rounded-t-lg py-2 px-4 cursor-pointer" 
+                     class:selected={selectedPrize == prize} 
+                     on:click={() => selectedPrize = prize}
+                     style="flex: 1;">
+                  {prize}
+                </div>
+              {/each}
+            </div>
+            <div class="border-[4px] border-[#7085C1] rounded-lg rounded-tl-none p-4 blue" 
+                 style="flex: 1; display: flex; justify-content: center; align-items: center;">
+              {#each prizes[selectedPrize] as prize}
+                <div class="flex items-center justify-center" 
+                     style="width: 40rem; height: 40rem;">
+                  <img src={prize.picture} alt="Prize" 
+                       style="width: 100%; height: 100%; object-fit: contain; display: block; margin: 0 auto;">
+                </div>
+              {/each}
+            </div>
+          </div>
+        </div>
+      </div>
+
 	<div class="section" id="contact" style="min-height:65vh; padding-bottom:2rem">
 		<h1>Meet the Team</h1>
 		<br>
