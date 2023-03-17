@@ -144,8 +144,7 @@
 		}
 	}
 
-	let selectedPrize = "Theme 1";
-
+	let selectedPrize = "General 1";
 	let prizes = {
   	  'General 1': [
         {
@@ -365,18 +364,60 @@
 		flex-wrap: wrap;
 	}
 
+	/* prizes css stuff */
+
 	.border-prize {
-  		border-color: #7085C1;
-	}
+        border-color: #7085C1;
+    }
 
-	.prize-selected {
-  		border: 4px solid #e8000d;
-	}
-	
+    .prize-selected {
+        border: 4px solid #e8000d;
+    }
 
-	.selected {
-  		background-color: #7085C1;
-	}
+    .prizes-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)); /* specify min and max column sizes */
+    grid-gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .prizes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr)); /* specify min and max column sizes */
+    grid-gap: 1rem;
+  }
+
+    .prize-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 4px solid #7085C1;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    /* Add styles for the selected prize */
+    .border-selected {
+        border-color: #FFC107;
+    }
+        
+    .prize-grid {
+    display: none;
+  }
+
+  .prize-grid[selected] {
+    display: block;
+  }
+
+    .selected {
+        background-color: #7085C1;
+        color: #F3F7E1;
+
+    }
+
+
+
 	/* FAQ */
 	.qanda-container {
 		display: flex;
@@ -664,32 +705,33 @@
 
     <div class="section" id="prizes">
         <h1>Prizes</h1>
-        <div class="flex mt-10 flex-wrap justify-center items-center gap-8" style="max-width: 80vw">
-          <div class="flex flex-col flex-grow">
-            <div class="flex">
+        <div class="flex mt-10 justify-center items-center gap-8" style="max-width: 80vw">
+          <div class="flex flex-col flex-grow border-[4px] border-[#7085C1] overflow-hidden border-none">
+            <div class="flex border-[4px] border-b-0 border-[#7085C1]">
               {#each Object.keys(prizes) as prize}
-                <div class="border-[4px] border-b-0 border-[#7085C1] rounded-t-lg py-2 px-4 cursor-pointer" 
-                     class:selected={selectedPrize == prize} 
-                     on:click={() => selectedPrize = prize}
-                     style="flex: 1;">
-                  {prize}
-                </div>
+              <div 
+                class="py-2 px-4 cursor-pointer flex-grow text-center border-r-[4px] last:border-r-0 
+                       {selectedPrize == prize ? 'selected' : ''}"
+                on:click={() => selectedPrize = prize}
+                style="flex-basis: 0; flex-grow: 1; min-width: 0; border-right-color: #7085C1; 
+                       font-family: 'PT Sans';"
+              >
+                {prize}
+              </div>
               {/each}
             </div>
-            <div class="border-[4px] border-[#7085C1] rounded-lg rounded-tl-none p-4 blue" 
-                 style="flex: 1; display: flex; justify-content: center; align-items: center;">
+            <div class="border-[4px] border-[#7085C1] p-4 blue" style="flex: 1; display: flex; justify-content: center; align-items: center;">
               {#each prizes[selectedPrize] as prize}
-                <div class="flex items-center justify-center" 
-                     style="width: 40rem; height: 40rem;">
-                  <img src={prize.picture} alt="Prize" 
-                       style="width: 100%; height: 100%; object-fit: contain; display: block; margin: 0 auto;">
-                </div>
+              <div class="flex items-center justify-center" style="width: 40rem; height: 40rem;">
+                <img src={prize.picture} alt="Prize" style="width: 100%; height: 100%; object-fit: contain; display: block; margin: 0 auto;">
+              </div>
               {/each}
             </div>
           </div>
         </div>
       </div>
 
+	  
 	<div class="section" id="contact" style="min-height:65vh; padding-bottom:2rem">
 		<h1>Meet the Team</h1>
 		<br>
