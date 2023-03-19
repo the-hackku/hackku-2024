@@ -144,54 +144,128 @@
 		}
 	}
 
-	let selectedPrize = "General 1";
-	let prizes = {
-  	  'General 1': [
+	
+	let prizes = [
         {
-          picture: "/polaroid.png"
+          picture: "/polaroid.png",
+					prizename: "Polaroid Camera Kit",
+					prizecategory:"General 1"
         }
-      ],
-  	  'General 2': [
+      ,
         {
-          picture: "/technica.png"
+          picture: "/technica.png",
+					prizename: "Audio Tecnhinca",
+					prizecategory:"General 2"
         }
-      ],
-  	  'General 3': [
+      ,
+  	  
     	{
-      	  picture: "/powerbank.png"
+      	  picture: "/powerbank.png",
+				  prizename:"ANKR Power Bank",
+					prizecategory:"General 3"
     	}
-  	  ],
-  	  'Theme 1': [
+  	  ,
+  	 
     	{
-      	  picture: "/meta-quest.png"
+      	  picture: "/meta-quest.png",
+					prizename:"Meta Quest",
+					prizecategory:"Theme 1"
     	}
-  	  ],
-  	  'Theme 2': [
+  	  ,
+  	  {
+      	  picture: "/lego.png",
+					prizename:"Lego Tokyo",
+					prizecategory:"Theme 2"
+    	}
+  	  ,
+  	  
     	{
-      	  picture: "/lego.png"
+      	  picture: "/pillow.png",
+					prizename:"CPU Pillow",
+					prizecategory:"Theme 3"
     	}
-  	  ],
-  	  'Theme 3': [
+  	  ,
+  	  
     	{
-      	  picture: "/pillow.png"
+      	  picture: "/roku.png",
+					prizename:"Roku Express",
+					prizecategory:"Hacker\'s Choice"
     	}
-  	  ],
-  	  'Hacker\'s Choice': [
+  	  ,
+  	  
     	{
-      	  picture: "/roku.png"
+      	  picture: "/echo.png",
+					prizename:"Echo Dot",
+					prizecategory:"Best Beginner"
     	}
-  	  ],
-  	  'Best Beginner': [
+  	,
+	  	
     	{
-      	  picture: "/echo.png"
+      	  picture: "",
+					prizename:"Google Cloud Backpacks",
+					prizecategory:"Best Open Source"
     	}
-  	],
-	  'Open Source': [
-    	{
-      	  picture: ""
-    	}
-  	  ]
-	};
+		];
+
+	let selectedPrize = prizes[0];
+	// let prizes = {
+  // 	  'General 1': [
+  //       {
+  //         picture: "/polaroid.png",
+	// 				prizename: "Polaroid Camera Kit"
+
+  //       }
+  //     ],
+  // 	  'General 2': [
+  //       {
+  //         picture: "/technica.png",
+	// 				prizename: "Audio Tecnhinca"
+  //       }
+  //     ],
+  // 	  'General 3': [
+  //   	{
+  //     	  picture: "/powerbank.png",
+	// 			  prizename:"ANKR Power Bank"
+
+  //   	}
+  // 	  ],
+  // 	  'Theme 1': [
+  //   	{
+  //     	  picture: "/meta-quest.png",
+	// 				prizename:"Meta Quest"
+  //   	}
+  // 	  ],
+  // 	  'Theme 2': [
+  //   	{
+  //     	  picture: "/lego.png",
+	// 				prizename:"Lego Tokyo"
+  //   	}
+  // 	  ],
+  // 	  'Theme 3': [
+  //   	{
+  //     	  picture: "/pillow.png",
+	// 				prizename:"CPU Pillow"
+  //   	}
+  // 	  ],
+  // 	  'Hacker\'s Choice': [
+  //   	{
+  //     	  picture: "/roku.png",
+	// 				prizename:"Roku Express"
+  //   	}
+  // 	  ],
+  // 	  'Best Beginner': [
+  //   	{
+  //     	  picture: "/echo.png",
+	// 				prizename:"Echo Dot"
+  //   	}
+  // 	],
+	//   'Open Source': [
+  //   	{
+  //     	  picture: "",
+	// 				prizename:"Google Cloud Backpacks"
+  //   	}
+  // 	  ]
+	// };
 
 </script>
 
@@ -417,6 +491,20 @@
     }
 
 
+		.prize-buttons{
+			border: #7085C1;
+			border-style: solid;
+			border-width: 0 0.25rem 0.25rem 0.25rem;
+			text-align: center;
+			padding: 0.75rem 0 0.75rem 15%;
+			cursor: pointer;
+		}
+
+
+		.selected{
+			background-color: #7085C1;
+			color: var(--background);
+		}
 
 	/* FAQ */
 	.qanda-container {
@@ -705,31 +793,28 @@
 
     <div class="section" id="prizes">
         <h1>Prizes</h1>
-        <div class="flex mt-10 justify-center items-center gap-8" style="max-width: 80vw">
-          <div class="flex flex-col flex-grow border-[4px] border-[#7085C1] overflow-hidden border-none">
-            <div class="flex border-[4px] border-b-0 border-[#7085C1]">
-              {#each Object.keys(prizes) as prize}
-              <div 
-                class="py-2 px-4 cursor-pointer flex-grow text-center border-r-[4px] last:border-r-0 
-                       {selectedPrize == prize ? 'selected' : ''}"
-                on:click={() => selectedPrize = prize}
-                style="flex-basis: 0; flex-grow: 1; min-width: 0; border-right-color: #7085C1; 
-                       font-family: 'PT Sans';"
-              >
-                {prize}
-              </div>
-              {/each}
-            </div>
-            <div class="border-[4px] border-[#7085C1] p-4 blue" style="flex: 1; display: flex; justify-content: center; align-items: center;">
-              {#each prizes[selectedPrize] as prize}
-              <div class="flex items-center justify-center" style="width: 40rem; height: 40rem;">
-                <img src={prize.picture} alt="Prize" style="width: 100%; height: 100%; object-fit: contain; display: block; margin: 0 auto;">
-              </div>
-              {/each}
-            </div>
-          </div>
-        </div>
-      </div>
+				
+				<div style="width: 80; height:35rem;">
+					<div style="background-color: var(--body-text); color:var(--background);
+					text-align:right; padding: 0.5rem 5% 0.5rem  80%;">
+					<p style="font-family: PT Sans; font-weight: 700">{selectedPrize.prizename}</p>
+					</div>
+					<div style="display:flex;">
+						<div style="display: inline-block; flex:0.33;">
+							{#each prizes as prize}
+								<div class="prize-buttons body-text" on:click={()=>{
+									selectedPrize=prize
+								}} class:selected={prize==selectedPrize}>{prize.prizecategory}</div>
+							{/each}
+						</div>	
+						<div style="display: inline-block; flex: 1; border: #7085C1;
+						border-style: solid; border-width: 0 0.25rem 0.25rem 0; height: 34.7rem; align-items:center; padding-top:5%">
+						<img src={selectedPrize.picture} alt="Prize" style="height: 85%; object-fit: contain; display: block; margin: 0 auto;">
+						</div>
+					</div>
+				</div>
+
+    </div>
 
 	  
 	<div class="section" id="contact" style="min-height:65vh; padding-bottom:2rem">
