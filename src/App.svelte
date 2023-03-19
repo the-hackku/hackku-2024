@@ -144,7 +144,7 @@
 		}
 	}
 
-	
+	let gridheight;
 	let prizes = [
         {
           picture: "/polaroid.png",
@@ -793,14 +793,13 @@
 
     <div class="section" id="prizes">
         <h1>Prizes</h1>
-				
-				<div style="width: 80; height:35rem;">
+				<div style="width: 80; height:35rem; margin-top:7rem; margin-left:7rem;">
 					<div style="background-color: var(--body-text); color:var(--background);
 					text-align:right; padding: 0.5rem 5% 0.5rem  80%;">
 					<p style="font-family: PT Sans; font-weight: 700">{selectedPrize.prizename}</p>
 					</div>
 					<div style="display:flex;">
-						<div style="display: inline-block; flex:0.33;">
+						<div style="display: inline-block; flex:0.33; height: 100%;" bind:clientHeight={gridheight}>
 							{#each prizes as prize}
 								<div class="prize-buttons body-text" on:click={()=>{
 									selectedPrize=prize
@@ -808,7 +807,7 @@
 							{/each}
 						</div>	
 						<div style="display: inline-block; flex: 1; border: #7085C1;
-						border-style: solid; border-width: 0 0.25rem 0.25rem 0; height: 34.7rem; align-items:center; padding-top:5%">
+						border-style: solid; border-width: 0 0.25rem 0.25rem 0; height: {gridheight} ; align-items:center; padding-top:5%">
 						<img src={selectedPrize.picture} alt="Prize" style="height: 85%; object-fit: contain; display: block; margin: 0 auto;">
 						</div>
 					</div>
