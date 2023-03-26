@@ -149,61 +149,61 @@
         {
           picture: "/polaroid.png",
 					prizename: "Polaroid Camera Kit",
-					prizecategory:"General 1"
+					prizecategory:"General Track 1st Place"
         }
       ,
         {
           picture: "/technica.png",
 					prizename: "Audio-Technica ATH-M40x",
-					prizecategory:"General 2"
+					prizecategory:"General Track 2nd Place"
         }
       ,
   	  
     	{
       	  picture: "/powerbank.png",
 				  prizename:"ANKR Power Bank",
-					prizecategory:"General 3"
+					prizecategory:"General Track 3rd Place"
     	}
   	  ,
   	 
     	{
       	  picture: "/meta-quest.png",
 					prizename:"Meta Quest 2",
-					prizecategory:"Theme 1"
+					prizecategory:"Themed Track 1st Place"
     	}
   	  ,
   	  {
       	  picture: "/lego.png",
 					prizename:"Lego Tokyo",
-					prizecategory:"Theme 2"
+					prizecategory:"Themed Track  2nd Place"
     	}
   	  ,
   	  
     	{
       	  picture: "/pillow.png",
 					prizename:"CPU Pillow",
-					prizecategory:"Theme 3"
+					prizecategory:"Theme Track 3rd Place"
     	}
   	  ,
   	  
     	{
       	  picture: "/roku.png",
 					prizename:"Roku Express",
-					prizecategory:"Hacker\'s Choice"
+					prizecategory:"Hacker\'s Choice Award"
     	}
   	  ,
   	  
     	{
       	  picture: "/echo.png",
 					prizename:"Echo Dot",
-					prizecategory:"Best Beginner"
+					prizecategory:"Best Beginner Project"
     	}
   	,
 	  	
     	{
-      	  picture: "",
+      	  picture: "GoogleBackPack.png",
 					prizename:"Google Cloud Backpacks",
-					prizecategory:"Best Open Source"
+					prizecategory:"Best Open Source Contribution"
     	}
 		];
 
@@ -414,26 +414,35 @@
     }
 
     /* Add styles for the selected prize */
-    .border-selected {
-        border-color: #FFC107;
-    }
-        
-    .prize-grid {
-    	display: none;
-  	}
-
-  	.prize-grid[selected] {
-		display: block;
-  	}
+   
 
 	.prize-buttons {
         border: #7085C1;
         border-style: solid;
         border-width: 0 0.25rem 0.25rem 0.25rem;
-        text-align: center;
-        padding: 0.75rem 0 0.75rem 15%;
+        padding: 0.75rem 0.75rem 0.75rem 0;
         cursor: pointer;
+				text-overflow:"";
+				text-align: right;
     }
+
+
+
+		.body-text-prize-button {
+		font-family: 'PT Sans';
+		font-size: 1.5rem;
+		font-weight: 400;
+		color: var(--body-text);
+		line-height: 2rem;
+	}
+
+	.body-text-prize-button-small-text{
+		font-family: 'PT Sans';
+		font-size: 1rem;
+		font-weight: 400;
+		color: var(--body-text);
+		line-height: 1.5rem;
+	}
 
     .selected {
         background-color: var(--body-text);
@@ -534,6 +543,10 @@
 		html {
 			font-size: 8px;
 		}
+
+		.prizes-grid{
+			margin-left: 0rem;
+		}
 	}
 	@media only screen and (min-width: 720px) {
 		html {
@@ -565,6 +578,7 @@
 		html {
 			font-size: 14px;
 		}
+
 	}
 </style>
 
@@ -727,21 +741,21 @@
 
 	<div class="section" id="prizes">
 		<h1>Prizes</h1>
-		<div style="width: 80; height: 35rem; margin-top: 7rem; margin-left: 7rem;">
-			<div style="background-color: var(--body-text); color:var(--background); text-align: right; padding: 1rem 5% 1rem 80%;">
+		<div style="width: 80vw; height: 35rem; margin-top: 5rem;">
+			<div style="background-color: var(--body-text); color:var(--background); text-align: right; padding: 1rem 5% 1rem 20%;">
 				<p style="font-family: PT Sans; font-weight: 700">{selectedPrize.prizename}</p>
 			</div>
 			<div style="display:flex; height: 34.3rem;">
-				<div style="display: inline-block; flex: 0.33; height: 100%;">
+				<div style="display: inline-grid; flex: 0.45;">
 					{#each prizes as prize}
-					<div class="prize-buttons body-text" on:click={()=>{
+					<div class="prize-buttons body-text-prize-button" class:body-text-prize-button-small-text={smallScreen} on:click={()=>{
 							selectedPrize=prize
 						}} class:selected={prize==selectedPrize}>{prize.prizecategory}</div>
 					{/each}
 				</div>
-				<div style="display: inline-block; flex: 1; border: #7085C1; border-style: solid; border-width: 0 0.25rem 0.25rem 0; height: 100%; align-items:center; padding-top: 5%;">
-					<div style="height: 85%; max-width: 100%;">
-						<img src={selectedPrize.picture} alt="Prize" style="height: 100%; width: 100%; object-fit: contain;">
+				<div style="flex: 1; border: #7085C1; border-style: solid; border-width: 0 0.25rem 0.25rem 0; height: 100%; align-items:center;">
+					<div style="height: 85%; max-width: 100%; padding-top:5%">
+						<img src={selectedPrize.picture} alt="Prize" style="height: 100%; width: 100%; object-fit: scale-down;">
 					</div>
 				</div>
 			</div>
