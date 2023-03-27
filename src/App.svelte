@@ -741,7 +741,7 @@
 
 	<div class="section" id="prizes">
 		<h1>Prizes</h1>
-		<div style="width: 80vw; height: 35rem; margin-top: 5rem;">
+		<div style="height: 35rem; margin-top: 5rem;">
 			<div style="background-color: var(--body-text); color:var(--background); text-align: right; padding: 1rem 5% 1rem 20%;">
 				<p style="font-family: PT Sans; font-weight: 700">{selectedPrize.prizename}</p>
 			</div>
