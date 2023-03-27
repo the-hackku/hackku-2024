@@ -84,7 +84,7 @@
 		}
 	}
 	let links = [
-		{ display: "REGISTER NOW!", action: () => window.open("https://forms.gle/KwRNWYcxXyqf3EdZ7", "_blank")},
+		{ display: "REGISTER NOW!", action: () => window.open("https://forms.gle/Sck3FsitxKgNQMpP8", "_blank")},
 		{ display: "ABOUT", action: () => scrollToID("about")},
 		{ display: "FAQ", action: () => scrollToID("faq")},
 		{ display: "SPONSORS", action: () => scrollToID("sponsors")},
@@ -225,6 +225,7 @@
 		--accent2: #92A0CA;
 		--accent3: #BFC6D5;
 		--accent4: #CED4DA;
+		--max-sponsor-image-height:3rem;
 	}
 	/* BODY */
 	main {
@@ -260,6 +261,7 @@
 		font-weight: 700;
 		color: var(--body-text);
 	}
+	
 	.body-text {
 		font-family: 'PT Sans';
 		font-size: 2rem;
@@ -496,18 +498,28 @@
 	}
 	/* SPONSORS */
 	.sponsors {
-		max-width: 70vw;
 		margin: auto;
 		display: flex;
 		justify-content: space-around;
-		flex-direction: row;
 		align-items: center;
-		flex-wrap: wrap;
-		gap: 5%;
 	}
 	.sponsor-image {
-		width: 250px;
-		margin-top: 4%;
+		max-width: 25rem;
+	}
+
+	.sponsor-tiers{
+		display:flex; 
+		flex-direction:column;
+		align-items:center;
+		gap: 4rem;
+	}
+	.sponsor-image-holders{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		max-width: 70vw;
+		flex-wrap: wrap;
+		gap: 5rem;
 	}
 	/* TEAM */
 	.team {
@@ -644,7 +656,7 @@
             <div class="body-text" id="about" style="width:42rem;max-width:80%">
               HackKU is an annual 36-hour hackathon hosted by the University of Kansas, where students can have the opportunity to innovate new ideas, discover different paths, and push the boundaries of technology. Work with teams of up to four people to create unique solutions to real-world problems. Projects can range from web applications and video games to drones and fitness devices.
             </div>
-            <a href=" https://forms.gle/Sck3FsitxKgNQMpP8" target="_blank">
+            <a href="https://forms.gle/Sck3FsitxKgNQMpP8" target="_blank">
               <button class="register-button" style="margin-top: 2rem; ">REGISTER NOW!</button>
             </a>
           </div>
@@ -726,12 +738,56 @@
 			</div>
 		</div>
 	</div>
-
-	<div class="section" id="sponsors">
+	<div style="background-color: var(--background); height:10rem; padding-left: 7.5rem;" >
 		<h1>Sponsors</h1>
-		<br>
-		<h2>More coming soon!</h2>
-		<br>
+		<p class="body-text" style="font-weight:700">Interested in sponsoring HackKU23?</p>
+		<p class="body-text" style="font-weight:700">Email us at <a href="mailto:sponsorship.hackku@gmail.com">sponsorship.hackku@gmail.com</a></p>
+	</div>
+	<div class="section sponsors" id="sponsors" style="row-gap:10rem; align-items:center;">
+		<div class="sponsor-tiers">
+			<h2>PETA Tier</h2>
+			<div class="sponsor-image-holders">
+				<img src="security_benefit.png" alt="Security Benefit Logo" style="max-height:6rem; margin-top: 7%">
+			</div>
+		</div>
+		<div class="sponsor-tiers">
+			<h2>TERA Tier</h2>
+			<div class="sponsor-image-holders">
+				<img src="ripple (1).png" alt="Ripple Logo"  style="max-height:6rem; margin-top: 7%">
+			</div>
+		</div>
+		<div class="sponsor-tiers">
+			<h2>GIGA Tier</h2>
+			<div class="sponsor-image-holders">
+				<img src="Air Power Consultants.png" alt="HRBlock Logo" class="sponsor-image" style="max-height:15rem">
+				<img src="HRBlock_Logo_250px.png" alt="HRBlock Logo" class="sponsor-image" style="max-height:15rem">
+				<img src="VUHL-Logo-V-large 1.png" alt="HRBlock Logo" class="sponsor-image" style="max-height:15rem">
+			</div>
+		</div>
+		<div class="sponsor-tiers">
+			<h2>MEGA Tier</h2>
+			<div class="sponsor-image-holders">
+				<img src="Tradebot Logo-flat-Registered Trademark.png" alt="TradeBot Logo" class="sponsor-image" style="max-height:17rem">
+			</div>
+		</div>
+		<div class="sponsor-tiers">
+			<h2>FOOD</h2>
+			<div class="sponsor-image-holders">
+				<img src="chriscakes.png" alt="Chris Cakes Logo" class="sponsor-image" style="max-height:17rem">
+				<img src="globeindianfood.png" alt="Globe Indian Logo" class="sponsor-image" style="max-height:17rem">
+				<img src="laestrella (1).png" alt="Laestralla Logo" class="sponsor-image" style="max-height:17rem">
+				<img src="mcclains.png" alt="Mcclains Logo" class="sponsor-image" style="max-height:17rem">
+				<img src="redpepper.png" alt="Red Pepper Logo" class="sponsor-image" style="max-height:17rem">
+			</div>
+		</div>
+		<div class="sponsor-tiers">
+			<h2>IN KIND</h2>
+			<div class="sponsor-image-holders">
+				<img src="balsamiq-logo-screen.png" alt="Balsamiq Logo" class="sponsor-image" style="max-height:8rem">
+				<img src="echo3D - Logo 2021 - Dark.png" alt="Echo 3D Logo" class="sponsor-image" style="max-height:8rem">
+				<img src="GoogleCloud_FullColor 2900x512px.png" alt="Google Cloud Logo" class="sponsor-image" style="max-height:8rem">
+				</div>
+		</div>
 		<div style="display:flex;justify-content:center;align-items:center">
 			<a href="http://hackp.ac/mlh-StandOutStickers-hackathons" target="_blank">
 				<img src="standoutStickers.png" style="max-width:25vw"alt="standout stickers icon" />
