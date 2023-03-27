@@ -7,7 +7,7 @@
 	import { onMount } from 'svelte';
 	import Footer from './components/Footer.svelte';
 	import './tw.css'
-  import {notifications} from './components/notifications.js'
+    import {notifications} from './components/notifications.js'
 	import Toast from './components/Toast.svelte'
   
 	let director = {
@@ -143,6 +143,72 @@
 			}
 		}
 	}
+
+	let gridheight;
+	let prizes = [
+        {
+          picture: "/polaroid.png",
+					prizename: "Polaroid Camera Kit",
+					prizecategory:"General Track 1st Place"
+        }
+      ,
+        {
+          picture: "/technica.png",
+					prizename: "Audio-Technica ATH-M40x",
+					prizecategory:"General Track 2nd Place"
+        }
+      ,
+  	  
+    	{
+      	  picture: "/powerbank.png",
+				  prizename:"ANKR Power Bank",
+					prizecategory:"General Track 3rd Place"
+    	}
+  	  ,
+  	 
+    	{
+      	  picture: "/meta-quest.png",
+					prizename:"Meta Quest 2",
+					prizecategory:"Themed Track 1st Place"
+    	}
+  	  ,
+  	  {
+      	  picture: "/lego.png",
+					prizename:"Lego Tokyo",
+					prizecategory:"Themed Track  2nd Place"
+    	}
+  	  ,
+  	  
+    	{
+      	  picture: "/pillow.png",
+					prizename:"CPU Pillow",
+					prizecategory:"Theme Track 3rd Place"
+    	}
+  	  ,
+  	  
+    	{
+      	  picture: "/roku.png",
+					prizename:"Roku Express",
+					prizecategory:"Hacker\'s Choice Award"
+    	}
+  	  ,
+  	  
+    	{
+      	  picture: "/echo.png",
+					prizename:"Echo Dot",
+					prizecategory:"Best Beginner Project"
+    	}
+  	,
+	  	
+    	{
+      	  picture: "GoogleBackPack.png",
+					prizename:"Google Cloud Backpacks",
+					prizecategory:"Best Open Source Contribution"
+    	}
+		];
+
+	let selectedPrize = prizes[0];
+
 </script>
 
 <style global>
@@ -309,14 +375,82 @@
 		padding-right: 4rem;
 	}
 
-
 	.aboutsection{
 		display: flex; 
 		flex-direction: row;
 		justify-content: space-between;
 		flex-wrap: wrap;
 	}
-	
+
+	/* Prizes*/
+
+	.border-prize {
+        border-color: #7085C1;
+    }
+
+    .prize-selected {
+        border: 4px solid #e8000d;
+    }
+
+    .prizes-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)); /* specify min and max column sizes */
+    grid-gap: 0.5rem;
+    margin-bottom: 1rem;
+  	}
+
+  	.prizes-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr)); /* specify min and max column sizes */
+		grid-gap: 1rem;
+  	}
+
+    .prize-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 4px solid #7085C1;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    /* Add styles for the selected prize */
+   
+
+	.prize-buttons {
+        border: #7085C1;
+        border-style: solid;
+        border-width: 0 0.25rem 0.25rem 0.25rem;
+        padding: 0.75rem 0.75rem 0.75rem 0;
+        cursor: pointer;
+				text-overflow:"";
+				text-align: right;
+    }
+
+
+
+		.body-text-prize-button {
+		font-family: 'PT Sans';
+		font-size: 1.5rem;
+		font-weight: 400;
+		color: var(--body-text);
+		line-height: 2rem;
+	}
+
+	.body-text-prize-button-small-text{
+		font-family: 'PT Sans';
+		font-size: 1rem;
+		font-weight: 400;
+		color: var(--body-text);
+		line-height: 1.5rem;
+	}
+
+    .selected {
+        background-color: var(--body-text);
+        color: var(--background);
+    }
+
 	/* FAQ */
 	.qanda-container {
 		display: flex;
@@ -400,6 +534,7 @@
 		align-items: center;
 		gap: 4rem;
 	}
+
 	@keyframes backgroundScroll {
 		from {
 			background-position-x: 0%;
@@ -419,6 +554,10 @@
 	@media only screen and (min-width: 240px) {
 		html {
 			font-size: 8px;
+		}
+
+		.prizes-grid{
+			margin-left: 0rem;
 		}
 	}
 	@media only screen and (min-width: 720px) {
@@ -451,6 +590,7 @@
 		html {
 			font-size: 14px;
 		}
+
 	}
 </style>
 
@@ -598,7 +738,6 @@
 			</div>
 		</div>
 	</div>
-	
 	<div style="background-color: var(--background); height:10rem; padding-left: 7.5rem;" >
 		<h1>Sponsors</h1>
 		<p class="body-text" style="font-weight:700">Interested in sponsoring HackKU23?</p>
@@ -655,11 +794,30 @@
 			</a>
 		</div>
 	</div>
+
 	<div class="section" id="prizes">
 		<h1>Prizes</h1>
-		<br>
-		<h2>Coming soon!</h2>
+		<div style="height: 35rem; margin-top: 5rem;">
+			<div style="background-color: var(--body-text); color:var(--background); text-align: right; padding: 1rem 5% 1rem 20%;">
+				<p style="font-family: PT Sans; font-weight: 700">{selectedPrize.prizename}</p>
+			</div>
+			<div style="display:flex; height: 34.3rem;">
+				<div style="display: inline-grid; flex: 0.45;">
+					{#each prizes as prize}
+					<div class="prize-buttons body-text-prize-button" class:body-text-prize-button-small-text={smallScreen} on:click={()=>{
+							selectedPrize=prize
+						}} class:selected={prize==selectedPrize}>{prize.prizecategory}</div>
+					{/each}
+				</div>
+				<div style="flex: 1; border: #7085C1; border-style: solid; border-width: 0 0.25rem 0.25rem 0; height: 100%; align-items:center;">
+					<div style="height: 85%; max-width: 100%; padding-top:5%">
+						<img src={selectedPrize.picture} alt="Prize" style="height: 100%; width: 100%; object-fit: scale-down;">
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
+
 	<div class="section" id="contact" style="min-height:65vh; padding-bottom:2rem">
 		<h1>Meet the Team</h1>
 		<br>
