@@ -364,29 +364,27 @@
 	}
 	/* SPONSORS */
 	.sponsors {
-		max-width: 70vw;
 		margin: auto;
 		display: flex;
 		justify-content: space-around;
-		flex-direction: row;
 		align-items: center;
-		flex-wrap: wrap;
-		gap: 5%;
 	}
 	.sponsor-image {
-		margin-top: 7%;
 		max-width: 25rem;
 	}
 
 	.sponsor-tiers{
 		display:flex; 
-		flex-direction:column; 
+		flex-direction:column;
 		align-items:center;
+		gap: 4rem;
 	}
 	.sponsor-image-holders{
 		display: flex;
-		flex-direction: row;
 		align-items: center;
+		justify-content: center;
+		max-width: 70vw;
+		flex-wrap: wrap;
 		gap: 5rem;
 	}
 	/* TEAM */
@@ -606,8 +604,7 @@
 		<p class="body-text" style="font-weight:700">Interested in sponsoring HackKU23?</p>
 		<p class="body-text" style="font-weight:700">Email us at <a href="mailto:sponsorship.hackku@gmail.com">sponsorship.hackku@gmail.com</a></p>
 	</div>
-	<div class="section" id="sponsors" style="row-gap:4rem; align-items:center;">
-		
+	<div class="section sponsors" id="sponsors" style="row-gap:10rem; align-items:center;">
 		<div class="sponsor-tiers">
 			<h2>PETA Tier</h2>
 			<div class="sponsor-image-holders">
@@ -637,18 +634,20 @@
 		<div class="sponsor-tiers">
 			<h2>FOOD</h2>
 			<div class="sponsor-image-holders">
+				<img src="chriscakes.png" alt="Chris Cakes Logo" class="sponsor-image" style="max-height:17rem">
+				<img src="globeindianfood.png" alt="Globe Indian Logo" class="sponsor-image" style="max-height:17rem">
 				<img src="laestrella (1).png" alt="Laestralla Logo" class="sponsor-image" style="max-height:17rem">
 				<img src="mcclains.png" alt="Mcclains Logo" class="sponsor-image" style="max-height:17rem">
-				<img src="globeindianfood.png" alt="Globe Indian Logo" class="sponsor-image" style="max-height:17rem">
+				<img src="redpepper.png" alt="Red Pepper Logo" class="sponsor-image" style="max-height:17rem">
 			</div>
 		</div>
 		<div class="sponsor-tiers">
 			<h2>IN KIND</h2>
 			<div class="sponsor-image-holders">
-				<img src="GoogleCloud_FullColor 2900x512px.png" alt="Google Cloud Logo" class="sponsor-image" style="max-height:8rem">
-				<img src="echo3D - Logo 2021 - Dark.png" alt="Echo 3D Logo" class="sponsor-image" style="max-height:8rem">
 				<img src="balsamiq-logo-screen.png" alt="Balsamiq Logo" class="sponsor-image" style="max-height:8rem">
-			</div>
+				<img src="echo3D - Logo 2021 - Dark.png" alt="Echo 3D Logo" class="sponsor-image" style="max-height:8rem">
+				<img src="GoogleCloud_FullColor 2900x512px.png" alt="Google Cloud Logo" class="sponsor-image" style="max-height:8rem">
+				</div>
 		</div>
 		<div style="display:flex;justify-content:center;align-items:center">
 			<a href="http://hackp.ac/mlh-StandOutStickers-hackathons" target="_blank">
