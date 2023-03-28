@@ -773,12 +773,13 @@
 		<div class="sponsor-tiers">
 			<h2>FOOD</h2>
 			<div class="sponsor-image-holders">
+				<img src="redpepper.png" alt="Red Pepper Logo" class="sponsor-image" style="max-height:17rem">
+				<img src="medmarket.png" alt="Mediterannean Market Logo" class="sponsor-image" style="max-height:17rem">
 				<img src="chriscakes.png" alt="Chris Cakes Logo" class="sponsor-image" style="max-height:17rem">
+				<img src="mcclains.png" alt="Mcclains Logo" class="sponsor-image" style="max-height:17rem">
 				<img src="globeindianfood.png" alt="Globe Indian Logo" class="sponsor-image" style="max-height:17rem">
 				<img src="laestrella (1).png" alt="Laestralla Logo" class="sponsor-image" style="max-height:17rem">
-				<img src="mcclains.png" alt="Mcclains Logo" class="sponsor-image" style="max-height:17rem">
-				<img src="redpepper.png" alt="Red Pepper Logo" class="sponsor-image" style="max-height:17rem">
-			</div>
+				</div>
 		</div>
 		<div class="sponsor-tiers">
 			<h2>IN KIND</h2>
