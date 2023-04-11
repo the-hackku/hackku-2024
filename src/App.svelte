@@ -779,6 +779,7 @@
 				<img src="mcclains.png" alt="Mcclains Logo" class="sponsor-image" style="max-height:17rem">
 				<img src="globeindianfood.png" alt="Globe Indian Logo" class="sponsor-image" style="max-height:17rem">
 				<img src="laestrella (1).png" alt="Laestralla Logo" class="sponsor-image" style="max-height:17rem">
+				<img src="Insomnialogo.png" alt="Laestralla Logo" class="sponsor-image" style="max-height:17rem">
 				</div>
 		</div>
 		<div class="sponsor-tiers">
