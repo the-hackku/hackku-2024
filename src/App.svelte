@@ -84,13 +84,13 @@
 		}
 	}
 	let links = [
+		{ display: "HACKERDOC", action: () => window.open("https://hackku.notion.site/hackku/HackerDoc-HackKU-2023-d870cdb8e84b425ab67a2eedcb41344c", "_blank")},
 		{ display: "REGISTER NOW!", action: () => window.open("https://forms.gle/Sck3FsitxKgNQMpP8", "_blank")},
 		{ display: "ABOUT", action: () => scrollToID("about")},
 		{ display: "FAQ", action: () => scrollToID("faq")},
 		{ display: "SPONSORS", action: () => scrollToID("sponsors")},
 		{ display: "PRIZES", action: () => scrollToID("prizes")},
-		{ display: "MEET the TEAM", action: () => scrollToID("contact")},
-		{display: "HACKERDOC", action: () => window.open("https://hackku.notion.site/hackku/HackerDoc-HackKU-2023-d870cdb8e84b425ab67a2eedcb41344c", "_blank")}
+		{ display: "MEET the TEAM", action: () => scrollToID("contact")}
 	]
 
 	let linksDesktop = [
