@@ -45,13 +45,13 @@
       <div class="answer">
         <p>No experience is necessary to attend! There will be workshops and prizes geared specifically towards beginner hackers, and lots of mentors to provide support throughout the event.</p>
       </div>
-      <button class="question">
+      <!-- <button class="question">
         <span><img src="images/heart-red-shad.png" class="heart-icon" alt="heart-icon"></span>
         As an MLH-affiliated event, all participants will be expected to follow the MLH Code of Conduct. What does this mean?
       </button>
       <div class="answer">
         <p>Read the MLH Code of Conduct <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target ="_blank" class="link">here</a>!</p>
-      </div>
+      </div> -->
       <button class="question">
         <span><img src="images/heart-red.png" class="heart-icon" alt="heart-icon"></span>
         I still have questions!
@@ -102,7 +102,7 @@
         What should I bring?
       </button>
       <div class="answer">
-        <p>"Hardware: Bring your hacking device and any accessories (like chargers!) required. Sleeping: Feel free to bring a sleeping bag, pillow, and/or blankets. Personal Hygiene: Please bring personal hygiene products, and a bath towel if you choose to use the provided showers."</p>
+        <p><b>Hardware:</b> Bring your hacking device and any accessories (like chargers!) required.<br><b>Sleeping:</b> Feel free to bring a sleeping bag, pillow, and/or blankets.<br><b>Personal Hygiene:</b> Please bring personal hygiene products, and a bath towel if you choose to use the provided showers."</p>
       </div>        
     </div> 
     <div class="faq-section">
@@ -167,7 +167,7 @@
 <style>
   .faq-container {
     padding-top: 0;
-    padding-bottom: 25rem;
+    padding-bottom: 29rem;
     background-color: var(--blue-lt);
     display: flex;
     flex-direction: column;

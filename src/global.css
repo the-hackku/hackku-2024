@@ -20,6 +20,10 @@
   font-family: 'Comic Sands';
   src: url('/fonts/ComicSands-Bold.woff') format('woff');
 }
+@font-face {
+  font-family: 'Comic Sands';
+  src: url('/fonts/ComicSands-Bold.woff') format('woff');
+}
 h1 {
   font: bold 12rem/9.25rem 'Comic Sands';
   color: var(--off-black);
@@ -31,18 +35,18 @@ h2 {
   text-align: center;
 }
 h3 {
-  font: bold 2.75rem Futura PT;
+  font: bold 2.75rem 'Futura PT';
   color: var(--off-black);
   text-align: center;
 }
 h4 {
-  font: 400 2.5rem Futura PT;
+  font: 400 2.5rem 'Futura PT';
   color: var(--off-black);
   text-align: center;
   margin: 1.5rem;
 }
 p {
-  font: 400 1.875rem Futura PT;
+  font: 400 1.875rem 'Futura PT';
   color: var(--off-black);
   text-align: center;
 }
