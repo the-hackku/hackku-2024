@@ -107,6 +107,7 @@ button {
   align-items: center;
   max-width: 100vw;
   overflow-x: hidden;
+  position: relative;
 }
 .section {
   position: relative;
