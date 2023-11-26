@@ -96,7 +96,8 @@ body {
   margin: 0;
 }
 button {
-  font: 400 1.875rem Futura PT;
+  font: 1.875rem 'Futura PT';
+  color: var(--off-black);
   display: flex;
   align-items: center;
 }
