@@ -166,6 +166,7 @@
 
 <style>
   .faq-container {
+    max-width: 100%;
     padding-top: 0;
     padding-bottom: 29rem;
     background-color: var(--blue-lt);

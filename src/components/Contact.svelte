@@ -80,6 +80,7 @@
 
 <style>
   .contact-section {
+    max-width: 100%;
     background-color: var(--dark-green);
     display: flex;
     flex-direction: column;

@@ -40,8 +40,8 @@
 <style>
   .landing {
     width: 100vw;
-    height: 100vh;
     max-width: 100%;
+    height: 100vh;
     background-color: var(--blue-lt);
   }
   .divided-title {

@@ -47,6 +47,7 @@
 
 <style>
   .sponsors-section {
+    max-width: 100%;
     background-color: var(--off-white);
     display: flex;
     flex-direction: column;
