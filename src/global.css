@@ -52,7 +52,7 @@ h4 {
 p {
   font: 1.875rem 'Futura PT';
   color: var(--off-black);
-  text-align: center;
+  margin: 0;
 }
 
 /* REM */

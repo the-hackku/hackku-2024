@@ -67,7 +67,7 @@
         When and where is HackKU?
       </button>
       <div class="answer">
-        <p>HackKU24 will take place from the evening of April 12 until early afternoon on April 14 at the University of Kansas’ School of Engineering</p>
+        <p>HackKU24 will take place from the evening of April 12 until early afternoon on April 14 at the University of Kansas School of Engineering</p>
       </div>
       <button class="question">
         <span><img src="images/heart-red.png" class="heart-icon" alt="heart-icon"></span>
@@ -102,7 +102,7 @@
         What should I bring?
       </button>
       <div class="answer">
-        <p><b>Hardware:</b> Bring your hacking device and any accessories (like chargers!) required.<br><b>Sleeping:</b> Feel free to bring a sleeping bag, pillow, and/or blankets.<br><b>Personal Hygiene:</b> Please bring personal hygiene products, and a bath towel if you choose to use the provided showers."</p>
+        <p><b>Hardware:</b> Bring your hacking device and any accessories (like chargers!) required<br><b>Sleeping:</b> Feel free to bring a sleeping bag, pillow, and/or blankets<br><b>Personal Hygiene:</b> Please bring personal hygiene products, and a bath towel if you choose to use the provided showers</p>
       </div>        
     </div> 
     <div class="faq-section">
@@ -207,7 +207,7 @@
 	}
 	.answer {
 		background-color: var(--blue-lt);
-		padding: 0 5rem;
+		padding: 0 10rem;
 		display: none;
 		overflow: hidden;
 	}

@@ -10,7 +10,7 @@
         <h2 style="margin:0 0">Sponsors</h2>
         <span><img src="images/flower-right.png" class="flower-decor" alt="flower-decor"></span>
       </duv>
-      <p style="margin-top:0">Interested in sponsoring HackKU24?<br>Contact us at <a href="mailto:hack@ku.edu" class="email-link turn-red">hack@ku.edu</a></p>
+      <p style="margin-top:0;text-align:center">Interested in sponsoring HackKU24?<br>Contact us at <a href="mailto:hack@ku.edu" class="email-link turn-red">hack@ku.edu</a></p>
     </div>
     <!-- <h3 id="sponsors-divider">Presented by</h3>
     <div class="sponsors-tier">

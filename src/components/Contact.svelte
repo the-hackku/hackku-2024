@@ -12,7 +12,7 @@
     "james": {
 			display: "James Hurd",
 			title: "Vice Director",
-			link: "https://www.linkedin.com/in/jameshurd2718/", 
+			link: "https://jameshurd.net/", 
       image: "images/james.jpg",
 		},
     "firangiz": {
@@ -48,7 +48,7 @@
     "nathan": {
 			display: "Nathan Dodson",
 			title: "Sponsorship",
-			link: "https://www.linkedin.com/in/nathanrdodson/", 
+			link: "https://www.nathandodson.com/", 
       image: "images/nathan.jpeg",
 		},
     "sungin": {

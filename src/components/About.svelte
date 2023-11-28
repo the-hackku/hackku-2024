@@ -60,6 +60,7 @@
   }
   .description-text {
     padding: 5rem 8rem;
+    margin: 2rem;
     text-align: center;
   }
   .button-heart-container {
