@@ -29,7 +29,7 @@
         What is HackKU?
       </button>
       <div class="answer">
-        <p>HackKU is the annual 36-hour hackathon hosted by students at the University of Kansas’ School of Engineering.</p>
+        <p>HackKU is the annual 36-hour hackathon hosted by students at the University of Kansas School of Engineering.</p>
       </div>
       <button class="question">
         <span><img src="images/heart-red-shad.png" class="heart-icon" alt="heart-icon"></span>
@@ -67,7 +67,7 @@
         When and where is HackKU?
       </button>
       <div class="answer">
-        <p>HackKU24 will take place from the evening of April 12 until early afternoon on April 14 at the University of Kansas School of Engineering</p>
+        <p>HackKU24 will take place from the evening of April 12 until early afternoon on April 14 at the University of Kansas School of Engineering.</p>
       </div>
       <button class="question">
         <span><img src="images/heart-red.png" class="heart-icon" alt="heart-icon"></span>
@@ -92,10 +92,10 @@
       </div>
       <button class="question">
         <span><img src="images/heart-red-shad.png" class="heart-icon" alt="heart-icon"></span>
-        Free swag?
+        Will there be any travel reimbursement?
       </button>
       <div class="answer">
-        <p>All swag will be distributed at HackKU24.</p>
+        <p>More info coming soon!</p>
       </div>
       <button class="question">
         <span><img src="images/heart-red.png" class="heart-icon" alt="heart-icon"></span>
@@ -103,7 +103,14 @@
       </button>
       <div class="answer">
         <p><b>Hardware:</b> Bring your hacking device and any accessories (like chargers!) required<br><b>Sleeping:</b> Feel free to bring a sleeping bag, pillow, and/or blankets<br><b>Personal Hygiene:</b> Please bring personal hygiene products, and a bath towel if you choose to use the provided showers</p>
-      </div>        
+      </div> 
+      <button class="question">
+        <span><img src="images/heart-red-shad.png" class="heart-icon" alt="heart-icon"></span>
+        Free swag?
+      </button>
+      <div class="answer">
+        <p>All swag will be distributed at HackKU24.</p>
+      </div>
     </div> 
     <div class="faq-section">
       <h3>Registration</h3>
