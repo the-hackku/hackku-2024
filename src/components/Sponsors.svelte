@@ -42,6 +42,10 @@
       <img src="images/20.png" alt="sponsor16">
       <img src="images/20.png" alt="sponsor17">
     </div> -->
+    <h3 id="sponsors-divider">In-Kind</h3>
+    <div class="sponsors-tier">  
+      <img src="images/standoutStickers.png" alt="Standout Stickers Logo" class="sponsor-logo">
+    </div>
   </div>
 </div>
 
@@ -58,7 +62,7 @@
     text-align: center;
     margin-top: 100px;
     margin-bottom: 30px;
-  }
+  } */
   .sponsors-tier {
     display: flex;
     flex-direction: row;
@@ -67,7 +71,7 @@
     row-gap: 10px;
     column-gap: 10px;
     margin: 20px;
-  } */
+  }
   .flower-decor-container {
     display: flex;
     justify-content: center;
@@ -80,5 +84,8 @@
   .email-link {
     color:var(--blue-dk);
     text-decoration:none
+  }
+  .sponsor-logo {
+    height: 20rem;
   }
 </style>
