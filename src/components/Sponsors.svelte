@@ -44,7 +44,7 @@
     </div> -->
     <h3 id="sponsors-divider">In-Kind</h3>
     <div class="sponsors-tier">  
-      <img src="images/standoutStickers.png" alt="Standout Stickers Logo" class="sponsor-logo">
+      <a href="http://hackp.ac/mlh-StandOutStickers-hackathons" target="_blank"><img src="images/standoutStickers.png" alt="Standout Stickers Logo" class="sponsor-logo"></a>
     </div>
   </div>
 </div>
