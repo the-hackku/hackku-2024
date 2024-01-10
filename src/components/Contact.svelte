@@ -13,7 +13,7 @@
 			display: "James Hurd",
 			title: "Vice Director",
 			link: "https://jameshurd.net/", 
-      image: "images/james.jpg",
+      image: "images/james.png",
 		},
     "firangiz": {
 			display: "Firangiz Ganbarli",
