@@ -11,7 +11,7 @@
 		{ display: "FAQ", action: () => scrollToID("faq")},
 		{ display: "SPONSORS", action: () => scrollToID("sponsors")},
 		{ display: "CONTACT", action: () => scrollToID("contact")},
-    { display: "REGISTER NOW!", action: () => window.open("https://forms.gle/Sck3FsitxKgNQMpP8", "_blank")}, 
+    { display: "REGISTER NOW!", action: () => window.open("https://forms.gle/VxKryAnMaGowQkMj6", "_blank")}, 
 	]
   const scrollToID = (id) => {
     window.scrollTo({
