@@ -31,7 +31,7 @@
     width: 100vw;
     height: 6.2rem;
     display: flex;
-    gap: 5rem;
+    gap: 4rem;
     justify-content: center;
     align-items: center;
     z-index: 1000;
