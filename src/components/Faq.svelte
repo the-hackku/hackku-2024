@@ -95,14 +95,14 @@
         Will there be any travel reimbursement?
       </button>
       <div class="answer">
-        <p>More info coming soon!</p>
+        <p> We are offering travel reimbursements for HackKU24! Check out <a href="https://forms.gle/Eiv8VGULvbVaUBPp7" target ="_blank" class="link">this link</a> learn more and apply now.</p>
       </div>
       <button class="question">
         <span><img src="images/heart-red.png" class="heart-icon" alt="heart-icon"></span>
         What should I bring?
       </button>
       <div class="answer">
-        <p><b>Hardware:</b> Bring your hacking device and any accessories (like chargers!) required<br><b>Sleeping:</b> Feel free to bring a sleeping bag, pillow, and/or blankets<br><b>Personal Hygiene:</b> Please bring personal hygiene products, and a bath towel if you choose to use the provided showers</p>
+        <p><b>Hardware:</b> Bring your hacking device and any accessories (like chargers!) required<br><b>Sleeping:</b> Feel free to bring a sleeping bag, pillow, and/or blankets<br><b>Personal Hygiene:</b> Please bring personal hygiene products, and a bath towel if you choose to use the provided showers<br><b>Reusable Water Bottle:</b> Please bring your own reusable water bottle to reduce waste!</p>
       </div> 
       <button class="question">
         <span><img src="images/heart-red-shad.png" class="heart-icon" alt="heart-icon"></span>
