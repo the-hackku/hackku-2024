@@ -37,12 +37,12 @@
     </div> -->
     <h3 id="sponsors-divider">MEGA Tier</h3>
     <div class="sponsors-tier">  
-      <img src="images/Netsmart.png" alt="Netsmart">
+      <img src="images/Netsmart.png" alt="Netsmart Logo" class="sponsor-logo">
     </div>
     
     <h3 id="sponsors-divider">KILA Tier</h3>
     <div class="sponsors-tier">  
-      <img src="images/Tradebot.png" alt="Tradebot">
+      <img src="images/Tradebot.png" alt="Tradebot Logo" class="sponsor-logo">
     </div>
     
     <h3 id="sponsors-divider">In-Kind</h3>
@@ -90,8 +90,5 @@
   }
   .sponsor-logo {
     height: 20rem;
-  }
-  img {
-    height: 15vh;
   }
 </style>
