@@ -34,14 +34,17 @@
       <img src="images/20.png" alt="sponsor11">
       <img src="images/20.png" alt="sponsor12">
       <img src="images/20.png" alt="sponsor13">
-    </div>
+    </div> -->
     <h3 id="sponsors-divider">MEGA Tier</h3>
     <div class="sponsors-tier">  
-      <img src="images/20.png" alt="sponsor14">
-      <img src="images/20.png" alt="sponsor15">
-      <img src="images/20.png" alt="sponsor16">
-      <img src="images/20.png" alt="sponsor17">
-    </div> -->
+      <img src="images/Netsmart.png" alt="Netsmart">
+    </div>
+    
+    <h3 id="sponsors-divider">KILA Tier</h3>
+    <div class="sponsors-tier">  
+      <img src="images/Tradebot.png" alt="Tradebot">
+    </div>
+    
     <h3 id="sponsors-divider">In-Kind</h3>
     <div class="sponsors-tier">  
       <a href="http://hackp.ac/mlh-StandOutStickers-hackathons" target="_blank"><img src="images/standoutStickers.png" alt="Standout Stickers Logo" class="sponsor-logo"></a>
@@ -87,5 +90,8 @@
   }
   .sponsor-logo {
     height: 20rem;
+  }
+  img {
+    height: 15vh;
   }
 </style>
