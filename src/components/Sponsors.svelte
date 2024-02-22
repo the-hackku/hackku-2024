@@ -91,5 +91,6 @@
   .sponsor-logo {
     height: 20rem;
     max-width: 40vw;
+    object-fit: contain;
   }
 </style>
