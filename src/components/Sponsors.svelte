@@ -89,15 +89,8 @@
     color:var(--blue-dk);
     text-decoration:none
   }
-<<<<<<< HEAD
   img {
     height: 15vh;
     max-width: 80vw;
-=======
-  .sponsor-logo {
-    height: 20rem;
-    max-width: 40vw;
-    object-fit: contain;
->>>>>>> 540c1e5952ba3588839a7c474a38db5fa58e80d9
   }
 </style>
