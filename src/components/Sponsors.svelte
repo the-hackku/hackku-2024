@@ -92,6 +92,6 @@
   img {
     height: 15vh;
     max-width: 80vw;
-    object-fit: cover;
+    object-fit: contain;
   }
 </style>
