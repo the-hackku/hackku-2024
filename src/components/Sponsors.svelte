@@ -17,6 +17,7 @@
       <h3>PETA Tier</h3>
       <div class="sponsors-logos">
         <img src="images/SecurityBenefit.png" alt="Security Benefit">
+        <img src="images/everly.png" alt="Everly">
       </div>
     </div>
 
@@ -25,6 +26,7 @@
       <div class="sponsors-logos">
         <img src="images/AirPower.png" alt="Air Power">
         <img src="images/HRBlock.png" alt="HR Block">
+        <img src="images/ripple.png" alt="Ripple">
         <img src="images/AdAstra.png" alt="Ad Astra">
       </div>
     </div>
@@ -89,15 +91,9 @@
     color:var(--blue-dk);
     text-decoration:none
   }
-<<<<<<< HEAD
   img {
     height: 15vh;
     max-width: 80vw;
-=======
-  .sponsor-logo {
-    height: 20rem;
-    max-width: 40vw;
     object-fit: contain;
->>>>>>> 540c1e5952ba3588839a7c474a38db5fa58e80d9
   }
 </style>
