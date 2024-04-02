@@ -45,6 +45,20 @@
         <img src="images/Tradebot.png" alt="Tradebot">
       </div>
     </div>
+
+    <div class="food-tier"> 
+      <h3>Food Partners</h3> 
+      <div class="sponsors-logos">
+        <img src="images/chrisCakes.png" alt="Chris Cakes">
+        <img src="images/globe.png" alt="Globe Indian">
+        <img src="images/insomnia.png" alt="Insomnia Cookies">
+        <img src="images/redPepper.png" alt="Red Pepper">
+        <img src="images/laEstrella.png" alt="La Estrella">
+        <img src="images/bubbleBox.png" alt="Bubble Box">
+        <img src="images/mcclains.png" alt="McClains">
+        <img src="images/celsius.png" alt="Celsius">
+      </div>
+    </div>
     
     <div class="sponsors-tier">  
       <h3>In-Kind</h3>
@@ -62,6 +76,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
   .sponsors-tier {
     display: flex;
@@ -69,6 +84,14 @@
     align-items: center;
     justify-content:center;
     margin-bottom: 6rem;
+  }
+  .food-tier {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    margin-bottom: 6rem;
+    max-width: 50rem;
   }
   .sponsors-logos {
     display: flex;
