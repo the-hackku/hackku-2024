@@ -126,7 +126,7 @@
         When is registration open?
       </button>
       <div class="answer">
-        <p>Registration will open in January 2024 and close on March 29th.</p>
+        <p>Registration will open in January 2024 and close on April 12.</p>
       </div>
       <button class="question">
         <span><img src="images/heart-red-shad.png" class="heart-icon" alt="heart-icon"></span>
